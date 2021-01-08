@@ -17,7 +17,7 @@ Papers read since 2021.
 - [ ] Heterogeneous Recycle Generation for Chinese Grammatical Correction
 
 # Pretraining
-1. [CCL-2020] 基于数据增强和多任务特征学习的中文语法错误检测方法  
+1. [CCL-2020] 基于数据增强和多任务特征学习的中文语法错误**检测**方法  
 Implements Chinese GED through data-augmentation and pretrained BERT finetuned using multi-task learning. The data-augmentation method applied here is simple, including manipulations such as insertions, deletions and so on. Some rules are designed to maintain the meanings of sentences. The Chinese BERT is used for GED with a CRF layer on top. It is finetuned through multi-task learning: pos tagging, parsing and grammar error detection.
 
 2. [ACL-2020] GECToR - Grammatical Error Correction: Tag, Not Rewrite  
