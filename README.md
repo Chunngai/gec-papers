@@ -25,7 +25,7 @@ Used a BERT sequence tagger. Developed custom task-specific g-transformations su
 https://github.com/grammarly/gector
 
 
-3. <span id="5">[ACL-2020] Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical</span>  
+3. <span id="5">[ACL-2020] Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction</span>  
 Applied the BERT-fused model for GEC. The BERT is finetuned with MLM and GED to fix the inconsistent input distribution between the raw data for BERT training and the GEC data. Pseudo-data and R2L are also used for performance boosting.  
 https://github.com/kanekomasahiro/bert-gec
 
