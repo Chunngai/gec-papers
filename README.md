@@ -10,8 +10,8 @@ Papers read since 2021.
 - [x] [MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking](#6)
 - [x] [Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract)](#7)
 - [x] [Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model](#8)
+- [x] [Chinese Grammatical Correction Using BERT-based Pre-trained Model](#9)
 
-- [ ] Chinese Grammatical Correction Using BERT-based Pre-trained Model
 - [ ] Seq2Edits: Sequence Transduction Using Span-level Edit Operations
 - [ ] Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction
 - [ ] Heterogeneous Recycle Generation for Chinese Grammatical Correction
@@ -36,6 +36,9 @@ Divides the GEC task into two stages: error identification and error correction.
 5. <span id="8">[IJNLP-2020] Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model</span>  
 Used BART for GEC and says that BART can be a baseline for GEC, which can reach high performance by simple finetuning with GEC data instead of pseudo-data pretraining.  
 https://github.com/Katsumata420/generic-pretrained-GEC
+
+6. <span id="9">[IJCNLP-2020] Chinese Grammatical Correction Using BERT-based Pre-trained Model  
+Tries BERT-init (BERT-encoder in the papar) and BERT-fused for Chinese GEC. The Chinese GEC ver. of *Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction*, even less techniques used.
 
 # Data-Augmentation
 1. <span id="6">[AAAI-2020] MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking</span>  
