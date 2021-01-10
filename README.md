@@ -2,6 +2,7 @@
 
 Papers read since 2021.
 
+## GEC
 - [x] [GECToR - Grammatical Error Correction: Tag, Not Rewrite](#2)
 - [x] [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](#3)
 - [x] [Incorporating BERT into Neural Machine Translation](#4)
@@ -12,13 +13,15 @@ Papers read since 2021.
 - [x] [Chinese Grammatical Correction Using BERT-based Pre-trained Model](#9)
 - [x] [Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction](#10)
 - [x] [Heterogeneous Recycle Generation for Chinese Grammatical Correction](#11)  
-
-NLP-TEA
-- [x] [基于数据增强和多任务特征学习的中文语法错误检测方法](#1)
 - [x] [TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020](#12)
 
-TODOs
+## GED
+- [x] [基于数据增强和多任务特征学习的中文语法错误检测方法](#1)
+
+## TODOs
 - [ ] Seq2Edits: Sequence Transduction Using Span-level Edit Operations
+
+---
 
 ## Seq2Seq
 1. <span id="5">[ACL-2020] Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction</span>  
@@ -33,7 +36,7 @@ https://github.com/Katsumata420/generic-pretrained-GEC
 Tries BERT-init (BERT-encoder in the papar) and BERT-fused for Chinese GEC. The Chinese GEC ver. of *Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction*, even less techniques used.
 
 4. <span id="12">[ACL-2020] TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020  
-Used BERT-init as in *Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction*, which is also the same as the BERT-encoder in *Chinese Grammatical Correction Using BERT-based Pre-trained Model*.
+Uses BERT-init as in *Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction*, which is also the same as the BERT-encoder in *Chinese Grammatical Correction Using BERT-based Pre-trained Model*.
 
 ## Seq Labeling
 1. <span id="2">[ACL-2020] GECToR - Grammatical Error Correction: Tag, Not Rewrite</span>  
@@ -45,14 +48,14 @@ Divides the GEC task into two stages: error identification and error correction.
 (Not very clear about the method proposed by the paper.)
 
 ## Combinations
-1. <span id="10">Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction</span>  
+1. <span id="10">[EMNLP-2020] Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction</span>  
 Combines a sequence tagging model for erroneous span detection and a seq2seq model for erroneous span correction to make the GEC process more efficient. The sequence tagging model (BERT-like) looks for spans needing to be corrected by outputting binary vectors, and the seq2seq model receives inputs annotated according to the outputs of the sequence tagging model and only produces outputs corresponding to the detected spans. Pseudo-data is used for pre-training the ESD and ESC models.
 
-2. <span id="11">Heterogeneous Recycle Generation for Chinese Grammatical Correction</span>  
+2. <span id="11">[ACL-2020] Heterogeneous Recycle Generation for Chinese Grammatical Correction</span>  
 Makes use of a sequence editing model, a seq2seq model and a spell checker to correct different kinds of errors (small scale errors, large scale errors and spell errors respectively). Iterative decoding is applied on (sequence editing model, seq2seq model). The proposed method needs not data-aug but still achieves comparable performance.
 
 ## Multi-Task Learning
-1. <span id="1">[CCL-2020] 基于数据增强和多任务特征学习的中文语法错误**检测**方法</span>  
+1. <span id="1">[CCL-2020] [GED] 基于数据增强和多任务特征学习的中文语法错误**检测**方法</span>  
 Implements Chinese GED through data-augmentation and pretrained BERT finetuned using multi-task learning. The data-augmentation method applied here is simple, including manipulations such as insertions, deletions and so on. Some rules are designed to maintain the meanings of sentences. The Chinese BERT is used for GED with a CRF layer on top. It is finetuned through multi-task learning: pos tagging, parsing and grammar error detection.
 
 ## Data-Augmentation
