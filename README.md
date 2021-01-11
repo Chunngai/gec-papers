@@ -11,7 +11,7 @@
 - [x] 2021/1/9 [Chinese Grammatical Correction Using BERT-based Pre-trained Model](#chinese-bert-gec)
 - [x] 2021/1/10 [Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction](#efficiency)
 - [x] 2021/1/10 [Heterogeneous Recycle Generation for Chinese Grammatical Correction](#heterogeneous)  
-- [x] 2021/1/11 [TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020](#chinese-bert-init)
+- [x] 2021/1/10 [TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020](#chinese-bert-init)
 - [x] 2021/1/11 [Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction](#local-beam-search)
 
 ## GED
@@ -60,7 +60,7 @@ Uses BERT + CRF.
 Applies res on BERT for GED. The encoded hidden repr is added with the emd and fed into the output layer.  
 (Also related to GEC but not detailed, thus catogorize as GED.)
 
-## Combinations
+## Combination
 1. <span id="efficiency">[EMNLP-2020] Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction</span>  
 Combines a sequence tagging model for erroneous span detection and a seq2seq model for erroneous span correction to make the GEC process more efficient. The sequence tagging model (BERT-like) looks for spans needing to be corrected by outputting binary vectors, and the seq2seq model receives inputs annotated according to the outputs of the sequence tagging model and only produces outputs corresponding to the detected spans. Pseudo-data is used for pre-training the ESD and ESC models.
 
