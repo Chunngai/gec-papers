@@ -1,26 +1,24 @@
 # gec-papers
 
-Papers read since 2021.
-
 ## GEC
-- [x] [GECToR - Grammatical Error Correction: Tag, Not Rewrite](#gector)
-- [x] [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](#bert)
-- [x] [Incorporating BERT into Neural Machine Translation](#bert-nmt)
-- [x] [Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction](#bert-gec)
-- [x] [MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking](#maskgec)
-- [x] [Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract)](#minimal-supervision)
-- [x] [Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model](#bart-gec)
-- [x] [Chinese Grammatical Correction Using BERT-based Pre-trained Model](#chinese-bert-gec)
-- [x] [Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction](#efficiency)
-- [x] [Heterogeneous Recycle Generation for Chinese Grammatical Correction](#heterogeneous)  
-- [x] [TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020](#chinese-bert-init)
-- [x] [Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction](#local-beam-search)
+- [x] 2021/1/5 [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](#bert)
+- [x] 2021/1/5 [Incorporating BERT into Neural Machine Translation](#bert-nmt)
+- [x] 2021/1/6 [Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction](#bert-gec)
+- [x] 2021/1/6 [GECToR - Grammatical Error Correction: Tag, Not Rewrite](#gector)
+- [x] 2021/1/7 [MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking](#maskgec)
+- [x] 2021/1/7 [Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract)](#minimal-supervision)
+- [x] 2021/1/7 [Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model](#bart-gec)
+- [x] 2021/1/9 [Chinese Grammatical Correction Using BERT-based Pre-trained Model](#chinese-bert-gec)
+- [x] 2021/1/10 [Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction](#efficiency)
+- [x] 2021/1/10 [Heterogeneous Recycle Generation for Chinese Grammatical Correction](#heterogeneous)  
+- [x] 2021/1/11 [TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020](#chinese-bert-init)
+- [x] 2021/1/11 [Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction](#local-beam-search)
 
 ## GED
-- [x] [基于数据增强和多任务特征学习的中文语法错误检测方法](#chinese-multi-task)
-- [x] [Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis](#score-based)
-- [x] [CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared](#bert-crf)
-- [x] [Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis](#resnet-bert)
+- [x] 2021/1/6 [基于数据增强和多任务特征学习的中文语法错误检测方法](#chinese-multi-task)
+- [x] 2021/1/11 [Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis](#score-based)
+- [x] 2021/1/11 [CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared](#bert-crf)
+- [x] 2021/1/11 [Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis](#resnet-bert)
 
 ## TODOs
 - [ ] Seq2Edits: Sequence Transduction Using Span-level Edit Operations
