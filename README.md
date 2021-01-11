@@ -14,6 +14,7 @@ Papers read since 2021.
 - [x] [Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction](#10)
 - [x] [Heterogeneous Recycle Generation for Chinese Grammatical Correction](#11)  
 - [x] [TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020](#12)
+- [x] [Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction](#16)
 
 ## GED
 - [x] [基于数据增强和多任务特征学习的中文语法错误检测方法](#1)
@@ -71,6 +72,10 @@ Makes use of a sequence editing model, a seq2seq model and a spell checker to co
 ## Multi-Task Learning
 1. <span id="1">[GED] [CCL-2020] 基于数据增强和多任务特征学习的中文语法错误检测方法</span>  
 Implements Chinese GED through data-augmentation and pretrained BERT finetuned using multi-task learning. The data-augmentation method applied here is simple, including manipulations such as insertions, deletions and so on. Some rules are designed to maintain the meanings of sentences. The Chinese BERT is used for GED with a CRF layer on top. It is finetuned through multi-task learning: pos tagging, parsing and grammar error detection.
+
+## Beam Search
+1. <span id="16"> [COLING-2020] Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction</span>  
+Proposes a local beam search method to output diverse outputs. The proposed method generates more diverse outputs than the plain beam search, and only modifies where should be corrected rather than changing the whole sequence as the global beam search. The copy factor in the copy-augmented Transformer is used as a penalty score.
 
 ## Data-Augmentation
 1. <span id="6">[AAAI-2020] MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking</span>  
