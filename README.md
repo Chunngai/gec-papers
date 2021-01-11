@@ -75,7 +75,7 @@ Implements Chinese GED through data-augmentation and pretrained BERT finetuned u
 1. <span id="local-beam-search"> [COLING-2020] Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction</span>  
 Proposes a local beam search method to output diverse outputs. The proposed method generates more diverse outputs than the plain beam search, and only modifies where should be corrected rather than changing the whole sequence as the global beam search. The copy factor in the copy-augmented Transformer is used as a penalty score.
 
-## Data-Augmentation
+## Dynamic Masking
 1. <span id="maskgec">[AAAI-2020] MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking</span>  
 Proposed a dynamic masking method for data-augmentation and generalization boosting. In each epoch each sentence is introduced noises with a prob by some manipulations, including padding substitution, random substution, word frequency substitution and so on.
 
