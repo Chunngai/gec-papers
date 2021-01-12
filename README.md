@@ -19,6 +19,8 @@
 - [x] 2021/1/11 [Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis](#score-based)
 - [x] 2021/1/11 [CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared](#bert-crf)
 - [x] 2021/1/11 [Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis](#resnet-bert)
+- [x] 2021/1/11 [Chinese Grammatical Errors Diagnosis System Based on BERT at NLPTEA-2020 CGED Shared Task](#bert-bilstm-crf-3gram-seq2seq)
+- [x] 2021/1/11 [Chinese Grammatical Error Detection Based on BERT Model](#bert-finetuned)
 
 ## TODOs
 - [ ] Seq2Edits: Sequence Transduction Using Span-level Edit Operations
@@ -30,15 +32,8 @@
 Applied the BERT-fused model for GEC. The BERT is finetuned with MLM and GED to fix the inconsistent input distribution between the raw data for BERT training and the GEC data. Pseudo-data and R2L are also used for performance boosting.  
 https://github.com/kanekomasahiro/bert-gec
 
-2. <span id="bart-gec">[AACL-2020] Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model</span>  
-Used BART for GEC and says that BART can be a baseline for GEC, which can reach high performance by simple finetuning with GEC data instead of pseudo-data pretraining.  
-https://github.com/Katsumata420/generic-pretrained-GEC
-
-3. <span id="chinese-bert-gec">[IJCNLP-2020] Chinese Grammatical Correction Using BERT-based Pre-trained Model  
+2. <span id="chinese-bert-gec">[IJCNLP-2020] Chinese Grammatical Correction Using BERT-based Pre-trained Model  
 Tries BERT-init (BERT-encoder in the papar) and BERT-fused for Chinese GEC. The Chinese GEC ver. of *Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction*, even less techniques used.
-
-4. <span id="chinese-bert-init">[AACL-2020] TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020  
-Uses BERT-init as in *Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction*, which is also the same as the BERT-encoder in *Chinese Grammatical Correction Using BERT-based Pre-trained Model*.
 
 ## Seq Labeling
 1. <span id="gector">[ACL-2020] GECToR - Grammatical Error Correction: Tag, Not Rewrite</span>  
@@ -48,17 +43,6 @@ https://github.com/grammarly/gector
 2. <span id="minimal-supervision">[AAAI-2020] Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract)</span>  
 Divides the GEC task into two stages: error identification and error correction. The first stage is a sequence tagging (remain, substitution, ...) task and a BERT is used for the second stage (correction).   
 (Not very clear about the method proposed by the paper.)
-
-3. <span id="score-based">[GED] [AACL-2020] Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis</span>  
-Uses BiLSTM-CRF for GED, whose input is features concat composed of output of BERT, POS, POS score and PMI score. The scores are incorporated using a gating mechanism to avoid losing partial-order relationships when embedding continuous feature items.  
-(Not very clear about the features used and the purpose of the gating mechanism.)
-
-4. <span id="bert-crf">[GED] [AACL-2020] CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared]</span>  
-Uses BERT + CRF.
-
-5. <span id="resnet-bert">[GED] [AACL-2020] Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis</span>  
-Applies res on BERT for GED. The encoded hidden repr is added with the emd and fed into the output layer.  
-(Also related to GEC but not detailed, thus catogorize as GED.)
 
 ## Combination
 1. <span id="efficiency">[EMNLP-2020] Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction</span>  
@@ -78,6 +62,31 @@ Proposes a local beam search method to output diverse outputs. The proposed meth
 ## Dynamic Masking
 1. <span id="maskgec">[AAAI-2020] MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking</span>  
 Proposed a dynamic masking method for data-augmentation and generalization boosting. In each epoch each sentence is introduced noises with a prob by some manipulations, including padding substitution, random substution, word frequency substitution and so on.
+
+## NLPTEA
+1. <span id="bart-gec">[AACL-2020] Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model</span>  
+Used BART for GEC and says that BART can be a baseline for GEC, which can reach high performance by simple finetuning with GEC data instead of pseudo-data pretraining.  
+https://github.com/Katsumata420/generic-pretrained-GEC
+
+2. <span id="chinese-bert-init">[AACL-2020] TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020  
+Uses BERT-init as in *Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction*, which is also the same as the BERT-encoder in *Chinese Grammatical Correction Using BERT-based Pre-trained Model*.
+
+3. <span id="score-based">[GED] [AACL-2020] Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis</span>  
+Uses BiLSTM-CRF for GED, whose input is features concat composed of output of BERT, POS, POS score and PMI score. The scores are incorporated using a gating mechanism to avoid losing partial-order relationships when embedding continuous feature items.  
+(Not very clear about the features used and the purpose of the gating mechanism.)
+
+4. <span id="bert-crf">[GED] [AACL-2020] CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared]</span>  
+Uses BERT + CRF.
+
+5. <span id="resnet-bert">[GED] [AACL-2020] Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis</span>  
+Applies res on BERT for GED. The encoded hidden repr is added with the emd and fed into the output layer.  
+(Also related to GEC but not detailed, thus catogorize as GED.)
+
+6. <span id="bert-bilstm-crf-3gram-seq2seq">[GED] [AACL-2020] Chinese Grammatical Errors Diagnosis System Based on BERT at NLPTEA-2020 CGED Shared Task</span>  
+Uses BERT-BiLSTM-CRF for GED. Uses a hybrid system containing a 3-gram and a seq2seq for GEC.
+
+7. <span id="bert-finetuned">[GED] [AACL-2020] Chinese Grammatical Error Detection Based on BERT Model</span>  
+Uses BERT finetuned on GEC datasets.
 
 ## Related
 1. <span id="bert-nmt">[NMT] [ICLR-2020] Incorporating BERT into Neural Machine Translation</span>  
