@@ -24,6 +24,10 @@
 - [x] 2021/1/11 [Chinese Grammatical Errors Diagnosis System Based on BERT at NLPTEA-2020 CGED Shared Task](#bert-bilstm-crf-3gram-seq2seq) [AACL-2020]
 - [x] 2021/1/11 [Chinese Grammatical Error Detection Based on BERT Model](#bert-finetuned) [AACL-2020]
 
+## Data aug
+- [x] Improving Grammatical Error Correction with Machine Translation Pairs [EMNLP-2020]
+- [x] A Self-Refinement Strategy for Noise Reduction in Grammatical Error Correction [EMNLP-2020]
+
 ---
 
 ## Seq2Seq
