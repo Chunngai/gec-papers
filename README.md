@@ -1,10 +1,8 @@
 # gec-papers
 
 ## GEC
-- [x] 2021/1/5 [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](#bert)
-- [x] 2021/1/5 [Incorporating BERT into Neural Machine Translation](#bert-nmt) [ICLR-2020]
-- [x] 2021/1/6 [Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction](#bert-gec) [ACL-2020]
-- [x] 2021/1/6 [GECToR - Grammatical Error Correction: Tag, Not Rewrite](#gector) [ACL-2020]
+- [x] 2021/1/6 [Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction](#bert-gec) [ACL-2020] √
+- [x] 2021/1/6 [GECToR - Grammatical Error Correction: Tag, Not Rewrite](#gector) [ACL-2020] √
 - [x] 2021/1/7 [MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking](#maskgec) [AAAI-2020]
 - [x] 2021/1/7 [Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract)](#minimal-supervision) [AAAI-2020]
 - [x] 2021/1/7 [Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model](#bart-gec) [AACL-2020]
@@ -15,9 +13,10 @@
 - [x] 2021/1/11 [Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction](#local-beam-search) [COLING-2020]
 - [x] 2021/1/12 [Seq2Edits: Sequence Transduction Using Span-level Edit Operations](#seq2edits) [EMNLP-2020]
 - [x] 2021/1/12 [Adversarial Grammatical Error Correction](#adversarial) [EMNLP-2020]
+- [x] 2021/1/17 Pseudo-Bidirectional Decoding for Local Sequence Transduction
 
 ## GED
-- [x] 2021/1/6 [基于数据增强和多任务特征学习的中文语法错误检测方法](#chinese-multi-task) [CCL-2020]
+- [x] 2021/1/6 [基于数据增强和多任务特征学习的中文语法错误检测方法](#chinese-multi-task) [CCL-2020] √
 - [x] 2021/1/11 [Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis](#score-based) [AACL-2020]
 - [x] 2021/1/11 [CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared](#bert-crf) [AACL-2020]
 - [x] 2021/1/11 [Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis](#resnet-bert) [AACL-2020]
@@ -27,6 +26,13 @@
 ## Data aug
 - [x] Improving Grammatical Error Correction with Machine Translation Pairs [EMNLP-2020]
 - [x] A Self-Refinement Strategy for Noise Reduction in Grammatical Error Correction [EMNLP-2020]
+
+## Related
+- [x] 2021/1/5 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+- [x] 2021/1/5 [Incorporating BERT into Neural Machine Translation](#bert-nmt) [ICLR-2020] √
+- [x] 2021/1/17 Agreement on Target-Bidirectional LSTMs for Sequence-to-Sequence Learning
+- [x] 2021/1/17 Agreement on Target-bidirectional Neural Machine Translation
+- [x] 2021/1/17 Edinburgh Neural Machine Translation Systems for WMT 16
 
 ---
 
@@ -46,7 +52,7 @@ https://github.com/Katsumata420/generic-pretrained-GEC
 Combines a sequence tagging model for erroneous span detection and a seq2seq model for erroneous span correction to make the GEC process more efficient. The sequence tagging model (BERT-like) looks for spans needing to be corrected by outputting binary vectors, and the seq2seq model receives inputs annotated according to the outputs of the sequence tagging model and only produces outputs corresponding to the detected spans. Pseudo-data is used for pre-training the ESD and ESC models.
 
 ## Seq2Edits
-1. <span id="seq2edits">[EMNLP-2020] Seq2Edits: Sequence Transduction Using Span-level Edit Operations]</span>  
+1. <span id="seq2edits">[EMNLP-2020] Seq2Edits: Sequence Transduction Using Span-level Edit Operations</span>  
 Proposes a method for tasks containing many overlaps such as GEC. Uses Transformer with the decoder modified. The model receives a source sentence and at each inference time-step outputs a 3-tuple  which corresponds to an edit operation (error tag, source span end position, replacement). The error tag provides clear explanation. The paper conducts experiments on 5 NLP tasks containing many overlaps. Experiments with and without pretraining are conducted.  
 (Not very clear about the modified decoder.)  
 https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/models/research/transformer_seq2edits.py
