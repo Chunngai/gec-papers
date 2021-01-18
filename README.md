@@ -13,7 +13,7 @@
 - [x] 2021/1/11 [Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction](#local-beam-search) [COLING-2020]
 - [x] 2021/1/12 [Seq2Edits: Sequence Transduction Using Span-level Edit Operations](#seq2edits) [EMNLP-2020]
 - [x] 2021/1/12 [Adversarial Grammatical Error Correction](#adversarial) [EMNLP-2020]
-- [x] 2021/1/17 Pseudo-Bidirectional Decoding for Local Sequence Transduction
+- [x] 2021/1/17 Pseudo-Bidirectional Decoding for Local Sequence Transduction [EMNLP-2020]
 
 ## GED
 - [x] 2021/1/6 [基于数据增强和多任务特征学习的中文语法错误检测方法](#chinese-multi-task) [CCL-2020] √
@@ -30,8 +30,8 @@
 ## Related
 - [x] 2021/1/5 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 - [x] 2021/1/5 [Incorporating BERT into Neural Machine Translation](#bert-nmt) [ICLR-2020] √
-- [x] 2021/1/17 Agreement on Target-Bidirectional LSTMs for Sequence-to-Sequence Learning
-- [x] 2021/1/17 Agreement on Target-bidirectional Neural Machine Translation
+- [x] 2021/1/17 Agreement on Target-Bidirectional LSTMs for Sequence-to-Sequence Learning [AAAI-2016]
+- [x] 2021/1/17 Agreement on Target-bidirectional Neural Machine Translation [NAACL-2016]
 - [x] 2021/1/17 Edinburgh Neural Machine Translation Systems for WMT 16
 
 ---
