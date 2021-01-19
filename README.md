@@ -5,15 +5,19 @@
 - [x] 2021/1/6 [GECToR - Grammatical Error Correction: Tag, Not Rewrite](#gector) [ACL-2020] √
 - [x] 2021/1/7 [MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking](#maskgec) [AAAI-2020]
 - [x] 2021/1/7 [Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract)](#minimal-supervision) [AAAI-2020]
-- [x] 2021/1/7 [Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model](#bart-gec) [AACL-2020]
+- [x] 2021/1/7 [Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model](#bart-gec) [AACL-2020] √
 - [x] 2021/1/9 [Chinese Grammatical Correction Using BERT-based Pre-trained Model](#chinese-bert-gec) [IJCNLP-2020]
 - [x] 2021/1/10 [Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction](#efficiency) [EMNLP-2020]
-- [x] 2021/1/10 [Heterogeneous Recycle Generation for Chinese Grammatical Correction](#heterogeneous) [COLING-2020]
+- [x] 2021/1/10 [Heterogeneous Recycle Generation for Chinese Grammatical Correction](#heterogeneous) [COLING-2020] √
 - [x] 2021/1/10 [TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020](#chinese-bert-init) [AACL-2020]
 - [x] 2021/1/11 [Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction](#local-beam-search) [COLING-2020]
 - [x] 2021/1/12 [Seq2Edits: Sequence Transduction Using Span-level Edit Operations](#seq2edits) [EMNLP-2020]
 - [x] 2021/1/12 [Adversarial Grammatical Error Correction](#adversarial) [EMNLP-2020]
 - [x] 2021/1/17 Pseudo-Bidirectional Decoding for Local Sequence Transduction [EMNLP-2020]
+- [x] 2021/1/18 Neural Grammatical Error Correction Systems with Unsupervised Pre-training on Synthetic Data [ACL-2019]
+- [x] 2021/1/18 An Empirical Study of Incorporating Pseudo Data into Grammatical Error Correction [ACL-2019]
+- [x] 2021/1/19 Parallel Iterative Edit Models for Local Sequence Transduction [EMNLP-2019]
+- [x] 2021/1/19 Improving Grammatical Error Correction via Pre-Training a Copy-Augmented Architecture with Unlabeled Data [NAACL-2019]
 
 ## GED
 - [x] 2021/1/6 [基于数据增强和多任务特征学习的中文语法错误检测方法](#chinese-multi-task) [CCL-2020] √
