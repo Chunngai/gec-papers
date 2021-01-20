@@ -18,6 +18,7 @@
 - [x] 2021/1/18 An Empirical Study of Incorporating Pseudo Data into Grammatical Error Correction [ACL-2019]
 - [x] 2021/1/19 Parallel Iterative Edit Models for Local Sequence Transduction [EMNLP-2019]
 - [x] 2021/1/19 Improving Grammatical Error Correction via Pre-Training a Copy-Augmented Architecture with Unlabeled Data [NAACL-2019]
+- [x] 2021/1/20 A Neural Grammatical Error Correction System Built On Better Pre-training and Sequential Transfer Learning [ACL-2020]
 
 ## GED
 - [x] 2021/1/6 [基于数据增强和多任务特征学习的中文语法错误检测方法](#chinese-multi-task) [CCL-2020] √
