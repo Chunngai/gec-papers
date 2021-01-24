@@ -72,7 +72,7 @@
 | 6 | 21/1/11 | Chinese Grammatical Error Detection Based on BERT Model | AACL-2020 |  | [Note](#bert-finetuned) |
 | 7 | 21/1/21 | Multi-Head Multi-Layer Attention to Deep Language Representations for Grammatical Error Detection | CICLING-2019 |  |  |
 
-## Data aug
+## DA
 <!-- - [x] Improving Grammatical Error Correction with Machine Translation Pairs [EMNLP-2020]
 - [x] A Self-Refinement Strategy for Noise Reduction in Grammatical Error Correction [EMNLP-2020] -->
 
@@ -97,7 +97,7 @@
 | 2* | 21/1/5 | Incorporating BERT into Neural Machine Translation | ICLR-2020 | [Code](https://github.com/bert-nmt/bert-nmt) | [Note](#bert-nmt) |
 | 3 | 21/1/17 | Agreement on Target-Bidirectional LSTMs for Sequence-to-Sequence Learning | AAAI-2016 |  |  |
 | 4 | 21/1/17 | Agreement on Target-bidirectional Neural Machine Translation | NAACL-2016 |  |  |
-| 5 | 21/1/17 | Edinburgh Neural Machine Translation Systems for WMT 16 | WMT-2016 |  |  |
+| 5* | 21/1/17 | Edinburgh Neural Machine Translation Systems for WMT 16 | WMT-2016 |  |  |
 | 6 | 21/1/22 | LIMIT-BERT: Linguistic Informed Multi-Task BERT | EMNLP-2020 |  |  |
 | 7 | 21/1/23 | Distilling Knowledge Learned in BERT for Text Generation | ACL-2020 |  |  |
 | 8 | 21/1/23 | Towards Making the Most of BERT in Neural Machine Translation | AAAI-2020 |  |  |
