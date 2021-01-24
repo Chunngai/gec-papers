@@ -1,7 +1,7 @@
 # gec-papers
 
 ## GEC
-- [x] 2021/1/6 [Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction](#bert-gec) [ACL-2020] √
+<!-- - [x] 2021/1/6 [Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction](#bert-gec) [ACL-2020] √
 - [x] 2021/1/6 [GECToR - Grammatical Error Correction: Tag, Not Rewrite](#gector) [ACL-2020] √
 - [x] 2021/1/7 [MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking](#maskgec) [AAAI-2020]
 - [x] 2021/1/7 [Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract)](#minimal-supervision) [AAAI-2020]
@@ -24,31 +24,65 @@
 - [x] 2021/1/21 Noisy Channel for Low Resource Grammatical Error Correction [ACL-2019]
 - [x] 2021/1/22 The BLCU System in the BEA 2019 Shared Task [ACL-2019]
 - [x] 2021/1/22 The AIP-Tohoku System at the BEA-2019 Shared Task [ACL-2019]
-- [x] 2021/1/22 CUNI System for the Building Educational Applications 2019 Shared Task: Grammatical Error Correction [ACL-2019]
+- [x] 2021/1/22 CUNI System for the Building Educational Applications 2019 Shared Task: Grammatical Error Correction [ACL-2019] -->
 
-<!-- | Index | Date | Paper | Conference | Note |
-| :-: | --- | --- | --- | --- |
-| 1 | 2021/1/6 | Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction | ACL-2020 | [Note](#bert-gec) |
-| 2 | 2021/1/6 | GECToR - Grammatical Error Correction: Tag, Not Rewrite | ACL-2020 | [Note](#gector) |
-| 3 | 2021/1/7 | MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking | AAAI-2020 | [Note](#maskgec) |
-| 4 | 2021/1/7 | Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract) | AAAI-2020 | [Note](#minimal-supervision) |
-| 5 | 2021/1/7 | Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model | AACL-2020 | [Note](#bart-gec) | -->
+| Index | Date | Paper | Conference | Code | Note |
+| :-: | --- | --- | --- | --- | --- |
+| 1 | 2021/1/6 | Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction | ACL-2020 | [Code](https://github.com/kanekomasahiro/bert-gec) | [Note](#bert-gec) |
+| 2 | 2021/1/6 | GECToR - Grammatical Error Correction: Tag, Not Rewrite | ACL-2020 | [Code](https://github.com/grammarly/gector) | [Note](#gector) |
+| 3 | 2021/1/7 | MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking | AAAI-2020 |  | [Note](#maskgec) |
+| 4 | 2021/1/7 | Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract) | AAAI-2020 |  | [Note](#minimal-supervision) |
+| 5 | 2021/1/7 | Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model | AACL-2020 | [Code](https://github.com/Katsumata420/generic-pretrained-GEC) | [Note](#bart-gec) |
+| 6 | 2021/1/9 | Chinese Grammatical Correction Using BERT-based Pre-trained Model | IJCNLP-2020 |  | [Note](#chinese-bert-gec) |
+| 7 | 2021/1/10 | Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction | EMNLP-2020 |  | [Note](#efficiency) |
+| 8 | 2021/1/10 | Heterogeneous Recycle Generation for Chinese Grammatical Correction | COLING-2020 |  | [Note](#heterogeneous) |
+| 9 | 2021/1/10 | TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020 | AACL-2020 |  | [Note](#chinese-bert-init) |
+| 10 | 2021/1/11 | Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction | COLING-2020 |  | [Note](#local-beam-search) |
+| 11 | 2021/1/12 | Seq2Edits: Sequence Transduction Using Span-level Edit Operations | EMNLP-2020 | [Code](https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/models/research/transformer_seq2edits.py) | [Note](#seq2edits) |
+| 12 | 2021/1/12 | Adversarial Grammatical Error Correction | EMNLP-2020 |  | [Note](#adversarial) |
+| 13 | 2021/1/17 | Pseudo-Bidirectional Decoding for Local Sequence Transduction | EMNLP-2020 |  |  |
+| 14 | 2021/1/18 | Neural Grammatical Error Correction Systems with Unsupervised Pre-training on Synthetic Data | ACL-2019 |  |  |
+| 15 | 2021/1/18 | An Empirical Study of Incorporating Pseudo Data into Grammatical Error Correction | ACL-2019 |  |  |
+| 16 | 2021/1/19 | Parallel Iterative Edit Models for Local Sequence Transduction | EMNLP-2019 |  |  |
+| 17 | 2021/1/19 | Improving Grammatical Error Correction via Pre-Training a Copy-Augmented Architecture with Unlabeled Data | NAACL-2019 |  |  |
+| 18 | 2021/1/20 | A Neural Grammatical Error Correction System Built On Better Pre-training and Sequential Transfer Learning | ACL-2020 |  |  |
+| 19 | 2021/1/20 | The Unreasonable Effectiveness of Transformer Language Models in Grammatical Error Correction | ACL-2019 |  |  |
+| 20 | 2021/1/20 | TMU Transformer System Using BERT for Re-ranking at BEA 2019 Grammatical Error Correction on Restricted Track | ACL-2019 |  |  |
+| 21 | 2021/1/21 | Noisy Channel for Low Resource Grammatical Error Correction | ACL-2019 |  |  |
+| 22 | 2021/1/22 | The BLCU System in the BEA 2019 Shared Task | ACL-2019 |  |  |
+| 23 | 2021/1/22 | The AIP-Tohoku System at the BEA-2019 Shared Task | ACL-2019 |  |  |
+| 24 | 2021/1/22 | CUNI System for the Building Educational Applications 2019 Shared Task: Grammatical Error Correction | ACL-2019 |  |  |
 
 ## GED
-- [x] 2021/1/6 [基于数据增强和多任务特征学习的中文语法错误检测方法](#chinese-multi-task) [CCL-2020] √
+<!-- - [x] 2021/1/6 [基于数据增强和多任务特征学习的中文语法错误检测方法](#chinese-multi-task) [CCL-2020] √
 - [x] 2021/1/11 [Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis](#score-based) [AACL-2020]
 - [x] 2021/1/11 [CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared](#bert-crf) [AACL-2020]
 - [x] 2021/1/11 [Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis](#resnet-bert) [AACL-2020]
 - [x] 2021/1/11 [Chinese Grammatical Errors Diagnosis System Based on BERT at NLPTEA-2020 CGED Shared Task](#bert-bilstm-crf-3gram-seq2seq) [AACL-2020]
 - [x] 2021/1/11 [Chinese Grammatical Error Detection Based on BERT Model](#bert-finetuned) [AACL-2020]
-- [x] 2021/1/21 Multi-Head Multi-Layer Attention to Deep Language Representations for Grammatical Error Detection [CICLING-2019]
+- [x] 2021/1/21 Multi-Head Multi-Layer Attention to Deep Language Representations for Grammatical Error Detection [CICLING-2019] -->
+
+| Index | Date | Paper | Conference | Code | Note |
+| :-: | --- | --- | --- | --- | --- |
+| 1 | 2021/1/6 | 基于数据增强和多任务特征学习的中文语法错误检测方法 | CCL-2020 |  | [Note](#chinese-multi-task) |
+| 2 | 2021/1/11 | Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis | AACL-2020 |  | [Note](#score-based) |
+| 3 | 2021/1/11 | CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared | AACL-2020 |  | [Note](#bert-crf) |
+| 4 | 2021/1/11 | Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis | AACL-2020 |  | [Note](#resnet-bert) |
+| 5 | 2021/1/11 | Chinese Grammatical Errors Diagnosis System Based on BERT at NLPTEA-2020 CGED Shared Task | AACL-2020 |  | [Note](#bert-bilstm-crf-3gram-seq2seq) |
+| 6 | 2021/1/11 | Chinese Grammatical Error Detection Based on BERT Model | AACL-2020 |  | [Note](#bert-finetuned) |
+| 7 | 2021/1/21 | Multi-Head Multi-Layer Attention to Deep Language Representations for Grammatical Error Detection | CICLING-2019 |  |  |
 
 ## Data aug
-- [x] Improving Grammatical Error Correction with Machine Translation Pairs [EMNLP-2020]
-- [x] A Self-Refinement Strategy for Noise Reduction in Grammatical Error Correction [EMNLP-2020]
+<!-- - [x] Improving Grammatical Error Correction with Machine Translation Pairs [EMNLP-2020]
+- [x] A Self-Refinement Strategy for Noise Reduction in Grammatical Error Correction [EMNLP-2020] -->
+
+| Index | Date | Paper | Conference | Code | Note |
+| :-: | --- | --- | --- | --- | --- |
+| 1 | - | Improving Grammatical Error Correction with Machine Translation Pairs | EMNLP-2020 |  |  |
+| 2 | - | A Self-Refinement Strategy for Noise Reduction in Grammatical Error Correction | EMNLP-2020 |  |  |
 
 ## Related
-- [x] 2021/1/5 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+<!-- - [x] 2021/1/5 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 - [x] 2021/1/5 [Incorporating BERT into Neural Machine Translation](#bert-nmt) [ICLR-2020] √
 - [x] 2021/1/17 Agreement on Target-Bidirectional LSTMs for Sequence-to-Sequence Learning [AAAI-2016]
 - [x] 2021/1/17 Agreement on Target-bidirectional Neural Machine Translation [NAACL-2016]
@@ -56,7 +90,19 @@
 - [x] 2021/1/22 LIMIT-BERT: Linguistic Informed Multi-Task BERT [EMNLP-2020]
 - [x] 2021/1/23 Distilling Knowledge Learned in BERT for Text Generation [ACL-2020]
 - [x] 2021/1/23 Towards Making the Most of BERT in Neural Machine Translation [AAAI-2020]
-- [x] 2021/1/23 Acquiring Knowledge from Pre-Trained Model to Neural Machine Translation [AAAI-2020]
+- [x] 2021/1/23 Acquiring Knowledge from Pre-Trained Model to Neural Machine Translation [AAAI-2020] -->
+
+| Index | Date | Paper | Conference | Code | Note |
+| :-: | --- | --- | --- | --- | --- |
+| 1 | 2021/1/5 | BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding | NAACL-2019 |  |  |
+| 2 | 2021/1/5 | Incorporating BERT into Neural Machine Translation | ICLR-2020 | [Code](https://github.com/bert-nmt/bert-nmt) | [Note](#bert-nmt) |
+| 3 | 2021/1/17 | Agreement on Target-Bidirectional LSTMs for Sequence-to-Sequence Learning | AAAI-2016 |  |  |
+| 4 | 2021/1/17 | Agreement on Target-bidirectional Neural Machine Translation | NAACL-2016 |  |  |
+| 5 | 2021/1/17 | Edinburgh Neural Machine Translation Systems for WMT 16 | WMT-2016 |  |  |
+| 6 | 2021/1/22 | LIMIT-BERT: Linguistic Informed Multi-Task BERT | EMNLP-2020 |  |  |
+| 7 | 2021/1/23 | Distilling Knowledge Learned in BERT for Text Generation | ACL-2020 |  |  |
+| 8 | 2021/1/23 | Towards Making the Most of BERT in Neural Machine Translation | AAAI-2020 |  |  |
+| 9 | 2021/1/23 | Acquiring Knowledge from Pre-Trained Model to Neural Machine Translation | AAAI-2020 |  |  |
 
 ---
 
