@@ -30,11 +30,11 @@
 | :-: | --- | --- | --- | --- | --- |
 | 1* | 21/1/6 | Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction | ACL-2020 | [Code](https://github.com/kanekomasahiro/bert-gec) | [Note](#bert-gec) |
 | 2* | 21/1/6 | GECToR - Grammatical Error Correction: Tag, Not Rewrite | ACL-2020 | [Code](https://github.com/grammarly/gector) | [Note](#gector) |
-| 3 | 21/1/7 | MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking | AAAI-2020 |  | [Note](#maskgec) |
+| 3* | 21/1/7 | MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking | AAAI-2020 |  | [Note](#maskgec) |
 | 4 | 21/1/7 | Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract) | AAAI-2020 |  | [Note](#minimal-supervision) |
 | 5* | 21/1/7 | Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model | AACL-2020 | [Code](https://github.com/Katsumata420/generic-pretrained-GEC) | [Note](#bart-gec) |
 | 6 | 21/1/9 | Chinese Grammatical Correction Using BERT-based Pre-trained Model | IJCNLP-2020 |  | [Note](#chinese-bert-gec) |
-| 7 | 21/1/10 | Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction | EMNLP-2020 |  | [Note](#efficiency) |
+| 7* | 21/1/10 | Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction | EMNLP-2020 |  | [Note](#efficiency) |
 | 8* | 21/1/10 | Heterogeneous Recycle Generation for Chinese Grammatical Correction | COLING-2020 |  | [Note](#heterogeneous) |
 | 9 | 21/1/10 | TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020 | AACL-2020 |  | [Note](#chinese-bert-init) |
 | 10 | 21/1/11 | Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction | COLING-2020 |  | [Note](#local-beam-search) |
