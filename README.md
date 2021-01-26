@@ -102,6 +102,7 @@
 | 7 | 21/1/23 | Distilling Knowledge Learned in BERT for Text Generation | ACL-2020 |  |  |
 | 8 | 21/1/23 | Towards Making the Most of BERT in Neural Machine Translation | AAAI-2020 |  |  |
 | 9 | 21/1/23 | Acquiring Knowledge from Pre-Trained Model to Neural Machine Translation | AAAI-2020 |  |  |
+| 10 | 21/1/26 | Improving Sequence-to-Sequence Pre-training via Sequence Span Rewriting | - |  |  |
 
 ---
 
