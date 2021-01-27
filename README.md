@@ -52,6 +52,7 @@
 | 22 | 21/1/22 | The BLCU System in the BEA 2019 Shared Task (Yang et al.) | ACL-2019 |  |  |
 | 23 | 21/1/22 | The AIP-Tohoku System at the BEA-2019 Shared Task (Asano et al.) | ACL-2019 |  |  |
 | 24 | 21/1/22 | CUNI System for the Building Educational Applications 2019 Shared Task: Grammatical Error Correction (Náplava and Straka) | ACL-2019 |  |  |
+| 25 | 21/1/27 | Cross-Sentence Grammatical Error Correction (Chollampatt et al.) | ACL-2019 |  |  |
 
 ## GED
 <!-- - [x] 2021/1/6 [基于数据增强和多任务特征学习的中文语法错误检测方法](#chinese-multi-task) [CCL-2020] √
