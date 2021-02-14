@@ -40,7 +40,7 @@
 | 10 | 21/1/11 | Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction (Hotate et al.) | COLING-2020 |  | [Note](#local-beam-search) |
 | 11 | 21/1/12 | Seq2Edits: Sequence Transduction Using Span-level Edit Operations (Stahlberg and Kumar) | EMNLP-2020 | [Code](https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/models/research/transformer_seq2edits.py) | [Note](#seq2edits) |
 | 12 | 21/1/12 | Adversarial Grammatical Error Correction (Raheja and Alikaniotis) | EMNLP-2020 |  | [Note](#adversarial) |
-| 13 | 21/1/17 | Pseudo-Bidirectional Decoding for Local Sequence Transduction (Zhou et al.) | EMNLP-2020 |  |  |
+| 13* | 21/1/17 | Pseudo-Bidirectional Decoding for Local Sequence Transduction (Zhou et al.) | EMNLP-2020 |  |  |
 | 14 | 21/1/18 | Neural Grammatical Error Correction Systems with Unsupervised Pre-training on Synthetic Data (Grundkiewicz et al.) | ACL-2019 |  |  |
 | 15 | 21/1/18 | An Empirical Study of Incorporating Pseudo Data into Grammatical Error Correction (Kiyono et al.) | ACL-2019 |  |  |
 | 16 | 21/1/19 | Parallel Iterative Edit Models for Local Sequence Transduction (Awasthi et al.) | EMNLP-2019 |  |  |
