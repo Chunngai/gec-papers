@@ -1,4 +1,60 @@
 # gec-papers
+**2022/5/18: Updating. The papers will be organized by publication years. Note that the key words are not from the paper authors. They are created by the repo author.**
+
+## GEC Papers 2022
+1. **Ensembling and Knowledge Distilling of Large Sequence Taggers for Grammatical Error Correction**
++ Authors: Maksym Tarnavskyi, Artem Chernodub, Kostiantyn Omelianchuk
++ Conference: ACL
++ Link: https://aclanthology.org/2022.acl-long.266/
++ Code: https://github.com/MaksTarnavskyi/gector-large
++ <details>
+    <summary>Abstract</summary>
+    In this paper, we investigate improvements to the GEC sequence tagging architecture with a focus on ensembling of recent cutting-edge Transformer-based encoders in Large configurations. We encourage ensembling models by majority votes on span-level edits because this approach is tolerant to the model architecture and vocabulary size. Our best ensemble achieves a new SOTA result with an F0.5 score of 76.05 on BEA-2019 (test), even without pre-training on synthetic datasets. In addition, we perform knowledge distillation with a trained ensemble to generate new synthetic training datasets, “Troy-Blogs” and “Troy-1BW”. Our best single sequence tagging model that is pretrained on the generated Troy- datasets in combination with the publicly available synthetic PIE dataset achieves a near-SOTA result with an F0.5 score of 73.21 on BEA-2019 (test). The code, datasets, and trained models are publicly available.
+  </details>
+
+2. **Interpretability for Language Learners Using Example-Based Grammatical Error Correction**
++ Authors: Masahiro Kaneko, Sho Takase, Ayana Niwa, Naoaki Okazaki
++ Conference: ACL
++ Link: https://aclanthology.org/2022.acl-long.496/
++ Code: https://github.com/kanekomasahiro/eb-gec
++ <details>
+    <summary>Abstract</summary>
+    Grammatical Error Correction (GEC) should not focus only on high accuracy of corrections but also on interpretability for language learning.However, existing neural-based GEC models mainly aim at improving accuracy, and their interpretability has not been explored.A promising approach for improving interpretability is an example-based method, which uses similar retrieved examples to generate corrections. In addition, examples are beneficial in language learning, helping learners understand the basis of grammatically incorrect/correct texts and improve their confidence in writing.Therefore, we hypothesize that incorporating an example-based method into GEC can improve interpretability as well as support language learners.In this study, we introduce an Example-Based GEC (EB-GEC) that presents examples to language learners as a basis for a correction result.The examples consist of pairs of correct and incorrect sentences similar to a given input and its predicted correction.Experiments demonstrate that the examples presented by EB-GEC help language learners decide to accept or refuse suggestions from the GEC output.Furthermore, the experiments also show that retrieved examples improve the accuracy of corrections.
+  </details>
++ Key Words: Interpretability; kNN-MT; Seq2Seq; Application Oriented
+
+3. **Adjusting the Precision-Recall Trade-Off with Align-and-Predict Decoding for Grammatical Error Correction**
++ Authors: Xin Sun, Houfeng Wang
++ Conference: ACL
++ Link: https://aclanthology.org/2022.acl-short.77/
++ Code: https://github.com/AutoTemp/Align-and-Predict
++ <details>
+    <summary>Abstract</summary>
+    Modern writing assistance applications are always equipped with a Grammatical Error Correction (GEC) model to correct errors in user-entered sentences. Different scenarios have varying requirements for correction behavior, e.g., performing more precise corrections (high precision) or providing more candidates for users (high recall). However, previous works adjust such trade-off only for sequence labeling approaches. In this paper, we propose a simple yet effective counterpart – Align-and-Predict Decoding (APD) for the most popular sequence-to-sequence models to offer more flexibility for the precision-recall trade-off. During inference, APD aligns the already generated sequence with input and adjusts scores of the following tokens. Experiments in both English and Chinese GEC benchmarks show that our approach not only adapts a single model to precision-oriented and recall-oriented inference, but also maximizes its potential to achieve state-of-the-art results. Our code is available at https://github.com/AutoTemp/Align-and-Predict.
+  </details>
++ Key Words: Precision-Recall Trade-Off; Beam Search; Seq2Seq; Application Oriented
+
+4. **“Is Whole Word Masking Always Better for Chinese BERT?”: Probing on Chinese Grammatical Error Correction**
++ Authors: Yong Dai, Linyang Li, Cong Zhou, Zhangyin Feng, Enbo Zhao, Xipeng Qiu, Piji Li, Duyu Tang
++ Conference: ACL Findings
++ Link: https://aclanthology.org/2022.findings-acl.1/
++ <details>
+    <summary>Abstract</summary>
+    Whole word masking (WWM), which masks all subwords corresponding to a word at once, makes a better English BERT model. For the Chinese language, however, there is no subword because each token is an atomic character. The meaning of a word in Chinese is different in that a word is a compositional unit consisting of multiple characters. Such difference motivates us to investigate whether WWM leads to better context understanding ability for Chinese BERT. To achieve this, we introduce two probing tasks related to grammatical error correction and ask pretrained models to revise or insert tokens in a masked language modeling manner. We construct a dataset including labels for 19,075 tokens in 10,448 sentences. We train three Chinese BERT models with standard character-level masking (CLM), WWM, and a combination of CLM and WWM, respectively. Our major findings are as follows: First, when one character needs to be inserted or replaced, the model trained with CLM performs the best. Second, when more than one character needs to be handled, WWM is the key to better performance. Finally, when being fine-tuned on sentence-level downstream tasks, models trained with different masking strategies perform comparably.
+  </details>
+
+5. **Type-Driven Multi-Turn Corrections for Grammatical Error Correction**
++ Authors: Shaopeng Lai, Qingyu Zhou, Jiali Zeng, Zhongli Li, Chao Li, Yunbo Cao, Jinsong Su
++ Conference: ACL Findings
++ Link: https://aclanthology.org/2022.findings-acl.254/
++ Code: https://github.com/DeepLearnXMU/TMTC
++ <details>
+    <summary>Abstract</summary>
+    Grammatical Error Correction (GEC) aims to automatically detect and correct grammatical errors. In this aspect, dominant models are trained by one-iteration learning while performing multiple iterations of corrections during inference. Previous studies mainly focus on the data augmentation approach to combat the exposure bias, which suffers from two drawbacks.First, they simply mix additionally-constructed training instances and original ones to train models, which fails to help models be explicitly aware of the procedure of gradual corrections. Second, they ignore the interdependence between different types of corrections.In this paper, we propose a Type-Driven Multi-Turn Corrections approach for GEC. Using this approach, from each training instance, we additionally construct multiple training instances, each of which involves the correction of a specific type of errors. Then, we use these additionally-constructed training instances and the original one to train the model in turn.Experimental results and in-depth analysis show that our approach significantly benefits the model training. Particularly, our enhanced model achieves state-of-the-art single-model performance on English GEC benchmarks. We release our code at Github.
+  </details>
++ Key Words: Edit Operation; Iterative Correction; Sequence Labeling
+
+---
 
 ## GEC
 <!-- - [x] 2021/1/6 [Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction](#bert-gec) [ACL-2020] √
