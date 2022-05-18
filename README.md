@@ -1,5 +1,5 @@
 # gec-papers
-**2022/5/18: Updating. The papers will be organized by publication years. Note that the key words are not from the paper authors. They are created by the repo author.**
+**2022/5/18: Updating. The papers will be organized by publication years. Note that the key words are not from the paper authors, they are created by the repo author.**
 
 ## GEC Papers 2022
 1. **Ensembling and Knowledge Distilling of Large Sequence Taggers for Grammatical Error Correction**
