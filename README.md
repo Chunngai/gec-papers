@@ -1,9 +1,17 @@
-# gec-papers
+# Paper List of Grammatical Error Correction
+
+## Introduction
+This repo lists papers of **Grammatical Error Correction (GEC)** and papers of related topics,
+such as **Grammatical Error Detection (GED)** and **Spoken Grammatical Error Correction (SGEC)**.
 
 ## Update Notes
-**2022/7/28: {D}: Papers of GEC/GED datasets. {LOTE}: Papers of GEC/GED for languages other than English.**
+**2022/7/28: Added some symbols. 
+{D}: Papers of GEC/GED datasets. 
+{LOTE}: Papers of GEC/GED for languages other than English.**
 
-**2022/5/18: Updating. The papers will be organized by publication years. Note that the key words are not from the paper authors, they are created by the repo author.**
+**2022/5/18: Updating. The papers will be organized by publication years. 
+Note that the key words are not from the paper authors, 
+they are created by the repo author.**
 
 ## GEC Papers 2022
 1. **Ensembling and Knowledge Distilling of Large Sequence Taggers for Grammatical Error Correction**
