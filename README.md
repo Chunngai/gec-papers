@@ -47,7 +47,7 @@ they are created by the repo author.**
   </details>
 + Key Words: Precision-Recall Trade-Off; Beam Search; Seq2Seq; Application Oriented
 
-4. **“Is Whole Word Masking Always Better for Chinese BERT?”: Probing on Chinese Grammatical Error Correction**
+4. **{LOTE} “Is Whole Word Masking Always Better for Chinese BERT?”: Probing on Chinese Grammatical Error Correction**
 + Authors: Yong Dai, Linyang Li, Cong Zhou, Zhangyin Feng, Enbo Zhao, Xipeng Qiu, Piji Li, Duyu Tang
 + Conference: ACL Findings
 + Link: https://aclanthology.org/2022.findings-acl.1/
@@ -88,7 +88,7 @@ they are created by the repo author.**
     Currently available grammatical error correction (GEC) datasets are compiled using essays or other long-form text written by language learners, limiting the applicability of these datasets to other domains such as informal writing and conversational dialog. In this paper, we present a novel GEC dataset consisting of parallel original and corrected utterances drawn from open-domain chatbot conversations; this dataset is, to our knowledge, the first GEC dataset targeted to a human-machine conversational setting. We also present a detailed annotation scheme which ranks errors by perceived impact on comprehension, making our dataset more representative of real-world language learning applications. To demonstrate the utility of the dataset, we use our annotated data to fine-tune a state-of-the-art GEC model. Experimental results show the effectiveness of our data in improving GEC model performance in a conversational scenario.
   </details>
 
-8. **{D} MuCGEC: a Multi-Reference Multi-Source Evaluation Dataset for Chinese Grammatical Error Correction**
+8. **{D, LOTE} MuCGEC: a Multi-Reference Multi-Source Evaluation Dataset for Chinese Grammatical Error Correction**
 + Authors: Yue Zhang, Zhenghua Li, Zuyi Bao, Jiacheng Li, Bo Zhang, Chen Li, Fei Huang, Min Zhang
 + Conference: NAACL
 + Link: https://aclanthology.org/2022.naacl-main.227/
@@ -108,8 +108,37 @@ they are created by the repo author.**
     We introduce a large and diverse Czech corpus annotated for grammatical error correction (GEC) with the aim to contribute to the still scarce data resources in this domain for languages other than English. The Grammar Error Correction Corpus for Czech (GECCC) offers a variety of four domains, covering error distributions ranging from high error density essays written by non-native speakers, to website texts, where errors are expected to be much less common. We compare several Czech GEC systems, including several Transformer-based ones, setting a strong baseline to future research. Finally, we meta-evaluate common GEC metrics against human judgments on our data. We make the new Czech GEC corpus publicly available under the CC BY-SA 4.0 license at http://hdl.handle.net/11234/1-4639.
   </details>
 
+10. **Grammatical Error Correction: Are We There Yet?**
++ Authors: Muhammad Reza Qorib, Hwee Tou Ng
++ Conference: COLING
++ Link: https://aclanthology.org/2022.coling-1.246/
++ <details>
+    <summary>Abstract</summary>
+    There has been much recent progress in natural language processing, and grammatical error correction (GEC) is no exception. We found that state-of-the-art GEC systems (T5 and GECToR) outperform humans by a wide margin on the CoNLL-2014 test set, a benchmark GEC test corpus, as measured by the standard F0.5 evaluation metric. However, a careful examination of their outputs reveals that there are still classes of errors that they fail to correct. This suggests that creating new test data that more accurately measure the true performance of GEC systems constitutes important future work.
+  </details>
+
+11. **{LOTE} Position Offset Label Prediction for Grammatical Error Correction**
++ Authors: Xiuyu Wu, Jingsong Yu, Xu Sun, Yunfang Wu
++ Conference: COLING
++ Link: https://aclanthology.org/2022.coling-1.480/
++ Code: Not released yet.
++ <details>
+    <summary>Abstract</summary>
+    We introduce a novel position offset label prediction subtask to the encoder-decoder architecture for grammatical error correction (GEC) task. To keep the meaning of the input sentence unchanged, only a few words should be inserted or deleted during correction, and most of tokens in the erroneous sentence appear in the paired correct sentence with limited position movement. Inspired by this observation, we design an auxiliary task to predict position offset label (POL) of tokens, which is naturally capable of integrating different correction editing operations into a unified framework. Based on the predicted POL, we further propose a new copy mechanism (P-copy) to replace the vanilla copy module. Experimental results on Chinese, English and Japanese datasets demonstrate that our proposed POL-Pc framework obviously improves the performance of baseline models. Moreover, our model yields consistent performance gain over various data augmentation methods. Especially, after incorporating synthetic data, our model achieves a 38.95 F-0.5 score on Chinese GEC dataset, which outperforms the previous state-of-the-art by a wide margin of 1.98 points.
+  </details>
+
+12. **{LOTE} String Editing Based Chinese Grammatical Error Diagnosis**
++ Authors: Haihua Xie, Xiaoqing Lyu, Xuefei Chen
++ Conference: COLING
++ Link: https://aclanthology.org/2022.coling-1.474/
++ Code: https://github.com/xiebimsa/se-cged
++ <details>
+    <summary>Abstract</summary>
+    Chinese Grammatical Error Diagnosis (CGED) suffers the problems of numerous types of grammatical errors and insufficiency of training data. In this paper, we propose a string editing based CGED model that requires less training data by using a unified workflow to handle various types of grammatical errors. Two measures are proposed in our model to enhance the performance of CGED. First, the detection and correction of grammatical errors are divided into different stages. In the stage of error detection, the model only outputs the types of grammatical errors so that the tag vocabulary size is significantly reduced compared with other string editing based models. Secondly, the correction of some grammatical errors is converted to the task of masked character inference, which has plenty of training data and mature solutions. Experiments on datasets of NLPTEA-CGED demonstrate that our model outperforms other CGED models in many aspects.
+  </details>
+
 ## GED Papers 2022
-1. **Improving Chinese Grammatical Error Detection via Data augmentation by Conditional Error Generation**
+1. **{LOTE} Improving Chinese Grammatical Error Detection via Data augmentation by Conditional Error Generation**
 + Authors: Tianchi Yue, Shulin Liu, Huihui Cai, Tao Yang, Shengkang Song, TingHao Yu
 + Conference: ACL Findings
 + Link: https://aclanthology.org/2022.findings-acl.233/
