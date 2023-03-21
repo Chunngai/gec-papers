@@ -83,6 +83,54 @@ Updating. The papers will be organized by publication years.
     </details>
 [//]: # (+ Key Words: Iterative Correction; Edit Operation; Sequence Labeling)
 
++ **[`en,zh`] SynGEC: Syntax-Enhanced Grammatical Error Correction with a Tailored GEC-Oriented Parser**
+  + Authors: Yue Zhang, Bo Zhang, Zhenghua Li, Zuyi Bao, Chen Li, Min Zhang
+  + Conference: EMNLP
+  + Link: https://aclanthology.org/2022.emnlp-main.162/
+  + Code: https://github.com/HillZhang1999/SynGEC
+  + <details>
+    <summary>Abstract</summary>
+    This work proposes a syntax-enhanced grammatical error correction (GEC) approach named SynGEC that effectively incorporates dependency syntactic information into the encoder part of GEC models. The key challenge for this idea is that off-the-shelf parsers are unreliable when processing ungrammatical sentences. To confront this challenge, we propose to build a tailored GEC-oriented parser (GOPar) using parallel GEC training data as a pivot. First, we design an extended syntax representation scheme that allows us to represent both grammatical errors and syntax in a unified tree structure. Then, we obtain parse trees of the source incorrect sentences by projecting trees of the target correct sentences. Finally, we train GOPar with such projected trees. For GEC, we employ the graph convolution network to encode source-side syntactic information produced by GOPar, and fuse them with the outputs of the Transformer encoder. Experiments on mainstream English and Chinese GEC datasets show that our proposed SynGEC approach consistently and substantially outperforms strong baselines and achieves competitive performance. Our code and data are all publicly available at https://github.com/HillZhang1999/SynGEC.
+  </details>
+
++ **[`en,ru`] Improved grammatical error correction by ranking elementary edits**
+  + Authors: Alexey Sorokin
+  + Conference: EMNLP
+  + Link: https://aclanthology.org/2022.emnlp-main.785/
+  + Code: https://github.com/AlexeySorokin/
+  + <details>
+    <summary>Abstract</summary>
+    We offer a two-stage reranking method for grammatical error correction: the first model serves as edit generator, while the second classifies the proposed edits as correct or false. We show how to use both encoder-decoder and sequence labeling models for the first step of our pipeline. We achieve state-of-the-art quality on BEA 2019 English dataset even using weak BERT-GEC edit generator. Combining our roberta-base scorer with state-of-the-art GECToR edit generator, we surpass GECToR by 2-3%. With a larger model we establish a new SOTA on BEA development and test sets. Our model also sets a new SOTA on Russian, despite using smaller models and less data than the previous approaches.
+  </details>
+
++ **[`zh`] Linguistic Rules-Based Corpus Generation for Native Chinese Grammatical Error Correction**
+  + Authors: Shirong Ma, Yinghui Li, Rongyi Sun, Qingyu Zhou, Shulin Huang, Ding Zhang, Li Yangning, Ruiyang Liu, Zhongli Li, Yunbo Cao, Haitao Zheng, Ying Shen
+  + Conference: EMNLP Findings
+  + Link: https://aclanthology.org/2022.findings-emnlp.40/
+  + Code: https://github.com/masr2000/CLG-CGEC
+  + <details>
+    <summary>Abstract</summary>
+    Chinese Grammatical Error Correction (CGEC) is both a challenging NLP task and a common application in human daily life. Recently, many data-driven approaches are proposed for the development of CGEC research. However, there are two major limitations in the CGEC field: First, the lack of high-quality annotated training corpora prevents the performance of existing CGEC models from being significantly improved. Second, the grammatical errors in widely used test sets are not made by native Chinese speakers, resulting in a significant gap between the CGEC models and the real application. In this paper, we propose a linguistic rules-based approach to construct large-scale CGEC training corpora with automatically generated grammatical errors. Additionally, we present a challenging CGEC benchmark derived entirely from errors made by native Chinese speakers in real-world scenarios. Extensive experiments and detailed analyses not only demonstrate that the training data constructed by our method effectively improves the performance of CGEC models, but also reflect that our benchmark is an excellent resource for further development of the CGEC field.
+  </details>
+
++ **[`zh`] From Spelling to Grammar: A New Framework for Chinese Grammatical Error Correction**
+  + Authors: Xiuyu Wu, Yunfang Wu
+  + Conference: EMNLP Findings
+  + Link: https://aclanthology.org/2022.findings-emnlp.63/
+  + <details>
+    <summary>Abstract</summary>
+    Chinese Grammatical Error Correction (CGEC) aims to generate a correct sentence from an erroneous sequence, where different kinds of errors are mixed. This paper divides the CGEC task into two steps, namely spelling error correction and grammatical error correction. We firstly propose a novel zero-shot approach for spelling error correction, which is simple but effective, obtaining a high precision to avoid error accumulation of the pipeline structure. To handle grammatical error correction, we design part-of-speech (POS) features and semantic class features to enhance the neural network model, and propose an auxiliary task to predict the POS sequence of the target sentence. Our proposed framework achieves a 42.11 F-0.5 score on CGEC dataset without using any synthetic data or data augmentation methods, which outperforms the previous state-of-the-art by a wide margin of 1.30 points. Moreover, our model produces meaningful POS representations that capture different POS words and convey reasonable POS transition rules.
+  </details>
+
++ **[`en,zh`] Sequence-to-Action: Grammatical Error Correction with Action Guided Sequence Generation**
+  + Authors: Jiquan Li, Junliang Guo, Yongxin Zhu, Xin Sheng, Deqiang Jiang, Bo Ren, Linli Xu
+  + Conference: AAAI
+  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/21345
+  + <details>
+    <summary>Abstract</summary>
+    The task of Grammatical Error Correction (GEC) has received remarkable attention with wide applications in Natural Language Processing (NLP) in recent years. While one of the key principles of GEC is to keep the correct parts unchanged and avoid over-correction, previous sequence-to-sequence (seq2seq) models generate results from scratch, which are not guaranteed to follow the original sentence structure and may suffer from the over-correction problem. In the meantime, the recently proposed sequence tagging models can overcome the over-correction problem by only generating edit operations, but are conditioned on human designed language-specific tagging labels. In this paper, we combine the pros and alleviate the cons of both models by proposing a novel Sequence-to-Action (S2A) module. The S2A module jointly takes the source and target sentences as input, and is able to automatically generate a token-level action sequence before predicting each token, where each action is generated from three choices named \texttt{SKIP}, \texttt{COPY} and \texttt{GEN}erate. Then the actions are fused with the basic seq2seq framework to provide final predictions. We conduct experiments on the benchmark datasets of both English and Chinese GEC tasks. Our model consistently outperforms the seq2seq baselines, while being able to significantly alleviate the over-correction problem as well as holding better generality and diversity in the generation results compared to the sequence tagging models.
+  </details>
+
 + **Frustratingly Easy System Combination for Grammatical Error Correction**
   + Authors: Muhammad Qorib, Seung-Hoon Na, Hwee Tou Ng
   + Conference: NAACL
@@ -124,6 +172,24 @@ Updating. The papers will be organized by publication years.
     </details>
 [//]: # (+ Keywords: Language-agnostic Data Augmentation; Pre-trained Language Models)
 
++ **Dynamic Negative Example Construction for Grammatical Error Correction using Contrastive Learning**
+  + Authors: He Junyi, Zhuang Junbin, Li Xia
+  + Conference: CCL
+  + Link: https://aclanthology.org/2022.ccl-1.83/
+  + <details>
+      <summary>Abstract</summary>
+      Grammatical error correction (GEC) aims at correcting texts with different types of grammatical errors into natural and correct forms. Due to the difference of error type distribution and error density, current grammatical error correction systems may over-correct writings and produce a low precision. To address this issue, in this paper, we propose a dynamic negative example construction method for grammatical error correction using contrastive learning. The proposed method can construct sufficient negative examples with diverse grammatical errors, and can be dynamically used during model training. The constructed negative examples are beneficial for the GEC model to correct sentences precisely and suppress the model from over-correction. Experimental results show that our proposed method enhances model precision, proving the effectiveness of our method.
+    </details>
+  
++ **[`el`] Enriching Grammatical Error Correction Resources for Modern Greek**
+  + Authors: Katerina Korre, John Pavlopoulos
+  + Conference: LREC
+  + Link: https://aclanthology.org/2022.lrec-1.532/
+  + <details>
+      <summary>Abstract</summary>
+      Grammatical Error Correction (GEC), a task of Natural Language Processing (NLP), is challenging for underepresented languages. This issue is most prominent in languages other than English. This paper addresses the issue of data and system sparsity for GEC purposes in the modern Greek Language. Following the most popular current approaches in GEC, we develop and test an MT5 multilingual text-to-text transformer for Greek. To our knowledge this the first attempt to create a fully-fledged GEC model for Greek. Our evaluation shows that our system reaches up to 52.63% F0.5 score on part of the Greek Native Corpus (GNC), which is 16% below the winning system of the BEA-19 shared task on English GEC. In addition, we provide an extended version of the Greek Learner Corpus (GLC), on which our model reaches up to 22.76% F0.5. Previous versions did not include corrections with the annotations which hindered the potential development of efficient GEC systems. For that reason we provide a new set of corrections. This new dataset facilitates an exploration of the generalisation abilities and robustness of our system, given that the assessment is conducted on learner data while the training on native data.
+    </details>
+
 ### GEC Datasets
 + **ErAConD: Error Annotated Conversational Dialog Dataset for Grammatical Error Correction**
   + Authors: Xun Yuan, Derek Pham, Sam Davidson, Zhou Yu
@@ -135,6 +201,16 @@ Updating. The papers will be organized by publication years.
       Currently available grammatical error correction (GEC) datasets are compiled using essays or other long-form text written by language learners, limiting the applicability of these datasets to other domains such as informal writing and conversational dialog. In this paper, we present a novel GEC dataset consisting of parallel original and corrected utterances drawn from open-domain chatbot conversations; this dataset is, to our knowledge, the first GEC dataset targeted to a human-machine conversational setting. We also present a detailed annotation scheme which ranks errors by perceived impact on comprehension, making our dataset more representative of real-world language learning applications. To demonstrate the utility of the dataset, we use our annotated data to fine-tune a state-of-the-art GEC model. Experimental results show the effectiveness of our data in improving GEC model performance in a conversational scenario.
     </details>
 
++ **FCGEC: Fine-Grained Corpus for Chinese Grammatical Error Correction**
+  + Authors: Lvxiaowei Xu, Jianwang Wu, Jiawei Peng, Jiayu Fu, Ming Cai
+  + Conference: EMNLP Findings
+  + Link: https://aclanthology.org/2022.findings-emnlp.137/
+  + Code: https://github.com/xlxwalex/FCGEC
+  + <details>
+      <summary>Abstract</summary>
+      Grammatical Error Correction (GEC) has been broadly applied in automatic correction and proofreading system recently. However, it is still immature in Chinese GEC due to limited high-quality data from native speakers in terms of category and scale. In this paper, we present FCGEC, a fine-grained corpus to detect, identify and correct the grammatical errors. FCGEC is a human-annotated corpus with multiple references, consisting of 41,340 sentences collected mainly from multi-choice questions in public school Chinese examinations. Furthermore, we propose a Switch-Tagger-Generator (STG) baseline model to correct the grammatical errors in low-resource settings. Compared to other GEC benchmark models, experimental results illustrate that STG outperforms them on our FCGEC. However, there exists a significant gap between benchmark models and humans that encourages future models to bridge it.
+    </details>
+  
 + **[`zh`] MuCGEC: a Multi-Reference Multi-Source Evaluation Dataset for Chinese Grammatical Error Correction**
   + Authors: Yue Zhang, Zhenghua Li, Zuyi Bao, Jiacheng Li, Bo Zhang, Chen Li, Fei Huang, Min Zhang
   + Conference: NAACL
@@ -155,7 +231,44 @@ Updating. The papers will be organized by publication years.
       We introduce a large and diverse Czech corpus annotated for grammatical error correction (GEC) with the aim to contribute to the still scarce data resources in this domain for languages other than English. The Grammar Error Correction Corpus for Czech (GECCC) offers a variety of four domains, covering error distributions ranging from high error density essays written by non-native speakers, to website texts, where errors are expected to be much less common. We compare several Czech GEC systems, including several Transformer-based ones, setting a strong baseline to future research. Finally, we meta-evaluate common GEC metrics against human judgments on our data. We make the new Czech GEC corpus publicly available under the CC BY-SA 4.0 license at http://hdl.handle.net/11234/1-4639.
     </details>
 
++ **[`ja`] Construction of a Quality Estimation Dataset for Automatic Evaluation of Japanese Grammatical Error Correction**
+  + Authors: Daisuke Suzuki, Yujin Takahashi, Ikumi Yamashita, Taichi Aida, Tosho Hirasawa, Michitaka Nakatsuji, Masato Mita, Mamoru Komachi
+  + Conference: LREC
+  + Link: https://aclanthology.org/2022.lrec-1.596/
+  + <details>
+      <summary>Abstract</summary>
+      In grammatical error correction (GEC), automatic evaluation is considered as an important factor for research and development of GEC systems. Previous studies on automatic evaluation have shown that quality estimation models built from datasets with manual evaluation can achieve high performance in automatic evaluation of English GEC. However, quality estimation models have not yet been studied in Japanese, because there are no datasets for constructing quality estimation models. In this study, therefore, we created a quality estimation dataset with manual evaluation to build an automatic evaluation model for Japanese GEC. By building a quality estimation model using this dataset and conducting a meta-evaluation, we verified the usefulness of the quality estimation model for Japanese GEC.
+    </details>
+  
++ **ProQE: Proficiency-wise Quality Estimation dataset for Grammatical Error Correction**
+  + Authors: Yujin Takahashi, Masahiro Kaneko, Masato Mita, Mamoru Komachi
+  + Conference: LREC
+  + Link: https://aclanthology.org/2022.lrec-1.644/
+  + <details>
+      <summary>Abstract</summary>
+      This study investigates how supervised quality estimation (QE) models of grammatical error correction (GEC) are affected by the learners’ proficiency with the data. QE models for GEC evaluations in prior work have obtained a high correlation with manual evaluations. However, when functioning in a real-world context, the data used for the reported results have limitations because prior works were biased toward data by learners with relatively high proficiency levels. To address this issue, we created a QE dataset that includes multiple proficiency levels and explored the necessity of performing proficiency-wise evaluation for QE of GEC. Our experiments demonstrated that differences in evaluation dataset proficiency affect the performance of QE models, and proficiency-wise evaluation helps create more robust models.
+    </details>
+  
++ **Improving Grammatical Error Correction for Multiword Expressions**
+  + Authors: Shiva Taslimipoor, Christopher Bryant, Zheng Yuan
+  + Conference: MWE
+  + Link: https://aclanthology.org/2022.lrec-1.644/
+  + <details>
+      <summary>Abstract</summary>
+      Grammatical error correction (GEC) is the task of automatically correcting errors in text. It has mainly been developed to assist language learning, but can also be applied to native text. This paper reports on preliminary work in improving GEC for multiword expression (MWE) error correction. We propose two systems which incorporate MWE information in two different ways: one is a multi-encoder decoder system which encodes MWE tags in a second encoder, and the other is a BART pre-trained transformer-based system that encodes MWE representations using special tokens. We show improvements in correcting specific types of verbal MWEs based on a modified version of a standard GEC evaluation approach.
+    </details>
+  
 ### GEC Evaluation
++ **Revisiting Grammatical Error Correction Evaluation and Beyond**
+  + Authors: Peiyuan Gong, Xuebo Liu, Heyan Huang, Min Zhang
+  + Conference: EMNLP
+  + Link: https://aclanthology.org/2022.emnlp-main.463/
+  + Code: https://github.com/pygongnlp/PT-M2
+  + <details>
+    <summary>Abstract</summary>
+    Pretraining-based (PT-based) automatic evaluation metrics (e.g., BERTScore and BARTScore) have been widely used in several sentence generation tasks (e.g., machine translation and text summarization) due to their better correlation with human judgments over traditional overlap-based methods. Although PT-based methods have become the de facto standard for training grammatical error correction (GEC) systems, GEC evaluation still does not benefit from pretrained knowledge. This paper takes the first step towards understanding and improving GEC evaluation with pretraining. We first find that arbitrarily applying PT-based metrics to GEC evaluation brings unsatisfactory correlation results because of the excessive attention to inessential systems outputs (e.g., unchanged parts). To alleviate the limitation, we propose a novel GEC evaluation metric to achieve the best of both worlds, namely PT-M2 which only uses PT-based metrics to score those corrected parts. Experimental results on the CoNLL14 evaluation task show that PT-M2 significantly outperforms existing methods, achieving a new state-of-the-art result of 0.949 Pearson correlation. Further analysis reveals that PT-M2 is robust to evaluate competitive GEC systems. Source code and scripts are freely available at https://github.com/pygongnlp/PT-M2.
+  </details>
+
 + **Grammatical Error Correction: Are We There Yet?**
   + Authors: Muhammad Reza Qorib, Hwee Tou Ng
   + Conference: COLING
