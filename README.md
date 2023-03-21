@@ -1,24 +1,25 @@
-# Paper List of Grammatical Error Correction
+# Papers of Grammatical Error Correction
 
 ## Introduction
-This repo lists papers of **Grammatical Error Correction (GEC)** and papers of related topics,
+This repository lists papers of **Grammatical Error Correction (GEC)** and those of related topics,
 such as **Grammatical Error Detection (GED)** and **Spoken Grammatical Error Correction (SGEC)**.
 
 ## Update Notes
+
+**2023/3/21:** Reorganizing the repo.
+
 **2022/11/9:** 
-1. Added a symbol {L:`lang_codes`} for GEC for languages other than English or multi-lingual GEC. Deprecated {LOTE}.
-2. Added a symbol {E} for evaluation studies.
-2. Added a topic section: multi-lingual GEC.
+1. Added a symbol {L:`lang_codes`} to indicate GEC for languages other than English, or multilingual GEC. Deprecated {LOTE}.
+2. Added a symbol {E} to indicate studies for evaluating GEC performance.
+3. Added a topic: multi-lingual GEC.
 
 **2022/7/28:**
-Added some symbols. 
-{D}: Papers of GEC/GED datasets. 
-{LOTE}: Papers of GEC/GED for languages other than English.**
+Added some symbols.  
++ {D}: Papers of GEC/GED datasets. 
++ {LOTE}: Papers of GEC/GED for languages other than English.
 
 **2022/5/18:**
-Updating. The papers will be organized by publication years. 
-Note that the key words are not from the paper authors, 
-they are created by the repo author.**
+Updating. The papers will be organized by publication years.
 
 ## Papers in 2022
 ### GEC
@@ -31,7 +32,7 @@ they are created by the repo author.**
     <summary>Abstract</summary>
     In this paper, we investigate improvements to the GEC sequence tagging architecture with a focus on ensembling of recent cutting-edge Transformer-based encoders in Large configurations. We encourage ensembling models by majority votes on span-level edits because this approach is tolerant to the model architecture and vocabulary size. Our best ensemble achieves a new SOTA result with an F0.5 score of 76.05 on BEA-2019 (test), even without pre-training on synthetic datasets. In addition, we perform knowledge distillation with a trained ensemble to generate new synthetic training datasets, “Troy-Blogs” and “Troy-1BW”. Our best single sequence tagging model that is pretrained on the generated Troy- datasets in combination with the publicly available synthetic PIE dataset achieves a near-SOTA result with an F0.5 score of 73.21 on BEA-2019 (test). The code, datasets, and trained models are publicly available.
   </details>
-+ Key Words: Empirical Study; Bigger PLMs; Ensembling Comparison; Knowledge Distilling
+[//]: # (+ Key Words: Empirical Study; Bigger PLMs; Ensembling Comparison; Knowledge Distilling)
 
 2. **Interpretability for Language Learners Using Example-Based Grammatical Error Correction**
 + Authors: Masahiro Kaneko, Sho Takase, Ayana Niwa, Naoaki Okazaki
@@ -42,7 +43,7 @@ they are created by the repo author.**
     <summary>Abstract</summary>
     Grammatical Error Correction (GEC) should not focus only on high accuracy of corrections but also on interpretability for language learning.However, existing neural-based GEC models mainly aim at improving accuracy, and their interpretability has not been explored.A promising approach for improving interpretability is an example-based method, which uses similar retrieved examples to generate corrections. In addition, examples are beneficial in language learning, helping learners understand the basis of grammatically incorrect/correct texts and improve their confidence in writing.Therefore, we hypothesize that incorporating an example-based method into GEC can improve interpretability as well as support language learners.In this study, we introduce an Example-Based GEC (EB-GEC) that presents examples to language learners as a basis for a correction result.The examples consist of pairs of correct and incorrect sentences similar to a given input and its predicted correction.Experiments demonstrate that the examples presented by EB-GEC help language learners decide to accept or refuse suggestions from the GEC output.Furthermore, the experiments also show that retrieved examples improve the accuracy of corrections.
   </details>
-+ Key Words: Interpretability; kNN-MT; Seq2Seq; Application Oriented
+[//]: # (+ Key Words: Interpretability; kNN-MT; Seq2Seq; Application Oriented)
 
 3. **Adjusting the Precision-Recall Trade-Off with Align-and-Predict Decoding for Grammatical Error Correction**
 + Authors: Xin Sun, Houfeng Wang
@@ -53,7 +54,7 @@ they are created by the repo author.**
     <summary>Abstract</summary>
     Modern writing assistance applications are always equipped with a Grammatical Error Correction (GEC) model to correct errors in user-entered sentences. Different scenarios have varying requirements for correction behavior, e.g., performing more precise corrections (high precision) or providing more candidates for users (high recall). However, previous works adjust such trade-off only for sequence labeling approaches. In this paper, we propose a simple yet effective counterpart – Align-and-Predict Decoding (APD) for the most popular sequence-to-sequence models to offer more flexibility for the precision-recall trade-off. During inference, APD aligns the already generated sequence with input and adjusts scores of the following tokens. Experiments in both English and Chinese GEC benchmarks show that our approach not only adapts a single model to precision-oriented and recall-oriented inference, but also maximizes its potential to achieve state-of-the-art results. Our code is available at https://github.com/AutoTemp/Align-and-Predict.
   </details>
-+ Key Words: Precision-Recall Trade-Off; Beam Search; Seq2Seq; Application Oriented
+[//]: # (+ Key Words: Precision-Recall Trade-Off; Beam Search; Seq2Seq; Application Oriented)
 
 4. **{L:`zh`} “Is Whole Word Masking Always Better for Chinese BERT?”: Probing on Chinese Grammatical Error Correction**
 + Authors: Yong Dai, Linyang Li, Cong Zhou, Zhangyin Feng, Enbo Zhao, Xipeng Qiu, Piji Li, Duyu Tang
@@ -73,7 +74,7 @@ they are created by the repo author.**
     <summary>Abstract</summary>
     Grammatical Error Correction (GEC) aims to automatically detect and correct grammatical errors. In this aspect, dominant models are trained by one-iteration learning while performing multiple iterations of corrections during inference. Previous studies mainly focus on the data augmentation approach to combat the exposure bias, which suffers from two drawbacks.First, they simply mix additionally-constructed training instances and original ones to train models, which fails to help models be explicitly aware of the procedure of gradual corrections. Second, they ignore the interdependence between different types of corrections.In this paper, we propose a Type-Driven Multi-Turn Corrections approach for GEC. Using this approach, from each training instance, we additionally construct multiple training instances, each of which involves the correction of a specific type of errors. Then, we use these additionally-constructed training instances and the original one to train the model in turn.Experimental results and in-depth analysis show that our approach significantly benefits the model training. Particularly, our enhanced model achieves state-of-the-art single-model performance on English GEC benchmarks. We release our code at Github.
   </details>
-+ Key Words: Iterative Correction; Edit Operation; Sequence Labeling
+[//]: # (+ Key Words: Iterative Correction; Edit Operation; Sequence Labeling)
 
 6. **Frustratingly Easy System Combination for Grammatical Error Correction**
 + Authors: Muhammad Qorib, Seung-Hoon Na, Hwee Tou Ng
@@ -84,7 +85,7 @@ they are created by the repo author.**
     <summary>Abstract</summary>
     In this paper, we formulate system combination for grammatical error correction (GEC) as a simple machine learning task: binary classification. We demonstrate that with the right problem formulation, a simple logistic regression algorithm can be highly effective for combining GEC models. Our method successfully increases the F0.5 score from the highest base GEC system by 4.2 points on the CoNLL-2014 test set and 7.2 points on the BEA-2019 test set. Furthermore, our method outperforms the state of the art by 4.0 points on the BEA-2019 test set, 1.2 points on the CoNLL-2014 test set with original annotation, and 3.4 points on the CoNLL-2014 test set with alternative annotation. We also show that our system combination generates better corrections with higher F0.5 scores than the conventional ensemble.
   </details>
-+ Key Words: Ensembling; Edit Type; Linear Regression; Application Oriented
+[//]: # (+ Key Words: Ensembling; Edit Type; Linear Regression; Application Oriented)
 
 7. **{D} ErAConD: Error Annotated Conversational Dialog Dataset for Grammatical Error Correction**
 + Authors: Xun Yuan, Derek Pham, Sam Davidson, Zhou Yu
@@ -106,17 +107,7 @@ they are created by the repo author.**
     This paper presents MuCGEC, a multi-reference multi-source evaluation dataset for Chinese Grammatical Error Correction (CGEC), consisting of 7,063 sentences collected from three Chinese-as-a-Second-Language (CSL) learner sources. Each sentence is corrected by three annotators, and their corrections are carefully reviewed by a senior annotator, resulting in 2.3 references per sentence. We conduct experiments with two mainstream CGEC models, i.e., the sequence-to-sequence model and the sequence-to-edit model, both enhanced with large pretrained language models, achieving competitive benchmark performance on previous and our datasets. We also discuss CGEC evaluation methodologies, including the effect of multiple references and using a char-based metric. Our annotation guidelines, data, and code are available at https://github.com/HillZhang1999/MuCGEC.
   </details>
 
-9. **{D,L:`cs`} Czech Grammar Error Correction with a Large and Diverse Corpus**
-+ Authors: Jakub Náplava, Milan Straka, Jana Straková, Alexandr Rosen
-+ Conference: TACL
-+ Link: https://aclanthology.org/2022.tacl-1.26/
-+ Code: https://github.com/ufal/errant_czech
-+ <details>
-    <summary>Abstract</summary>
-    We introduce a large and diverse Czech corpus annotated for grammatical error correction (GEC) with the aim to contribute to the still scarce data resources in this domain for languages other than English. The Grammar Error Correction Corpus for Czech (GECCC) offers a variety of four domains, covering error distributions ranging from high error density essays written by non-native speakers, to website texts, where errors are expected to be much less common. We compare several Czech GEC systems, including several Transformer-based ones, setting a strong baseline to future research. Finally, we meta-evaluate common GEC metrics against human judgments on our data. We make the new Czech GEC corpus publicly available under the CC BY-SA 4.0 license at http://hdl.handle.net/11234/1-4639.
-  </details>
-
-10. **{E} Grammatical Error Correction: Are We There Yet?**
+9. **{E} Grammatical Error Correction: Are We There Yet?**
 + Authors: Muhammad Reza Qorib, Hwee Tou Ng
 + Conference: COLING
 + Link: https://aclanthology.org/2022.coling-1.246/
@@ -125,7 +116,7 @@ they are created by the repo author.**
     There has been much recent progress in natural language processing, and grammatical error correction (GEC) is no exception. We found that state-of-the-art GEC systems (T5 and GECToR) outperform humans by a wide margin on the CoNLL-2014 test set, a benchmark GEC test corpus, as measured by the standard F0.5 evaluation metric. However, a careful examination of their outputs reveals that there are still classes of errors that they fail to correct. This suggests that creating new test data that more accurately measure the true performance of GEC systems constitutes important future work.
   </details>
 
-11. **{L:`zh,en,ja`} Position Offset Label Prediction for Grammatical Error Correction**
+10. **{L:`zh,en,ja`} Position Offset Label Prediction for Grammatical Error Correction**
 + Authors: Xiuyu Wu, Jingsong Yu, Xu Sun, Yunfang Wu
 + Conference: COLING
 + Link: https://aclanthology.org/2022.coling-1.480/
@@ -135,7 +126,7 @@ they are created by the repo author.**
     We introduce a novel position offset label prediction subtask to the encoder-decoder architecture for grammatical error correction (GEC) task. To keep the meaning of the input sentence unchanged, only a few words should be inserted or deleted during correction, and most of tokens in the erroneous sentence appear in the paired correct sentence with limited position movement. Inspired by this observation, we design an auxiliary task to predict position offset label (POL) of tokens, which is naturally capable of integrating different correction editing operations into a unified framework. Based on the predicted POL, we further propose a new copy mechanism (P-copy) to replace the vanilla copy module. Experimental results on Chinese, English and Japanese datasets demonstrate that our proposed POL-Pc framework obviously improves the performance of baseline models. Moreover, our model yields consistent performance gain over various data augmentation methods. Especially, after incorporating synthetic data, our model achieves a 38.95 F-0.5 score on Chinese GEC dataset, which outperforms the previous state-of-the-art by a wide margin of 1.98 points.
   </details>
 
-12. **{L:`zh`} String Editing Based Chinese Grammatical Error Diagnosis**
+11. **{L:`zh`} String Editing Based Chinese Grammatical Error Diagnosis**
 + Authors: Haihua Xie, Xiaoqing Lyu, Xuefei Chen
 + Conference: COLING
 + Link: https://aclanthology.org/2022.coling-1.474/
@@ -145,7 +136,7 @@ they are created by the repo author.**
     Chinese Grammatical Error Diagnosis (CGED) suffers the problems of numerous types of grammatical errors and insufficiency of training data. In this paper, we propose a string editing based CGED model that requires less training data by using a unified workflow to handle various types of grammatical errors. Two measures are proposed in our model to enhance the performance of CGED. First, the detection and correction of grammatical errors are divided into different stages. In the stage of error detection, the model only outputs the types of grammatical errors so that the tag vocabulary size is significantly reduced compared with other string editing based models. Secondly, the correction of some grammatical errors is converted to the task of masked character inference, which has plenty of training data and mature solutions. Experiments on datasets of NLPTEA-CGED demonstrate that our model outperforms other CGED models in many aspects.
   </details>
 
-13. <a name="sun-et-al-ijcal2022"></a>**{L:`en,zh,de,ru`} A Unified Strategy for Multilingual Grammatical Error Correction with Pre-trained Cross-Lingual Language Model**
+12. <a name="sun-et-al-ijcal2022"></a>**{L:`en,zh,de,ru`} A Unified Strategy for Multilingual Grammatical Error Correction with Pre-trained Cross-Lingual Language Model**
 + Authors: Xin Sun, Tao Ge, Shuming Ma, Jingjing Li, Furu Wei, Houfeng Wang
 + Conference: IJCAI
 + Link: https://www.ijcai.org/proceedings/2022/0606
@@ -153,7 +144,17 @@ they are created by the repo author.**
     <summary>Abstract</summary>
     Synthetic data construction of Grammatical Error Correction (GEC) for non-English languages relies heavily on human-designed and language-specific rules, which produce limited error-corrected patterns. In this paper, we propose a generic and language-independent strategy for multilingual GEC, which can train a GEC system effectively for a new non-English language with only two easy-to-access resources: 1) a pre-trained cross-lingual language model (PXLM) and 2) parallel translation data between English and the language. Our approach creates diverse parallel GEC data without any language-specific operations by taking the non-autoregressive translation generated by PXLM and the gold translation as error-corrected sentence pairs. Then, we reuse PXLM to initialize the GEC model and pre-train it with the synthetic data generated by itself, which yields further improvement. We evaluate our approach on three public benchmarks of GEC in different languages. It achieves the state-of-the-art results on the NLPCC 2018 Task 2 dataset (Chinese) and obtains competitive performance on Falko-Merlin (German) and RULEC-GEC (Russian). Further analysis demonstrates that our data construction method is complementary to rule-based approaches.
   </details>
-+ Keywords: Language-agnostic Data Augmentation; Pre-trained Language Models
+[//]: # (+ Keywords: Language-agnostic Data Augmentation; Pre-trained Language Models)
+
+13. **{D, L:`cs`} Czech Grammar Error Correction with a Large and Diverse Corpus**
++ Authors: Jakub Náplava, Milan Straka, Jana Straková, Alexandr Rosen
++ Conference: TACL
++ Link: https://aclanthology.org/2022.tacl-1.26/
++ Code: https://github.com/ufal/errant_czech
++ <details>
+    <summary>Abstract</summary>
+    We introduce a large and diverse Czech corpus annotated for grammatical error correction (GEC) with the aim to contribute to the still scarce data resources in this domain for languages other than English. The Grammar Error Correction Corpus for Czech (GECCC) offers a variety of four domains, covering error distributions ranging from high error density essays written by non-native speakers, to website texts, where errors are expected to be much less common. We compare several Czech GEC systems, including several Transformer-based ones, setting a strong baseline to future research. Finally, we meta-evaluate common GEC metrics against human judgments on our data. We make the new Czech GEC corpus publicly available under the CC BY-SA 4.0 license at http://hdl.handle.net/11234/1-4639.
+  </details>
 
 ### GED
 1. **{L:`zh`} Improving Chinese Grammatical Error Detection via Data augmentation by Conditional Error Generation**
@@ -165,7 +166,7 @@ they are created by the repo author.**
     <summary>Abstract</summary>
     Chinese Grammatical Error Detection(CGED) aims at detecting grammatical errors in Chinese texts. One of the main challenges for CGED is the lack of annotated data. To alleviate this problem, previous studies proposed various methods to automatically generate more training samples, which can be roughly categorized into rule-based methods and model-based methods. The rule-based methods construct erroneous sentences by directly introducing noises into original sentences. However, the introduced noises are usually context-independent, which are quite different from those made by humans. The model-based methods utilize generative models to imitate human errors. The generative model may bring too many changes to the original sentences and generate semantically ambiguous sentences, so it is difficult to detect grammatical errors in these generated sentences. In addition, generated sentences may be error-free and thus become noisy data. To handle these problems, we propose CNEG, a novel Conditional Non-Autoregressive Error Generation model for generating Chinese grammatical errors. Specifically, in order to generate a context-dependent error, we first mask a span in a correct text, then predict an erroneous span conditioned on both the masked text and the correct span. Furthermore, we filter out error-free spans by measuring their perplexities in the original sentences. Experimental results show that our proposed method achieves better performance than all compared data augmentation methods on the CGED-2018 and CGED-2020 benchmarks.
   </details>
-+ Key Words: Generative CGED; BERT Masking; Conditional Error Generation 
+[//]: # (+ Key Words: Generative CGED; BERT Masking; Conditional Error Generation )
 
 2. **Exploring the Capacity of a Large-scale Masked Language Model to Recognize Grammatical Errors**
 + Authors: Ryo Nagata, Manabu Kimura, Kazuaki Hanawa
@@ -190,7 +191,7 @@ they are created by the repo author.**
 
 ## Papers in 2021
 ### GEC
-1. <a name="rothe-et-al-acl2021">**A Simple Recipe for Multilingual Grammatical Error Correction**
+1. <a name="rothe-et-al-acl2021"></a>**{L:`en,de,ru,cs`} A Simple Recipe for Multilingual Grammatical Error Correction**
 + Authors: Sascha Rothe, Jonathan Mallinson, Eric Malmi, Sebastian Krause, Aliaksei Severyn
 + Conference: ACL
 + Link: https://aclanthology.org/2021.acl-short.89/
@@ -200,223 +201,382 @@ they are created by the repo author.**
     Abstract
     This paper presents a simple recipe to trainstate-of-the-art multilingual Grammatical Error Correction (GEC) models. We achieve this by first proposing a language-agnostic method to generate a large number of synthetic examples. The second ingredient is to use large-scale multilingual language models (up to 11B parameters). Once fine-tuned on language-specific supervised sets we surpass the previous state-of-the-art results on GEC benchmarks in four languages: English, Czech, German and Russian. Having established a new set of baselines for GEC, we make our results easily reproducible and accessible by releasing a CLANG-8 dataset. It is produced by using our best model, which we call gT5, to clean the targets of a widely used yet noisy Lang-8 dataset. cLang-8 greatly simplifies typical GEC training pipelines composed of multiple fine-tuning stages – we demonstrate that performing a single fine-tuning stepon cLang-8 with the off-the-shelf language models yields further accuracy improvements over an already top-performing gT5 model for English.
   </details>
-+ Keywords: Language-agnostic Data Augmentation; Pre-trained Language Models; Distillation
+[//]: # (+ Keywords: Language-agnostic Data Augmentation; Pre-trained Language Models; Distillation)
 
 ## Topics
 ### Multi-lingual GEC
 1. [A Unified Strategy for Multilingual Grammatical Error Correction with Pre-trained Cross-Lingual Language Model](#sun-et-al-ijcal2022)
-+ Languages: `en,zh,de,ru` 
-+ Method: language-agnostic data augmentation, multi-lingual pre-trained language models.
-  + A two-stage training strategy is employed: pre-training with augmented pseudo data and fine-tuning with language-specific annotated data. 
-  + In the pre-training stage, this paper uses an NAT (non-autoregressive translation) model to translate sentences, 
-  and uses the translated sentences as erroneous sentences, which are paired with the corresponding correct sentences as augmentation pairs.
-  Specifically, let the target language for data augmentation be `zh` (Chinese). 
-    1) First, a translation pair (`en`, `zh`) is obtained from machine translation data.
-    2) Then, word-level noises (insertion, deletion, replacement, swapping) are injected to the `zh` sentence, obtaining `zh^1`. 
-    3) After that, some words in the `zh^1` sentence are masked, obtaining `zh^2`.
++ Languages: `en,zh,de,ru`
++ <details>
+  <summary>Method: language-agnostic data augmentation, multi-lingual pre-trained language models.</summary>
+  
+  + A two-stage training strategy is employed: (1) pre-training with augmented pseudo data and (2) fine-tuning with language-specific annotated data.
+  
+  + In the pre-training stage, this paper uses an NAT (non-autoregressive translation) model to translate sentences, and uses the translated sentences as erroneous sentences. The erroneous sentences are paired with the corresponding correct sentences as augmentation pairs. Specifically, let the target language for data augmentation be `zh` (Chinese), the augmentation method is as follows. In this manner, 10M augmented pairs in every language are constructed to pre-train the GEC model. Additionally, the GEC model is initialized with the pre-trained weights of DeltaLM (an InfoXLM-initialized encoder-decoder model) before pre-training.
+    1) A translation pair (`en`, `zh`) is obtained from machine translation data.
+    2) Word-level noises (insertion, deletion, replacement, swapping) are injected to the `zh` sentence, obtaining `zh^1`. 
+    3) Some words in the `zh^1` sentence are masked, obtaining `zh^2`.
     Then, InfoXLM (an NAT) receives the (`en`, `zh^2`) pair as input and outputs the translated sentence `zh^2^` with distributional sampling.
     4) The outputted sentence `zh^2^` is further noised with character-level noises (insertion, deletion, replacement, swapping, casing), obtaining `zh^3`. Finally, (`zh^3`, `zh`) is treated as an augmented pair for pre-training.
   
-    In this way, 10M augmented pairs in every language are constructed, which are used to pre-train the GEC model. 
-  Before pre-training,  the GEC model is init with the pre-trained weights of DeltaLM (an InfoXLM-init enc-dec model).
   + In the fine-tuning stage, the pre-trained model is fine-tuned with language-specific annotated data. 
+  </details>
 
 2. [A Simple Recipe for Multilingual Grammatical Error Correction](#rothe-et-al-acl2021)
 + Languages: `en,de,ru,cs`
-+ Method: language-agnostic data augmentation, multi-lingual pre-trained language models.
-  + A two-stage training strategy is employed: pre-training with augmented pseudo data and fine-tuning with language-specific annotated data.
-  + In the pre-training stage, the mT5 model is pre-trained with augmented data constructed using the mC4 corpus that contains unlabeled texts in 101 languages.
++ <details>
+  <summary>Method: language-agnostic data augmentation, multi-lingual pre-trained language models.</summary>
+  
+  + A two-stage training strategy is employed: (1) pre-training with augmented pseudo data and (2) fine-tuning with language-specific annotated data.
+  
+  + In the pre-training stage, augmented data are constructed from the mC4 corpus that contains unlabeled texts in 101 languages. Each noised sentence is paired with the original sentence to form an augmented pair (sent_noised, sent_original). The augmented pairs are used to pre-train the mT5 model.
   Specifically, the unlabeled texts are noised with the following operations:
     1) dropping spans of tokens, swapping tokens
     2) dropping spans of characters, swapping characters, inserting characters, lower-casing a word, upper-casing the first character of a word
+
+  + In the fine-tuning stage, the pre-trained model is further fine-tuned with language-specific data.
   
-  Each noised sentence is paired with the original sentence (sent_noised, sent_original) to form an augmented pair.
-  And the augmented pairs are used to pre-train the mT5 model.
-  + In the fine-tuning stage, the pre-trained model is further fine-tuned with language-specific data. 
+  </details>
 
----
-**The papers below will be re-arranged.**
+[//]: # (---)
 
-## GEC
-<!-- - [x] 2021/1/6 [Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction](#bert-gec) [ACL-2020] √
-- [x] 2021/1/6 [GECToR - Grammatical Error Correction: Tag, Not Rewrite](#gector) [ACL-2020] √
-- [x] 2021/1/7 [MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking](#maskgec) [AAAI-2020]
-- [x] 2021/1/7 [Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract)](#minimal-supervision) [AAAI-2020]
-- [x] 2021/1/7 [Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model](#bart-gec) [AACL-2020] √
-- [x] 2021/1/9 [Chinese Grammatical Correction Using BERT-based Pre-trained Model](#chinese-bert-gec) [IJCNLP-2020]
-- [x] 2021/1/10 [Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction](#efficiency) [EMNLP-2020]
-- [x] 2021/1/10 [Heterogeneous Recycle Generation for Chinese Grammatical Correction](#heterogeneous) [COLING-2020] √
-- [x] 2021/1/10 [TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020](#chinese-bert-init) [AACL-2020]
-- [x] 2021/1/11 [Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction](#local-beam-search) [COLING-2020]
-- [x] 2021/1/12 [Seq2Edits: Sequence Transduction Using Span-level Edit Operations](#seq2edits) [EMNLP-2020]
-- [x] 2021/1/12 [Adversarial Grammatical Error Correction](#adversarial) [EMNLP-2020]
-- [x] 2021/1/17 Pseudo-Bidirectional Decoding for Local Sequence Transduction [EMNLP-2020]
-- [x] 2021/1/18 Neural Grammatical Error Correction Systems with Unsupervised Pre-training on Synthetic Data [ACL-2019]
-- [x] 2021/1/18 An Empirical Study of Incorporating Pseudo Data into Grammatical Error Correction [ACL-2019]
-- [x] 2021/1/19 Parallel Iterative Edit Models for Local Sequence Transduction [EMNLP-2019]
-- [x] 2021/1/19 Improving Grammatical Error Correction via Pre-Training a Copy-Augmented Architecture with Unlabeled Data [NAACL-2019]
-- [x] 2021/1/20 A Neural Grammatical Error Correction System Built On Better Pre-training and Sequential Transfer Learning [ACL-2020]
-- [x] 2021/1/20 The Unreasonable Effectiveness of Transformer Language Models in Grammatical Error Correction [ACL-2019]
-- [x] 2021/1/20 TMU Transformer System Using BERT for Re-ranking at BEA 2019 Grammatical Error Correction on Restricted Track [ACL-2019]
-- [x] 2021/1/21 Noisy Channel for Low Resource Grammatical Error Correction [ACL-2019]
-- [x] 2021/1/22 The BLCU System in the BEA 2019 Shared Task [ACL-2019]
-- [x] 2021/1/22 The AIP-Tohoku System at the BEA-2019 Shared Task [ACL-2019]
-- [x] 2021/1/22 CUNI System for the Building Educational Applications 2019 Shared Task: Grammatical Error Correction [ACL-2019] -->
+[//]: # (**The papers below will be re-arranged.**)
 
-| Index | Date | Paper | Conference | Code | Note |
-| :-: | --- | --- | --- | --- | --- |
-| 1* | 21/1/6 | Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction (Kaneko et al.) | ACL-2020 | [Code](https://github.com/kanekomasahiro/bert-gec) | [Note](#bert-gec) |
-| 2* | 21/1/6 | GECToR - Grammatical Error Correction: Tag, Not Rewrite (Omelianchuk et al.) | ACL-2020 | [Code](https://github.com/grammarly/gector) | [Note](#gector) |
-| 3* | 21/1/7 | MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking (Zhao and Wang) | AAAI-2020 |  | [Note](#maskgec) |
-| 4 | 21/1/7 | Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract) (Li et al.) | AAAI-2020 |  | [Note](#minimal-supervision) |
-| 5* | 21/1/7 | Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model (Katsumata and Komachi) | AACL-2020 | [Code](https://github.com/Katsumata420/generic-pretrained-GEC) | [Note](#bart-gec) |
-| 6 | 21/1/9 | Chinese Grammatical Correction Using BERT-based Pre-trained Model (Wang et al.) | IJCNLP-2020 |  | [Note](#chinese-bert-gec) |
-| 7* | 21/1/10 | Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction (Chen et al.) | EMNLP-2020 |  | [Note](#efficiency) |
-| 8* | 21/1/10 | Heterogeneous Recycle Generation for Chinese Grammatical Correction (Hinson et al.) | COLING-2020 |  | [Note](#heterogeneous) |
-| 9 | 21/1/10 | TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020 (Wang and Komachi) | AACL-2020 |  | [Note](#chinese-bert-init) |
-| 10 | 21/1/11 | Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction (Hotate et al.) | COLING-2020 |  | [Note](#local-beam-search) |
-| 11 | 21/1/12 | Seq2Edits: Sequence Transduction Using Span-level Edit Operations (Stahlberg and Kumar) | EMNLP-2020 | [Code](https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/models/research/transformer_seq2edits.py) | [Note](#seq2edits) |
-| 12 | 21/1/12 | Adversarial Grammatical Error Correction (Raheja and Alikaniotis) | EMNLP-2020 |  | [Note](#adversarial) |
-| 13* | 21/1/17 | Pseudo-Bidirectional Decoding for Local Sequence Transduction (Zhou et al.) | EMNLP-2020 |  |  |
-| 14 | 21/1/18 | Neural Grammatical Error Correction Systems with Unsupervised Pre-training on Synthetic Data (Grundkiewicz et al.) | ACL-2019 |  |  |
-| 15 | 21/1/18 | An Empirical Study of Incorporating Pseudo Data into Grammatical Error Correction (Kiyono et al.) | ACL-2019 |  |  |
-| 16 | 21/1/19 | Parallel Iterative Edit Models for Local Sequence Transduction (Awasthi et al.) | EMNLP-2019 |  |  |
-| 17 | 21/1/19 | Improving Grammatical Error Correction via Pre-Training a Copy-Augmented Architecture with Unlabeled Data (Zhao et al.) | NAACL-2019 |  |  |
-| 18 | 21/1/20 | A Neural Grammatical Error Correction System Built On Better Pre-training and Sequential Transfer Learning (Choe et al.) | ACL-2020 |  |  |
-| 19 | 21/1/20 | The Unreasonable Effectiveness of Transformer Language Models in Grammatical Error Correction (Alikaniotis and Raheja) | ACL-2019 |  |  |
-| 20 | 21/1/20 | TMU Transformer System Using BERT for Re-ranking at BEA 2019 Grammatical Error Correction on Restricted Track (Kaneko et al.) | ACL-2019 |  |  |
-| 21 | 21/1/21 | Noisy Channel for Low Resource Grammatical Error Correction (Flachs et al.) | ACL-2019 |  |  |
-| 22 | 21/1/22 | The BLCU System in the BEA 2019 Shared Task (Yang et al.) | ACL-2019 |  |  |
-| 23 | 21/1/22 | The AIP-Tohoku System at the BEA-2019 Shared Task (Asano et al.) | ACL-2019 |  |  |
-| 24 | 21/1/22 | CUNI System for the Building Educational Applications 2019 Shared Task: Grammatical Error Correction (Náplava and Straka) | ACL-2019 |  |  |
-| 25 | 21/1/27 | Cross-Sentence Grammatical Error Correction (Chollampatt et al.) | ACL-2019 |  |  |
+[//]: # (## GEC)
 
-## GED
-<!-- - [x] 2021/1/6 [基于数据增强和多任务特征学习的中文语法错误检测方法](#chinese-multi-task) [CCL-2020] √
-- [x] 2021/1/11 [Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis](#score-based) [AACL-2020]
-- [x] 2021/1/11 [CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared](#bert-crf) [AACL-2020]
-- [x] 2021/1/11 [Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis](#resnet-bert) [AACL-2020]
-- [x] 2021/1/11 [Chinese Grammatical Errors Diagnosis System Based on BERT at NLPTEA-2020 CGED Shared Task](#bert-bilstm-crf-3gram-seq2seq) [AACL-2020]
-- [x] 2021/1/11 [Chinese Grammatical Error Detection Based on BERT Model](#bert-finetuned) [AACL-2020]
-- [x] 2021/1/21 Multi-Head Multi-Layer Attention to Deep Language Representations for Grammatical Error Detection [CICLING-2019] -->
+[//]: # (<!-- - [x] 2021/1/6 [Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction]&#40;#bert-gec&#41; [ACL-2020] √)
 
-| Index | Date | Paper | Conference | Code | Note |
-| :-: | --- | --- | --- | --- | --- |
-| 1* | 21/1/6 | 基于数据增强和多任务特征学习的中文语法错误检测方法 (Xie et al.) | CCL-2020 |  | [Note](#chinese-multi-task) |
-| 2 | 21/1/11 | Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis (Cao et al.) | AACL-2020 |  | [Note](#score-based) |
-| 3 | 21/1/11 | CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared (Wu and Wang) | AACL-2020 |  | [Note](#bert-crf) |
-| 4 | 21/1/11 | Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis (Wang et al.) | AACL-2020 |  | [Note](#resnet-bert) |
-| 5 | 21/1/11 | Chinese Grammatical Errors Diagnosis System Based on BERT at NLPTEA-2020 CGED Shared Task (Zan et al.) | AACL-2020 |  | [Note](#bert-bilstm-crf-3gram-seq2seq) |
-| 6 | 21/1/11 | Chinese Grammatical Error Detection Based on BERT Model (Cheng and Duan) | AACL-2020 |  | [Note](#bert-finetuned) |
-| 7 | 21/1/21 | Multi-Head Multi-Layer Attention to Deep Language Representations for Grammatical Error Detection (Kaneko et al.) | CICLING-2019 |  |  |
+[//]: # (- [x] 2021/1/6 [GECToR - Grammatical Error Correction: Tag, Not Rewrite]&#40;#gector&#41; [ACL-2020] √)
 
-## DA
-<!-- - [x] Improving Grammatical Error Correction with Machine Translation Pairs [EMNLP-2020]
-- [x] A Self-Refinement Strategy for Noise Reduction in Grammatical Error Correction [EMNLP-2020] -->
+[//]: # (- [x] 2021/1/7 [MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking]&#40;#maskgec&#41; [AAAI-2020])
 
-| Index | Date | Paper | Conference | Code | Note |
-| :-: | --- | --- | --- | --- | --- |
-| 1 | 21/1/11 | A Self-Refinement Strategy for Noise Reduction in Grammatical Error Correction (Mita et al.) | EMNLP-2020 |  |  |
+[//]: # (- [x] 2021/1/7 [Towards Minimal Supervision BERT-Based Grammar Error Correction &#40;Student Abstract&#41;]&#40;#minimal-supervision&#41; [AAAI-2020])
 
-## Related
-<!-- - [x] 2021/1/5 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
-- [x] 2021/1/5 [Incorporating BERT into Neural Machine Translation](#bert-nmt) [ICLR-2020] √
-- [x] 2021/1/17 Agreement on Target-Bidirectional LSTMs for Sequence-to-Sequence Learning [AAAI-2016]
-- [x] 2021/1/17 Agreement on Target-bidirectional Neural Machine Translation [NAACL-2016]
-- [x] 2021/1/17 Edinburgh Neural Machine Translation Systems for WMT 16
-- [x] 2021/1/22 LIMIT-BERT: Linguistic Informed Multi-Task BERT [EMNLP-2020]
-- [x] 2021/1/23 Distilling Knowledge Learned in BERT for Text Generation [ACL-2020]
-- [x] 2021/1/23 Towards Making the Most of BERT in Neural Machine Translation [AAAI-2020]
-- [x] 2021/1/23 Acquiring Knowledge from Pre-Trained Model to Neural Machine Translation [AAAI-2020] -->
+[//]: # (- [x] 2021/1/7 [Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model]&#40;#bart-gec&#41; [AACL-2020] √)
 
-| Index | Date | Paper | Conference | Code | Note |
-| :-: | --- | --- | --- | --- | --- |
-| 1 | 21/1/5 | BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (Devlin et al.) | NAACL-2019 |  |  |
-| 2* | 21/1/5 | Incorporating BERT into Neural Machine Translation (Zhu et al.) | ICLR-2020 | [Code](https://github.com/bert-nmt/bert-nmt) | [Note](#bert-nmt) |
-| 3 | 21/1/17 | Agreement on Target-Bidirectional LSTMs for Sequence-to-Sequence Learning (Liu et al.) | AAAI-2016 |  |  |
-| 4 | 21/1/17 | Agreement on Target-bidirectional Neural Machine Translation (Liu et al.) | NAACL-2016 |  |  |
-| 5* | 21/1/17 | Edinburgh Neural Machine Translation Systems for WMT 16 (Sennrich et al.) | WMT-2016 |  |  |
-| 6 | 21/1/22 | LIMIT-BERT: Linguistic Informed Multi-Task BERT (Zhou et al.) | EMNLP-2020 |  |  |
-| 7 | 21/1/23 | Distilling Knowledge Learned in BERT for Text Generation (Chen et al.) | ACL-2020 |  |  |
-| 8 | 21/1/23 | Towards Making the Most of BERT in Neural Machine Translation (Yang et al.) | AAAI-2020 |  |  |
-| 9 | 21/1/23 | Acquiring Knowledge from Pre-Trained Model to Neural Machine Translation (Weng et al.) | AAAI-2020 |  |  |
-| 10 | 21/1/26 | Improving Sequence-to-Sequence Pre-training via Sequence Span Rewriting (Zhou et al.) | - |  |  |
+[//]: # (- [x] 2021/1/9 [Chinese Grammatical Correction Using BERT-based Pre-trained Model]&#40;#chinese-bert-gec&#41; [IJCNLP-2020])
 
----
+[//]: # (- [x] 2021/1/10 [Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction]&#40;#efficiency&#41; [EMNLP-2020])
 
-## Seq2Seq
-1. <span id="bert-gec">[ACL-2020] Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction</span>  
-Applied the BERT-fused model for GEC. The BERT is finetuned with MLM and GED to fix the inconsistent input distribution between the raw data for BERT training and the GEC data. Pseudo-data and R2L are also used for performance boosting.  
-https://github.com/kanekomasahiro/bert-gec
+[//]: # (- [x] 2021/1/10 [Heterogeneous Recycle Generation for Chinese Grammatical Correction]&#40;#heterogeneous&#41; [COLING-2020] √)
 
-2. <span id="chinese-bert-gec">[IJCNLP-2020] Chinese Grammatical Correction Using BERT-based Pre-trained Model  
-Tries BERT-init (BERT-encoder in the papar) and BERT-fused for Chinese GEC. The Chinese GEC ver. of *Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction*, even less techniques used.
+[//]: # (- [x] 2021/1/10 [TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020]&#40;#chinese-bert-init&#41; [AACL-2020])
 
-3. <span id="bart-gec">[AACL-2020] Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model</span>  
-Used BART for GEC and says that BART can be a baseline for GEC, which can reach high performance by simple finetuning with GEC data instead of pseudo-data pretraining.  
-https://github.com/Katsumata420/generic-pretrained-GEC
+[//]: # (- [x] 2021/1/11 [Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction]&#40;#local-beam-search&#41; [COLING-2020])
 
-4. <span id="efficiency">[EMNLP-2020] Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction</span>  
-Combines a sequence tagging model for erroneous span detection and a seq2seq model for erroneous span correction to make the GEC process more efficient. The sequence tagging model (BERT-like) looks for spans needing to be corrected by outputting binary vectors, and the seq2seq model receives inputs annotated according to the outputs of the sequence tagging model and only produces outputs corresponding to the detected spans. Pseudo-data is used for pre-training the ESD and ESC models.
+[//]: # (- [x] 2021/1/12 [Seq2Edits: Sequence Transduction Using Span-level Edit Operations]&#40;#seq2edits&#41; [EMNLP-2020])
 
-## Seq2Edits
-1. <span id="seq2edits">[EMNLP-2020] Seq2Edits: Sequence Transduction Using Span-level Edit Operations</span>  
-Proposes a method for tasks containing many overlaps such as GEC. Uses Transformer with the decoder modified. The model receives a source sentence and at each inference time-step outputs a 3-tuple  which corresponds to an edit operation (error tag, source span end position, replacement). The error tag provides clear explanation. The paper conducts experiments on 5 NLP tasks containing many overlaps. Experiments with and without pretraining are conducted.  
-(Not very clear about the modified decoder.)  
-https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/models/research/transformer_seq2edits.py
+[//]: # (- [x] 2021/1/12 [Adversarial Grammatical Error Correction]&#40;#adversarial&#41; [EMNLP-2020])
 
-## Seq Labeling
-1. <span id="gector">[ACL-2020] GECToR - Grammatical Error Correction: Tag, Not Rewrite</span>  
-Used a BERT sequence tagger. Developed custom task-specific g-transformations such as CASE, MERGE and so on. Since each time a token in the source sentence can only map an edit, iterative correction may be required. A 3-stage training strategy is used: data-aug pretraining - finetuning on err data - finetuning on err and err-free data.  
-https://github.com/grammarly/gector
+[//]: # (- [x] 2021/1/17 Pseudo-Bidirectional Decoding for Local Sequence Transduction [EMNLP-2020])
 
-2. <span id="minimal-supervision">[AAAI-2020] Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract)</span>  
-Divides the GEC task into two stages: error identification and error correction. The first stage is a sequence tagging (remain, substitution, ...) task and a BERT is used for the second stage (correction).   
-(Not very clear about the method proposed by the paper.)
+[//]: # (- [x] 2021/1/18 Neural Grammatical Error Correction Systems with Unsupervised Pre-training on Synthetic Data [ACL-2019])
 
-## Pipeline
-1. <span id="heterogeneous">[COLING-2020] Heterogeneous Recycle Generation for Chinese Grammatical Correction</span>  
-Makes use of a sequence editing model, a seq2seq model and a spell checker to correct different kinds of errors (small scale errors, large scale errors and spell errors respectively). Iterative decoding is applied on (sequence editing model, seq2seq model). The proposed method needs not data-aug but still achieves comparable performance.
+[//]: # (- [x] 2021/1/18 An Empirical Study of Incorporating Pseudo Data into Grammatical Error Correction [ACL-2019])
 
-## Multi-Task Learning
-1. <span id="chinese-multi-task">[GED] [CCL-2020] 基于数据增强和多任务特征学习的中文语法错误检测方法</span>  
-Implements Chinese GED through data-augmentation and pretrained BERT finetuned using multi-task learning. The data-augmentation method applied here is simple, including manipulations such as insertions, deletions and so on. Some rules are designed to maintain the meanings of sentences. The Chinese BERT is used for GED with a CRF layer on top. It is finetuned through multi-task learning: pos tagging, parsing and grammar error detection.
+[//]: # (- [x] 2021/1/19 Parallel Iterative Edit Models for Local Sequence Transduction [EMNLP-2019])
 
-## Beam Search
-1. <span id="local-beam-search">[COLING-2020] Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction</span>  
-Proposes a local beam search method to output diverse outputs. The proposed method generates more diverse outputs than the plain beam search, and only modifies where should be corrected rather than changing the whole sequence as the global beam search. The copy factor in the copy-augmented Transformer is used as a penalty score.
+[//]: # (- [x] 2021/1/19 Improving Grammatical Error Correction via Pre-Training a Copy-Augmented Architecture with Unlabeled Data [NAACL-2019])
 
-## Adversarial Training
-1. <span id="adversarial">[EMNLP-2020] Adversarial Grammatical Error Correction</span>  
-The first approach to use adversarial training for GEC. Uses a seq2seq model as the generator and a sentence-pair classification model for the discriminator. The discriminator basically acts as a novel evaluation method for evaluating the outputs generated by the generator, which directly models the task. No other technique such as data augmentation is used.  
-(Not very clear about the adversarial training.)
+[//]: # (- [x] 2021/1/20 A Neural Grammatical Error Correction System Built On Better Pre-training and Sequential Transfer Learning [ACL-2020])
 
-## Dynamic Masking
-1. <span id="maskgec">[AAAI-2020] MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking</span>  
-Proposed a dynamic masking method for data-augmentation and generalization boosting. In each epoch each sentence is introduced noises with a prob by some manipulations, including padding substitution, random substution, word frequency substitution and so on.
+[//]: # (- [x] 2021/1/20 The Unreasonable Effectiveness of Transformer Language Models in Grammatical Error Correction [ACL-2019])
 
-## NLPTEA
-1. <span id="chinese-bert-init">[AACL-2020] TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020  
-Uses BERT-init as in *Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction*, which is also the same as the BERT-encoder in *Chinese Grammatical Correction Using BERT-based Pre-trained Model*.
+[//]: # (- [x] 2021/1/20 TMU Transformer System Using BERT for Re-ranking at BEA 2019 Grammatical Error Correction on Restricted Track [ACL-2019])
 
-2. <span id="score-based">[GED] [AACL-2020] Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis</span>  
-Uses BiLSTM-CRF for GED, whose input is features concat composed of output of BERT, POS, POS score and PMI score. The scores are incorporated using a gating mechanism to avoid losing partial-order relationships when embedding continuous feature items.  
-(Not very clear about the features used and the purpose of the gating mechanism.)
+[//]: # (- [x] 2021/1/21 Noisy Channel for Low Resource Grammatical Error Correction [ACL-2019])
 
-3. <span id="bert-crf">[GED] [AACL-2020] CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared]</span>  
-Uses BERT + CRF.
+[//]: # (- [x] 2021/1/22 The BLCU System in the BEA 2019 Shared Task [ACL-2019])
 
-4. <span id="resnet-bert">[GED] [AACL-2020] Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis</span>  
-Applies res on BERT for GED. The encoded hidden repr is added with the emd and fed into the output layer.  
-(Also related to GEC but not detailed, thus catogorize as GED.)
+[//]: # (- [x] 2021/1/22 The AIP-Tohoku System at the BEA-2019 Shared Task [ACL-2019])
 
-5. <span id="bert-bilstm-crf-3gram-seq2seq">[GED] [AACL-2020] Chinese Grammatical Errors Diagnosis System Based on BERT at NLPTEA-2020 CGED Shared Task</span>  
-Uses BERT-BiLSTM-CRF for GED. Uses a hybrid system containing a 3-gram and a seq2seq for GEC.
+[//]: # (- [x] 2021/1/22 CUNI System for the Building Educational Applications 2019 Shared Task: Grammatical Error Correction [ACL-2019] -->)
 
-6. <span id="bert-finetuned">[GED] [AACL-2020] Chinese Grammatical Error Detection Based on BERT Model</span>  
-Uses BERT finetuned on GEC datasets.
+[//]: # ()
+[//]: # (| Index | Date | Paper | Conference | Code | Note |)
 
-## Related
-1. <span id="bert-nmt">[NMT] [ICLR-2020] Incorporating BERT into Neural Machine Translation</span>  
-Proposed a BERT-fused model. Comparing with the Vanilla Transformer, the proposed model has additionally one BERT-Enc Attention module in the encoder and a BERT-Dec Attention module in the decoder. Both of the additional modules are for incorporating features extracted by BERT whose weights are fixed. A Vanilla Transformer is trained in the first training stage, and in the second stage the BERT and additional modules are trained together.  
-https://github.com/bert-nmt/bert-nmt
+[//]: # (| :-: | --- | --- | --- | --- | --- |)
+
+[//]: # (| 1* | 21/1/6 | Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction &#40;Kaneko et al.&#41; | ACL-2020 | [Code]&#40;https://github.com/kanekomasahiro/bert-gec&#41; | [Note]&#40;#bert-gec&#41; |)
+
+[//]: # (| 2* | 21/1/6 | GECToR - Grammatical Error Correction: Tag, Not Rewrite &#40;Omelianchuk et al.&#41; | ACL-2020 | [Code]&#40;https://github.com/grammarly/gector&#41; | [Note]&#40;#gector&#41; |)
+
+[//]: # (| 3* | 21/1/7 | MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking &#40;Zhao and Wang&#41; | AAAI-2020 |  | [Note]&#40;#maskgec&#41; |)
+
+[//]: # (| 4 | 21/1/7 | Towards Minimal Supervision BERT-Based Grammar Error Correction &#40;Student Abstract&#41; &#40;Li et al.&#41; | AAAI-2020 |  | [Note]&#40;#minimal-supervision&#41; |)
+
+[//]: # (| 5* | 21/1/7 | Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model &#40;Katsumata and Komachi&#41; | AACL-2020 | [Code]&#40;https://github.com/Katsumata420/generic-pretrained-GEC&#41; | [Note]&#40;#bart-gec&#41; |)
+
+[//]: # (| 6 | 21/1/9 | Chinese Grammatical Correction Using BERT-based Pre-trained Model &#40;Wang et al.&#41; | IJCNLP-2020 |  | [Note]&#40;#chinese-bert-gec&#41; |)
+
+[//]: # (| 7* | 21/1/10 | Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction &#40;Chen et al.&#41; | EMNLP-2020 |  | [Note]&#40;#efficiency&#41; |)
+
+[//]: # (| 8* | 21/1/10 | Heterogeneous Recycle Generation for Chinese Grammatical Correction &#40;Hinson et al.&#41; | COLING-2020 |  | [Note]&#40;#heterogeneous&#41; |)
+
+[//]: # (| 9 | 21/1/10 | TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020 &#40;Wang and Komachi&#41; | AACL-2020 |  | [Note]&#40;#chinese-bert-init&#41; |)
+
+[//]: # (| 10 | 21/1/11 | Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction &#40;Hotate et al.&#41; | COLING-2020 |  | [Note]&#40;#local-beam-search&#41; |)
+
+[//]: # (| 11 | 21/1/12 | Seq2Edits: Sequence Transduction Using Span-level Edit Operations &#40;Stahlberg and Kumar&#41; | EMNLP-2020 | [Code]&#40;https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/models/research/transformer_seq2edits.py&#41; | [Note]&#40;#seq2edits&#41; |)
+
+[//]: # (| 12 | 21/1/12 | Adversarial Grammatical Error Correction &#40;Raheja and Alikaniotis&#41; | EMNLP-2020 |  | [Note]&#40;#adversarial&#41; |)
+
+[//]: # (| 13* | 21/1/17 | Pseudo-Bidirectional Decoding for Local Sequence Transduction &#40;Zhou et al.&#41; | EMNLP-2020 |  |  |)
+
+[//]: # (| 14 | 21/1/18 | Neural Grammatical Error Correction Systems with Unsupervised Pre-training on Synthetic Data &#40;Grundkiewicz et al.&#41; | ACL-2019 |  |  |)
+
+[//]: # (| 15 | 21/1/18 | An Empirical Study of Incorporating Pseudo Data into Grammatical Error Correction &#40;Kiyono et al.&#41; | ACL-2019 |  |  |)
+
+[//]: # (| 16 | 21/1/19 | Parallel Iterative Edit Models for Local Sequence Transduction &#40;Awasthi et al.&#41; | EMNLP-2019 |  |  |)
+
+[//]: # (| 17 | 21/1/19 | Improving Grammatical Error Correction via Pre-Training a Copy-Augmented Architecture with Unlabeled Data &#40;Zhao et al.&#41; | NAACL-2019 |  |  |)
+
+[//]: # (| 18 | 21/1/20 | A Neural Grammatical Error Correction System Built On Better Pre-training and Sequential Transfer Learning &#40;Choe et al.&#41; | ACL-2020 |  |  |)
+
+[//]: # (| 19 | 21/1/20 | The Unreasonable Effectiveness of Transformer Language Models in Grammatical Error Correction &#40;Alikaniotis and Raheja&#41; | ACL-2019 |  |  |)
+
+[//]: # (| 20 | 21/1/20 | TMU Transformer System Using BERT for Re-ranking at BEA 2019 Grammatical Error Correction on Restricted Track &#40;Kaneko et al.&#41; | ACL-2019 |  |  |)
+
+[//]: # (| 21 | 21/1/21 | Noisy Channel for Low Resource Grammatical Error Correction &#40;Flachs et al.&#41; | ACL-2019 |  |  |)
+
+[//]: # (| 22 | 21/1/22 | The BLCU System in the BEA 2019 Shared Task &#40;Yang et al.&#41; | ACL-2019 |  |  |)
+
+[//]: # (| 23 | 21/1/22 | The AIP-Tohoku System at the BEA-2019 Shared Task &#40;Asano et al.&#41; | ACL-2019 |  |  |)
+
+[//]: # (| 24 | 21/1/22 | CUNI System for the Building Educational Applications 2019 Shared Task: Grammatical Error Correction &#40;Náplava and Straka&#41; | ACL-2019 |  |  |)
+
+[//]: # (| 25 | 21/1/27 | Cross-Sentence Grammatical Error Correction &#40;Chollampatt et al.&#41; | ACL-2019 |  |  |)
+
+[//]: # ()
+[//]: # (## GED)
+
+[//]: # (<!-- - [x] 2021/1/6 [基于数据增强和多任务特征学习的中文语法错误检测方法]&#40;#chinese-multi-task&#41; [CCL-2020] √)
+
+[//]: # (- [x] 2021/1/11 [Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis]&#40;#score-based&#41; [AACL-2020])
+
+[//]: # (- [x] 2021/1/11 [CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared]&#40;#bert-crf&#41; [AACL-2020])
+
+[//]: # (- [x] 2021/1/11 [Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis]&#40;#resnet-bert&#41; [AACL-2020])
+
+[//]: # (- [x] 2021/1/11 [Chinese Grammatical Errors Diagnosis System Based on BERT at NLPTEA-2020 CGED Shared Task]&#40;#bert-bilstm-crf-3gram-seq2seq&#41; [AACL-2020])
+
+[//]: # (- [x] 2021/1/11 [Chinese Grammatical Error Detection Based on BERT Model]&#40;#bert-finetuned&#41; [AACL-2020])
+
+[//]: # (- [x] 2021/1/21 Multi-Head Multi-Layer Attention to Deep Language Representations for Grammatical Error Detection [CICLING-2019] -->)
+
+[//]: # ()
+[//]: # (| Index | Date | Paper | Conference | Code | Note |)
+
+[//]: # (| :-: | --- | --- | --- | --- | --- |)
+
+[//]: # (| 1* | 21/1/6 | 基于数据增强和多任务特征学习的中文语法错误检测方法 &#40;Xie et al.&#41; | CCL-2020 |  | [Note]&#40;#chinese-multi-task&#41; |)
+
+[//]: # (| 2 | 21/1/11 | Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis &#40;Cao et al.&#41; | AACL-2020 |  | [Note]&#40;#score-based&#41; |)
+
+[//]: # (| 3 | 21/1/11 | CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared &#40;Wu and Wang&#41; | AACL-2020 |  | [Note]&#40;#bert-crf&#41; |)
+
+[//]: # (| 4 | 21/1/11 | Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis &#40;Wang et al.&#41; | AACL-2020 |  | [Note]&#40;#resnet-bert&#41; |)
+
+[//]: # (| 5 | 21/1/11 | Chinese Grammatical Errors Diagnosis System Based on BERT at NLPTEA-2020 CGED Shared Task &#40;Zan et al.&#41; | AACL-2020 |  | [Note]&#40;#bert-bilstm-crf-3gram-seq2seq&#41; |)
+
+[//]: # (| 6 | 21/1/11 | Chinese Grammatical Error Detection Based on BERT Model &#40;Cheng and Duan&#41; | AACL-2020 |  | [Note]&#40;#bert-finetuned&#41; |)
+
+[//]: # (| 7 | 21/1/21 | Multi-Head Multi-Layer Attention to Deep Language Representations for Grammatical Error Detection &#40;Kaneko et al.&#41; | CICLING-2019 |  |  |)
+
+[//]: # ()
+[//]: # (## DA)
+
+[//]: # (<!-- - [x] Improving Grammatical Error Correction with Machine Translation Pairs [EMNLP-2020])
+
+[//]: # (- [x] A Self-Refinement Strategy for Noise Reduction in Grammatical Error Correction [EMNLP-2020] -->)
+
+[//]: # ()
+[//]: # (| Index | Date | Paper | Conference | Code | Note |)
+
+[//]: # (| :-: | --- | --- | --- | --- | --- |)
+
+[//]: # (| 1 | 21/1/11 | A Self-Refinement Strategy for Noise Reduction in Grammatical Error Correction &#40;Mita et al.&#41; | EMNLP-2020 |  |  |)
+
+[//]: # ()
+[//]: # (## Related)
+
+[//]: # (<!-- - [x] 2021/1/5 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding)
+
+[//]: # (- [x] 2021/1/5 [Incorporating BERT into Neural Machine Translation]&#40;#bert-nmt&#41; [ICLR-2020] √)
+
+[//]: # (- [x] 2021/1/17 Agreement on Target-Bidirectional LSTMs for Sequence-to-Sequence Learning [AAAI-2016])
+
+[//]: # (- [x] 2021/1/17 Agreement on Target-bidirectional Neural Machine Translation [NAACL-2016])
+
+[//]: # (- [x] 2021/1/17 Edinburgh Neural Machine Translation Systems for WMT 16)
+
+[//]: # (- [x] 2021/1/22 LIMIT-BERT: Linguistic Informed Multi-Task BERT [EMNLP-2020])
+
+[//]: # (- [x] 2021/1/23 Distilling Knowledge Learned in BERT for Text Generation [ACL-2020])
+
+[//]: # (- [x] 2021/1/23 Towards Making the Most of BERT in Neural Machine Translation [AAAI-2020])
+
+[//]: # (- [x] 2021/1/23 Acquiring Knowledge from Pre-Trained Model to Neural Machine Translation [AAAI-2020] -->)
+
+[//]: # ()
+[//]: # (| Index | Date | Paper | Conference | Code | Note |)
+
+[//]: # (| :-: | --- | --- | --- | --- | --- |)
+
+[//]: # (| 1 | 21/1/5 | BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding &#40;Devlin et al.&#41; | NAACL-2019 |  |  |)
+
+[//]: # (| 2* | 21/1/5 | Incorporating BERT into Neural Machine Translation &#40;Zhu et al.&#41; | ICLR-2020 | [Code]&#40;https://github.com/bert-nmt/bert-nmt&#41; | [Note]&#40;#bert-nmt&#41; |)
+
+[//]: # (| 3 | 21/1/17 | Agreement on Target-Bidirectional LSTMs for Sequence-to-Sequence Learning &#40;Liu et al.&#41; | AAAI-2016 |  |  |)
+
+[//]: # (| 4 | 21/1/17 | Agreement on Target-bidirectional Neural Machine Translation &#40;Liu et al.&#41; | NAACL-2016 |  |  |)
+
+[//]: # (| 5* | 21/1/17 | Edinburgh Neural Machine Translation Systems for WMT 16 &#40;Sennrich et al.&#41; | WMT-2016 |  |  |)
+
+[//]: # (| 6 | 21/1/22 | LIMIT-BERT: Linguistic Informed Multi-Task BERT &#40;Zhou et al.&#41; | EMNLP-2020 |  |  |)
+
+[//]: # (| 7 | 21/1/23 | Distilling Knowledge Learned in BERT for Text Generation &#40;Chen et al.&#41; | ACL-2020 |  |  |)
+
+[//]: # (| 8 | 21/1/23 | Towards Making the Most of BERT in Neural Machine Translation &#40;Yang et al.&#41; | AAAI-2020 |  |  |)
+
+[//]: # (| 9 | 21/1/23 | Acquiring Knowledge from Pre-Trained Model to Neural Machine Translation &#40;Weng et al.&#41; | AAAI-2020 |  |  |)
+
+[//]: # (| 10 | 21/1/26 | Improving Sequence-to-Sequence Pre-training via Sequence Span Rewriting &#40;Zhou et al.&#41; | - |  |  |)
+
+[//]: # ()
+[//]: # (---)
+
+[//]: # ()
+[//]: # (## Seq2Seq)
+
+[//]: # (1. <span id="bert-gec">[ACL-2020] Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction</span>  )
+
+[//]: # (Applied the BERT-fused model for GEC. The BERT is finetuned with MLM and GED to fix the inconsistent input distribution between the raw data for BERT training and the GEC data. Pseudo-data and R2L are also used for performance boosting.  )
+
+[//]: # (https://github.com/kanekomasahiro/bert-gec)
+
+[//]: # ()
+[//]: # (2. <span id="chinese-bert-gec">[IJCNLP-2020] Chinese Grammatical Correction Using BERT-based Pre-trained Model  )
+
+[//]: # (Tries BERT-init &#40;BERT-encoder in the papar&#41; and BERT-fused for Chinese GEC. The Chinese GEC ver. of *Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction*, even less techniques used.)
+
+[//]: # ()
+[//]: # (3. <span id="bart-gec">[AACL-2020] Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model</span>  )
+
+[//]: # (Used BART for GEC and says that BART can be a baseline for GEC, which can reach high performance by simple finetuning with GEC data instead of pseudo-data pretraining.  )
+
+[//]: # (https://github.com/Katsumata420/generic-pretrained-GEC)
+
+[//]: # ()
+[//]: # (4. <span id="efficiency">[EMNLP-2020] Improving the Efficiency of Grammatical Error Correction with Erroneous Span Detection and Correction</span>  )
+
+[//]: # (Combines a sequence tagging model for erroneous span detection and a seq2seq model for erroneous span correction to make the GEC process more efficient. The sequence tagging model &#40;BERT-like&#41; looks for spans needing to be corrected by outputting binary vectors, and the seq2seq model receives inputs annotated according to the outputs of the sequence tagging model and only produces outputs corresponding to the detected spans. Pseudo-data is used for pre-training the ESD and ESC models.)
+
+[//]: # ()
+[//]: # (## Seq2Edits)
+
+[//]: # (1. <span id="seq2edits">[EMNLP-2020] Seq2Edits: Sequence Transduction Using Span-level Edit Operations</span>  )
+
+[//]: # (Proposes a method for tasks containing many overlaps such as GEC. Uses Transformer with the decoder modified. The model receives a source sentence and at each inference time-step outputs a 3-tuple  which corresponds to an edit operation &#40;error tag, source span end position, replacement&#41;. The error tag provides clear explanation. The paper conducts experiments on 5 NLP tasks containing many overlaps. Experiments with and without pretraining are conducted.  )
+
+[//]: # (&#40;Not very clear about the modified decoder.&#41;  )
+
+[//]: # (https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/models/research/transformer_seq2edits.py)
+
+[//]: # ()
+[//]: # (## Seq Labeling)
+
+[//]: # (1. <span id="gector">[ACL-2020] GECToR - Grammatical Error Correction: Tag, Not Rewrite</span>  )
+
+[//]: # (Used a BERT sequence tagger. Developed custom task-specific g-transformations such as CASE, MERGE and so on. Since each time a token in the source sentence can only map an edit, iterative correction may be required. A 3-stage training strategy is used: data-aug pretraining - finetuning on err data - finetuning on err and err-free data.  )
+
+[//]: # (https://github.com/grammarly/gector)
+
+[//]: # ()
+[//]: # (2. <span id="minimal-supervision">[AAAI-2020] Towards Minimal Supervision BERT-Based Grammar Error Correction &#40;Student Abstract&#41;</span>  )
+
+[//]: # (Divides the GEC task into two stages: error identification and error correction. The first stage is a sequence tagging &#40;remain, substitution, ...&#41; task and a BERT is used for the second stage &#40;correction&#41;.   )
+
+[//]: # (&#40;Not very clear about the method proposed by the paper.&#41;)
+
+[//]: # ()
+[//]: # (## Pipeline)
+
+[//]: # (1. <span id="heterogeneous">[COLING-2020] Heterogeneous Recycle Generation for Chinese Grammatical Correction</span>  )
+
+[//]: # (Makes use of a sequence editing model, a seq2seq model and a spell checker to correct different kinds of errors &#40;small scale errors, large scale errors and spell errors respectively&#41;. Iterative decoding is applied on &#40;sequence editing model, seq2seq model&#41;. The proposed method needs not data-aug but still achieves comparable performance.)
+
+[//]: # ()
+[//]: # (## Multi-Task Learning)
+
+[//]: # (1. <span id="chinese-multi-task">[GED] [CCL-2020] 基于数据增强和多任务特征学习的中文语法错误检测方法</span>  )
+
+[//]: # (Implements Chinese GED through data-augmentation and pretrained BERT finetuned using multi-task learning. The data-augmentation method applied here is simple, including manipulations such as insertions, deletions and so on. Some rules are designed to maintain the meanings of sentences. The Chinese BERT is used for GED with a CRF layer on top. It is finetuned through multi-task learning: pos tagging, parsing and grammar error detection.)
+
+[//]: # ()
+[//]: # (## Beam Search)
+
+[//]: # (1. <span id="local-beam-search">[COLING-2020] Generating Diverse Corrections with Local Beam Search for Grammatical Error Correction</span>  )
+
+[//]: # (Proposes a local beam search method to output diverse outputs. The proposed method generates more diverse outputs than the plain beam search, and only modifies where should be corrected rather than changing the whole sequence as the global beam search. The copy factor in the copy-augmented Transformer is used as a penalty score.)
+
+[//]: # ()
+[//]: # (## Adversarial Training)
+
+[//]: # (1. <span id="adversarial">[EMNLP-2020] Adversarial Grammatical Error Correction</span>  )
+
+[//]: # (The first approach to use adversarial training for GEC. Uses a seq2seq model as the generator and a sentence-pair classification model for the discriminator. The discriminator basically acts as a novel evaluation method for evaluating the outputs generated by the generator, which directly models the task. No other technique such as data augmentation is used.  )
+
+[//]: # (&#40;Not very clear about the adversarial training.&#41;)
+
+[//]: # ()
+[//]: # (## Dynamic Masking)
+
+[//]: # (1. <span id="maskgec">[AAAI-2020] MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking</span>  )
+
+[//]: # (Proposed a dynamic masking method for data-augmentation and generalization boosting. In each epoch each sentence is introduced noises with a prob by some manipulations, including padding substitution, random substution, word frequency substitution and so on.)
+
+[//]: # ()
+[//]: # (## NLPTEA)
+
+[//]: # (1. <span id="chinese-bert-init">[AACL-2020] TMU-NLP System Using BERT-based Pre-trained Model to the NLP-TEA CGED Shared Task 2020  )
+
+[//]: # (Uses BERT-init as in *Encoder-Decoder Models Can Benefit from Pre-trained Masked Language Models in Grammatical Error Correction*, which is also the same as the BERT-encoder in *Chinese Grammatical Correction Using BERT-based Pre-trained Model*.)
+
+[//]: # ()
+[//]: # (2. <span id="score-based">[GED] [AACL-2020] Integrating BERT and Score-based Feature Gates for Chinese Grammatical Error Diagnosis</span>  )
+
+[//]: # (Uses BiLSTM-CRF for GED, whose input is features concat composed of output of BERT, POS, POS score and PMI score. The scores are incorporated using a gating mechanism to avoid losing partial-order relationships when embedding continuous feature items.  )
+
+[//]: # (&#40;Not very clear about the features used and the purpose of the gating mechanism.&#41;)
+
+[//]: # ()
+[//]: # (3. <span id="bert-crf">[GED] [AACL-2020] CYUT Team Chinese Grammatical Error Diagnosis System Report in NLPTEA-2020 CGED Shared]</span>  )
+
+[//]: # (Uses BERT + CRF.)
+
+[//]: # ()
+[//]: # (4. <span id="resnet-bert">[GED] [AACL-2020] Combining ResNet and Transformer for Chinese Grammatical Error Diagnosis</span>  )
+
+[//]: # (Applies res on BERT for GED. The encoded hidden repr is added with the emd and fed into the output layer.  )
+
+[//]: # (&#40;Also related to GEC but not detailed, thus catogorize as GED.&#41;)
+
+[//]: # ()
+[//]: # (5. <span id="bert-bilstm-crf-3gram-seq2seq">[GED] [AACL-2020] Chinese Grammatical Errors Diagnosis System Based on BERT at NLPTEA-2020 CGED Shared Task</span>  )
+
+[//]: # (Uses BERT-BiLSTM-CRF for GED. Uses a hybrid system containing a 3-gram and a seq2seq for GEC.)
+
+[//]: # ()
+[//]: # (6. <span id="bert-finetuned">[GED] [AACL-2020] Chinese Grammatical Error Detection Based on BERT Model</span>  )
+
+[//]: # (Uses BERT finetuned on GEC datasets.)
+
+[//]: # ()
+[//]: # (## Related)
+
+[//]: # (1. <span id="bert-nmt">[NMT] [ICLR-2020] Incorporating BERT into Neural Machine Translation</span>  )
+
+[//]: # (Proposed a BERT-fused model. Comparing with the Vanilla Transformer, the proposed model has additionally one BERT-Enc Attention module in the encoder and a BERT-Dec Attention module in the decoder. Both of the additional modules are for incorporating features extracted by BERT whose weights are fixed. A Vanilla Transformer is trained in the first training stage, and in the second stage the BERT and additional modules are trained together.  )
+
+[//]: # (https://github.com/bert-nmt/bert-nmt)
