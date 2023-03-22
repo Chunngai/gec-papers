@@ -6,6 +6,8 @@ such as **Grammatical Error Detection (GED)** and **Spoken Grammatical Error Cor
 
 ## Update Notes
 
+**2023/3/22:** Add a topic: syntax-enhanced.
+
 **2023/3/21:** 
 1. Reorganized the repo.
 2. Divide GEC papers into:
@@ -83,7 +85,7 @@ Updating. The papers will be organized by publication years.
     </details>
 [//]: # (+ Key Words: Iterative Correction; Edit Operation; Sequence Labeling)
 
-+ **[`en,zh`] SynGEC: Syntax-Enhanced Grammatical Error Correction with a Tailored GEC-Oriented Parser**
++ <a name="zhang-et-al-emnlp2022"></a>**[`en,zh`] SynGEC: Syntax-Enhanced Grammatical Error Correction with a Tailored GEC-Oriented Parser**
   + Authors: Yue Zhang, Bo Zhang, Zhenghua Li, Zuyi Bao, Chen Li, Min Zhang
   + Conference: EMNLP
   + Link: https://aclanthology.org/2022.emnlp-main.162/
@@ -188,6 +190,23 @@ Updating. The papers will be organized by publication years.
   + <details>
       <summary>Abstract</summary>
       Grammatical Error Correction (GEC), a task of Natural Language Processing (NLP), is challenging for underepresented languages. This issue is most prominent in languages other than English. This paper addresses the issue of data and system sparsity for GEC purposes in the modern Greek Language. Following the most popular current approaches in GEC, we develop and test an MT5 multilingual text-to-text transformer for Greek. To our knowledge this the first attempt to create a fully-fledged GEC model for Greek. Our evaluation shows that our system reaches up to 52.63% F0.5 score on part of the Greek Native Corpus (GNC), which is 16% below the winning system of the BEA-19 shared task on English GEC. In addition, we provide an extended version of the Greek Learner Corpus (GLC), on which our model reaches up to 22.76% F0.5. Previous versions did not include corrections with the annotations which hindered the potential development of efficient GEC systems. For that reason we provide a new set of corrections. This new dataset facilitates an exploration of the generalisation abilities and robustness of our system, given that the assessment is conducted on learner data while the training on native data.
+    </details>
+
++ <a name="li-et-al-ipm2022"></a>**Incorporating rich syntax information in Grammatical Error Correction**
+  + Authors: Zuchao Li, Kevin Parnow, Hai Zhao
+  + Journal: Information Processing & Management
+  + Link: https://www.sciencedirect.com/science/article/pii/S0306457322000206
+  + <details>
+      <summary>Abstract</summary>
+      Syntax parse trees are a method of representing sentence structure and are often used to provide models with syntax information and enhance downstream task performance. Because grammar and syntax are inherently linked, the incorporation of syntax parse trees in GEC is a natural solution. In this work, we present a method of incorporating syntax parse trees for Grammatical Error Correction (GEC). Building off a strong sequence-to-sequence Transformer baseline, we present a unified parse integration method for GEC that allows for the use of both dependency and constituency parse trees, as well as their combination - a syntactic graph. Specifically, on the sentence encoder, we propose a graph encoder that can encode dependency trees and constituent trees at the same time, yielding two representations for terminal nodes (i.e., the token of the sentence) and non-terminal nodes. We next use two cross-attentions (NT-Cross-Attention and T-Cross-Attention) to aggregate these source syntactic representations to the target side for final corrections prediction. In addition to evaluating our models on the popular CoNLL-2014 Shared Task and JFLEG GEC benchmarks, we affirm the effectiveness of our proposed method by testing both varying levels of parsing quality and exploring the use of both parsing formalisms. With further empirical exploration and analysis to identify the source of improvement, we found that rich syntax information provided clear clues for GEC; a syntactic graph composed of multiple syntactic parse trees can effectively compensate for the limited quality and insufficient error correction capability of a single syntactic parse tree.
+    </details>
+  
++ <a name="zhang-et-al-2022"></a>**CSynGEC: Incorporating Constituent-based Syntax for Grammatical Error Correction with a Tailored GEC-Oriented Parser**
+  + Authors: Yue Zhang, Zhenghua Li
+  + Link: https://arxiv.org/abs/2211.08158
+  + <details>
+      <summary>Abstract</summary>
+      Recently, Zhang et al. (2022) propose a syntax-aware grammatical error correction (GEC) approach, named SynGEC, showing that incorporating tailored dependency-based syntax of the input sentence is quite beneficial to GEC. This work considers another mainstream syntax formalism, i.e., constituent-based syntax. By drawing on the successful experience of SynGEC, we first propose an extended constituent-based syntax scheme to accommodate errors in ungrammatical sentences. Then, we automatically obtain constituency trees of ungrammatical sentences to train a GEC-oriented constituency parser by using parallel GEC data as a pivot. For syntax encoding, we employ the graph convolutional network (GCN). Experimental results show that our method, named CSynGEC, yields substantial improvements over strong baselines. Moreover, we investigate the integration of constituent-based and dependency-based syntax for GEC in two ways: 1) intra-model combination, which means using separate GCNs to encode both kinds of syntax for decoding in a single model; 2)inter-model combination, which means gathering and selecting edits predicted by different models to achieve final corrections. We find that the former method improves recall over using one standalone syntax formalism while the latter improves precision, and both lead to better F0.5 values.
     </details>
 
 ### GEC Datasets
@@ -335,8 +354,16 @@ Updating. The papers will be organized by publication years.
     </details>
 [//]: # (+ Keywords: Language-agnostic Data Augmentation; Pre-trained Language Models; Distillation)
 
++ <a name="wan-and-wan-2021"></a>**A Syntax-Guided Grammatical Error Correction Model with Dependency Tree Correction**
+  + Authors: Zhaohong Wan, Xiaojun Wan
+  + Link: https://arxiv.org/abs/2111.03294
+  + <details>
+      <summary>Abstract</summary>
+      Grammatical Error Correction (GEC) is a task of detecting and correcting grammatical errors in sentences. Recently, neural machine translation systems have become popular approaches for this task. However, these methods lack the use of syntactic knowledge which plays an important role in the correction of grammatical errors. In this work, we propose a syntax-guided GEC model (SG-GEC) which adopts the graph attention mechanism to utilize the syntactic knowledge of dependency trees. Considering the dependency trees of the grammatically incorrect source sentences might provide incorrect syntactic knowledge, we propose a dependency tree correction task to deal with it. Combining with data augmentation method, our model achieves strong performances without using any large pre-trained models. We evaluate our model on public benchmarks of GEC task and it achieves competitive results.
+    </details>
+
 ## Topics
-### Multi-lingual GEC
+### Multi-lingual
 + [A Unified Strategy for Multilingual Grammatical Error Correction with Pre-trained Cross-Lingual Language Model](#sun-et-al-ijcal2022)
   + Languages: `en,zh,de,ru`
   + <details>
@@ -369,6 +396,19 @@ Updating. The papers will be organized by publication years.
     + In the fine-tuning stage, the pre-trained model is further fine-tuned with language-specific data.
   
   </details>
+
+### Syntax-Enhanced
+
++ [SynGEC: Syntax-Enhanced Grammatical Error Correction with a Tailored GEC-Oriented Parser](#zhang-et-al-emnlp2022)
+  + Method: GEC-oriented dependency syntax parser + GCN fusing. 
+
++ [CSynGEC: Incorporating Constituent-based Syntax for Grammatical Error Correction with a Tailored GEC-Oriented Parser](#zhang-et-al-2022)
+  + Method: GEC-oriented constituency syntax parser + GCN fusing; incorporation of dependency & constituency syntax.
+
++ [Incorporating rich syntax information in Grammatical Error Correction](#li-et-al-ipm2022)
+
++ [A Syntax-Guided Grammatical Error Correction Model with Dependency Tree Correction](#wan-and-wan-2021)
+  + Method: Dependency syntax + GAT fusing; dependency tree correction (prediction of dependency relation, distance and ancestor-descendant relation).
 
 [//]: # (---)
 
