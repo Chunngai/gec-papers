@@ -349,10 +349,18 @@ Updating. The papers will be organized by publication years.
   + Code: https://github.com/google-research-datasets/clang8 (only the clang8 data are provided)
   + <details>
       <summary>Abstract</summary>
-      Abstract
       This paper presents a simple recipe to trainstate-of-the-art multilingual Grammatical Error Correction (GEC) models. We achieve this by first proposing a language-agnostic method to generate a large number of synthetic examples. The second ingredient is to use large-scale multilingual language models (up to 11B parameters). Once fine-tuned on language-specific supervised sets we surpass the previous state-of-the-art results on GEC benchmarks in four languages: English, Czech, German and Russian. Having established a new set of baselines for GEC, we make our results easily reproducible and accessible by releasing a CLANG-8 dataset. It is produced by using our best model, which we call gT5, to clean the targets of a widely used yet noisy Lang-8 dataset. cLang-8 greatly simplifies typical GEC training pipelines composed of multiple fine-tuning stages – we demonstrate that performing a single fine-tuning stepon cLang-8 with the off-the-shelf language models yields further accuracy improvements over an already top-performing gT5 model for English.
     </details>
 [//]: # (+ Keywords: Language-agnostic Data Augmentation; Pre-trained Language Models; Distillation)
+
++ <a name="flachs-et-al-bea2021"></a>**[`es,de,ru,cs`]Data Strategies for Low-Resource Grammatical Error Correction**
+  + Authors: Simon Flachs, Felix Stahlberg, Shankar Kumar
+  + Conference: BEA
+  + Link: https://aclanthology.org/2021.bea-1.12/
+  + <details>
+      <summary>Abstract</summary>
+   Grammatical Error Correction (GEC) is a task that has been extensively investigated for the English language. However, for low-resource languages the best practices for training GEC systems have not yet been systematically determined. We investigate how best to take advantage of existing data sources for improving GEC systems for languages with limited quantities of high quality training data. We show that methods for generating artificial training data for GEC can benefit from including morphological errors. We also demonstrate that noisy error correction data gathered from Wikipedia revision histories and the language learning website Lang8, are valuable data sources. Finally, we show that GEC systems pre-trained on noisy data sources can be fine-tuned effectively using small amounts of high quality, human-annotated data.
+   </details>
 
 + <a name="wan-and-wan-2021"></a>**A Syntax-Guided Grammatical Error Correction Model with Dependency Tree Correction**
   + Authors: Zhaohong Wan, Xiaojun Wan
@@ -396,6 +404,9 @@ Updating. The papers will be organized by publication years.
     + In the fine-tuning stage, the pre-trained model is further fine-tuned with language-specific data.
   
   </details>
+  
++ [Data Strategies for Low-Resource Grammatical Error Correction](#flachs-et-al-bea2021)
+  + Languages: `es,de,ru,cs`
 
 ### Syntax-Enhanced
 
