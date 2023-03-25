@@ -6,6 +6,8 @@ such as **Grammatical Error Detection (GED)** and **Spoken Grammatical Error Cor
 
 ## Update Notes
 
+**2023/3/25:** Add papers of multilingual GEC.
+
 **2023/3/22:** Add a topic: syntax-enhanced.
 
 **2023/3/21:** 
@@ -200,7 +202,16 @@ Updating. The papers will be organized by publication years.
       <summary>Abstract</summary>
       Syntax parse trees are a method of representing sentence structure and are often used to provide models with syntax information and enhance downstream task performance. Because grammar and syntax are inherently linked, the incorporation of syntax parse trees in GEC is a natural solution. In this work, we present a method of incorporating syntax parse trees for Grammatical Error Correction (GEC). Building off a strong sequence-to-sequence Transformer baseline, we present a unified parse integration method for GEC that allows for the use of both dependency and constituency parse trees, as well as their combination - a syntactic graph. Specifically, on the sentence encoder, we propose a graph encoder that can encode dependency trees and constituent trees at the same time, yielding two representations for terminal nodes (i.e., the token of the sentence) and non-terminal nodes. We next use two cross-attentions (NT-Cross-Attention and T-Cross-Attention) to aggregate these source syntactic representations to the target side for final corrections prediction. In addition to evaluating our models on the popular CoNLL-2014 Shared Task and JFLEG GEC benchmarks, we affirm the effectiveness of our proposed method by testing both varying levels of parsing quality and exploring the use of both parsing formalisms. With further empirical exploration and analysis to identify the source of improvement, we found that rich syntax information provided clear clues for GEC; a syntactic graph composed of multiple syntactic parse trees can effectively compensate for the limited quality and insufficient error correction capability of a single syntactic parse tree.
     </details>
-  
+ 
++ <a name="pajak-and-pajak-esa2022"></a>** [`ar,zh,cs,de,en,ro,ru`] Multilingual fine-tuning for Grammatical Error Correction**
+  + Authors: Krzysztof Pająk, Dominik Pająk
+  + Journal: Expert Systems with Applications
+  + Link: https://www.sciencedirect.com/science/article/pii/S0957417422003773?ref=pdf_download&fr=RR-9&rr=7ad7dd3fcb910466
+  + <details>
+      <summary>Abstract</summary>
+      Finding a single model capable of comprehending multiple languages is an area of active research in Natural Language Processing (NLP). Recently developed models such as mBART, mT5 or xProphetNet can solve problems connected with, for instance, machine translation and summarization for many languages. However, good multilingual solutions to the problem of Grammatical Error Correction (GEC) are still missing — this paper aims at filling this gap. We first review current annotated GEC datasets and then apply existing pre-trained multilingual models to correct grammatical errors in multiple languages. In our experiments, we compare how different pre-training approaches impact the final GEC quality. Our result is a single model that can correct seven different languages and is the best (in terms of F-score) currently reported multilingual GEC model. Additionally, our multilingual model achieves better results than the SOTA monolingual model for Romanian.
+    </details>
+
 + <a name="zhang-et-al-2022"></a>**CSynGEC: Incorporating Constituent-based Syntax for Grammatical Error Correction with a Tailored GEC-Oriented Parser**
   + Authors: Yue Zhang, Zhenghua Li
   + Link: https://arxiv.org/abs/2211.08158
@@ -362,6 +373,16 @@ Updating. The papers will be organized by publication years.
    Grammatical Error Correction (GEC) is a task that has been extensively investigated for the English language. However, for low-resource languages the best practices for training GEC systems have not yet been systematically determined. We investigate how best to take advantage of existing data sources for improving GEC systems for languages with limited quantities of high quality training data. We show that methods for generating artificial training data for GEC can benefit from including morphological errors. We also demonstrate that noisy error correction data gathered from Wikipedia revision histories and the language learning website Lang8, are valuable data sources. Finally, we show that GEC systems pre-trained on noisy data sources can be fine-tuned effectively using small amounts of high quality, human-annotated data.
    </details>
 
++ <a name="straka-et-al-wnut2021"></a>**[`cs,de,ru`] Character Transformations for Non-Autoregressive GEC Tagging**
+  + Authors: Milan Straka, Jakub Náplava, Jana Straková
+  + Conference: EMNLP-WNUT
+  + Link: https://aclanthology.org/2021.wnut-1.46/
+  + Code: https://github.com/ufal/wnut2021_character_transformations_gec
+  + <details>
+      <summary>Abstract</summary>
+   We propose a character-based non-autoregressive GEC approach, with automatically generated character transformations. Recently, per-word classification of correction edits has proven an efficient, parallelizable alternative to current encoder-decoder GEC systems. We show that word replacement edits may be suboptimal and lead to explosion of rules for spelling, diacritization and errors in morphologically rich languages, and propose a method for generating character transformations from GEC corpus. Finally, we train character transformation models for Czech, German and Russian, reaching solid results and dramatic speedup compared to autoregressive systems. The source code is released at https://github.com/ufal/wnut2021_character_transformations_gec.
+   </details>
+
 + <a name="wan-and-wan-2021"></a>**A Syntax-Guided Grammatical Error Correction Model with Dependency Tree Correction**
   + Authors: Zhaohong Wan, Xiaojun Wan
   + Link: https://arxiv.org/abs/2111.03294
@@ -370,9 +391,55 @@ Updating. The papers will be organized by publication years.
       Grammatical Error Correction (GEC) is a task of detecting and correcting grammatical errors in sentences. Recently, neural machine translation systems have become popular approaches for this task. However, these methods lack the use of syntactic knowledge which plays an important role in the correction of grammatical errors. In this work, we propose a syntax-guided GEC model (SG-GEC) which adopts the graph attention mechanism to utilize the syntactic knowledge of dependency trees. Considering the dependency trees of the grammatically incorrect source sentences might provide incorrect syntactic knowledge, we propose a dependency tree correction task to deal with it. Combining with data augmentation method, our model achieves strong performances without using any large pre-trained models. We evaluate our model on public benchmarks of GEC task and it achieves competitive results.
     </details>
 
+## Papers in 2020
+### GEC Methods
++ <a name="yamashita-et-al-coling2020"></a>**[`en,ru,cs`] Cross-lingual Transfer Learning for Grammatical Error Correction**
+  + Authors: Ikumi Yamashita, Satoru Katsumata, Masahiro Kaneko, Aizhan Imankulova, Mamoru Komachi
+  + Conference: COLING
+  + Link: https://aclanthology.org/2020.coling-main.415/
+  + <details>
+      <summary>Abstract</summary>
+      In this study, we explore cross-lingual transfer learning in grammatical error correction (GEC) tasks. Many languages lack the resources required to train GEC models. Cross-lingual transfer learning from high-resource languages (the source models) is effective for training models of low-resource languages (the target models) for various tasks. However, in GEC tasks, the possibility of transferring grammatical knowledge (e.g., grammatical functions) across languages is not evident. Therefore, we investigate cross-lingual transfer learning methods for GEC. Our results demonstrate that transfer learning from other languages can improve the accuracy of GEC. We also demonstrate that proximity to source languages has a significant impact on the accuracy of correcting certain types of errors.
+    </details>
+
++ <a name="katsusama-and-komachi-aacl2020"></a>**[`en,de,cs,ru`] Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model**
+  + Authors: Satoru Katsumata, Mamoru Komachi
+  + Conference: AACL
+  + Link: https://aclanthology.org/2020.aacl-main.83/
+  + Code: https://github.com/Katsumata420/generic-pretrained-GEC
+  + <details>
+      <summary>Abstract</summary>
+      Studies on grammatical error correction (GEC) have reported on the effectiveness of pretraining a Seq2Seq model with a large amount of pseudodata. However, this approach requires time-consuming pretraining of GEC because of the size of the pseudodata. In this study, we explored the utility of bidirectional and auto-regressive transformers (BART) as a generic pretrained encoder-decoder model for GEC. With the use of this generic pretrained model for GEC, the time-consuming pretraining can be eliminated. We find that monolingual and multilingual BART models achieve high performance in GEC, with one of the results being comparable to the current strong results in English GEC.
+    </details>
+
+## Papers in 2019
+### GEC Methods
++ <a name="naplava-and-straka-wnut2019"></a>**[`en,cs,de,ru`] Grammatical Error Correction in Low-Resource Scenarios**
+  + Authors: Jakub Náplava, Milan Straka
+  + Conference: EMNLP-WNUT
+  + Link: https://aclanthology.org/D19-5545/
+  + Code: https://github.com/ufal/low-resource-gec-wnut2019
+  + <details>
+      <summary>Abstract</summary>
+      Grammatical error correction in English is a long studied problem with many existing systems and datasets. However, there has been only a limited research on error correction of other languages. In this paper, we present a new dataset AKCES-GEC on grammatical error correction for Czech. We then make experiments on Czech, German and Russian and show that when utilizing synthetic parallel corpus, Transformer neural machine translation model can reach new state-of-the-art results on these datasets. AKCES-GEC is published under CC BY-NC-SA 4.0 license at http://hdl.handle.net/11234/1-3057, and the source code of the GEC model is available at https://github.com/ufal/low-resource-gec-wnut2019.
+    </details>
+
+## Papers in 2018
+### GEC Methods
++ **[`de`] Using Wikipedia Edits in Low Resource Grammatical Error Correction**
+  + Authors: Adriane Boyd
+  + Conference: EMNLP-WNUT
+  + Link: https://aclanthology.org/W18-6111/
+  + Code: https://github.com/adrianeboyd/ boyd-wnut2018/
+  + <details>
+      <summary>Abstract</summary>
+      We develop a grammatical error correction (GEC) system for German using a small gold GEC corpus augmented with edits extracted from Wikipedia revision history. We extend the automatic error annotation tool ERRANT (Bryant et al., 2017) for German and use it to analyze both gold GEC corrections and Wikipedia edits (Grundkiewicz and Junczys-Dowmunt, 2014) in order to select as additional training data Wikipedia edits containing grammatical corrections similar to those in the gold corpus. Using a multilayer convolutional encoder-decoder neural network GEC approach (Chollampatt and Ng, 2018), we evaluate the contribution of Wikipedia edits and find that carefully selected Wikipedia edits increase performance by over 5%.
+    </details>
+
 ## Topics
 ### Multi-lingual
 + [A Unified Strategy for Multilingual Grammatical Error Correction with Pre-trained Cross-Lingual Language Model](#sun-et-al-ijcal2022)
+  + Year: 2022
   + Languages: `en,zh,de,ru`
   + <details>
     <summary>Method: language-agnostic data augmentation, multi-lingual pre-trained language models.</summary>
@@ -389,7 +456,12 @@ Updating. The papers will be organized by publication years.
     + In the fine-tuning stage, the pre-trained model is fine-tuned with language-specific annotated data. 
   </details>
 
++ [Multilingual fine-tuning for Grammatical Error Correction](#pajak-and-pajak-esa2022)
+  + Year: 2022
+  + Languages: `ar,zh,cs,de,en,ro,ru `
+
 + [A Simple Recipe for Multilingual Grammatical Error Correction](#rothe-et-al-acl2021)
+  + Year: 2021
   + Languages: `en,de,ru,cs`
   + <details>
     <summary>Method: language-agnostic data augmentation, multi-lingual pre-trained language models.</summary>
@@ -404,21 +476,42 @@ Updating. The papers will be organized by publication years.
     + In the fine-tuning stage, the pre-trained model is further fine-tuned with language-specific data.
   
   </details>
-  
+ 
 + [Data Strategies for Low-Resource Grammatical Error Correction](#flachs-et-al-bea2021)
+  + Year: 2021
   + Languages: `es,de,ru,cs`
+
++ [ Character Transformations for Non-Autoregressive GEC Tagging](#straka-et-al-wnut2021)
+  + Year: 2021
+  + Languages: `cs,de,ru`
+
++ [Cross-lingual Transfer Learning for Grammatical Error Correction](#yamashita-et-al-coling2020)
+  + Year: 2020
+  + Languages: `en,ru,cs`
+
++ [Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model](#katsusama-and-komachi-aacl2020)
+  + Year: 2020
+  + Languages: `en,de,cs,ru`
+
++ [Grammatical Error Correction in Low-Resource Scenarios](#naplava-and-straka-wnut2019)
+  + Year: 2019
+  + Languages: `en,cs,de,ru`
 
 ### Syntax-Enhanced
 
 + [SynGEC: Syntax-Enhanced Grammatical Error Correction with a Tailored GEC-Oriented Parser](#zhang-et-al-emnlp2022)
+  + Year: 2022
   + Method: GEC-oriented dependency syntax parser + GCN fusing. 
 
 + [CSynGEC: Incorporating Constituent-based Syntax for Grammatical Error Correction with a Tailored GEC-Oriented Parser](#zhang-et-al-2022)
+  + Year: 2022
   + Method: GEC-oriented constituency syntax parser + GCN fusing; incorporation of dependency & constituency syntax.
 
 + [Incorporating rich syntax information in Grammatical Error Correction](#li-et-al-ipm2022)
+  + Year: 2022
 
 + [A Syntax-Guided Grammatical Error Correction Model with Dependency Tree Correction](#wan-and-wan-2021)
+  + Year: 2021
   + Method: Dependency syntax + GAT fusing; dependency tree correction (prediction of dependency relation, distance and ancestor-descendant relation).
 
 [//]: # (---)
