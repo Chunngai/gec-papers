@@ -6,7 +6,7 @@ such as **Grammatical Error Detection (GED)** and **Spoken Grammatical Error Cor
 
 ## Update Notes
 
-**2023/3/25:** Add papers of multilingual GEC.
+**2023/3/25:** Change the topic of *multilingual GEC* to *GEC of languages other than English & Chinese*.
 
 **2023/3/22:** Add a topic: syntax-enhanced.
 
@@ -185,7 +185,7 @@ Updating. The papers will be organized by publication years.
       Grammatical error correction (GEC) aims at correcting texts with different types of grammatical errors into natural and correct forms. Due to the difference of error type distribution and error density, current grammatical error correction systems may over-correct writings and produce a low precision. To address this issue, in this paper, we propose a dynamic negative example construction method for grammatical error correction using contrastive learning. The proposed method can construct sufficient negative examples with diverse grammatical errors, and can be dynamically used during model training. The constructed negative examples are beneficial for the GEC model to correct sentences precisely and suppress the model from over-correction. Experimental results show that our proposed method enhances model precision, proving the effectiveness of our method.
     </details>
   
-+ **[`el`] Enriching Grammatical Error Correction Resources for Modern Greek**
++ <a name="korre-and-pavlopoulos-lrec2022">**[`el`] Enriching Grammatical Error Correction Resources for Modern Greek**
   + Authors: Katerina Korre, John Pavlopoulos
   + Conference: LREC
   + Link: https://aclanthology.org/2022.lrec-1.532/
@@ -426,7 +426,7 @@ Updating. The papers will be organized by publication years.
 
 ## Papers in 2018
 ### GEC Methods
-+ **[`de`] Using Wikipedia Edits in Low Resource Grammatical Error Correction**
++ <a name="boyd-wnut2018"></a>**[`de`] Using Wikipedia Edits in Low Resource Grammatical Error Correction**
   + Authors: Adriane Boyd
   + Conference: EMNLP-WNUT
   + Link: https://aclanthology.org/W18-6111/
@@ -437,7 +437,8 @@ Updating. The papers will be organized by publication years.
     </details>
 
 ## Topics
-### Multi-lingual
+### GEC of Languages other than English & Chinese
+#### Multilingual
 + [A Unified Strategy for Multilingual Grammatical Error Correction with Pre-trained Cross-Lingual Language Model](#sun-et-al-ijcal2022)
   + Year: 2022
   + Languages: `en,zh,de,ru`
@@ -497,6 +498,15 @@ Updating. The papers will be organized by publication years.
   + Year: 2019
   + Languages: `en,cs,de,ru`
 
+#### Monolingual
++ [Enriching Grammatical Error Correction Resources for Modern Greek](#korre-and-pavlopoulos-lrec2022)
+  + Year: 2022
+  + Languages: `el`
+
++ [Using Wikipedia Edits in Low Resource Grammatical Error Correction](#boyd-wnut2018)
+  + Year: 2018
+  + Languages: `de`
+  
 ### Syntax-Enhanced
 
 + [SynGEC: Syntax-Enhanced Grammatical Error Correction with a Tailored GEC-Oriented Parser](#zhang-et-al-emnlp2022)
