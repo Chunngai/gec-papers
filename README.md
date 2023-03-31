@@ -364,13 +364,13 @@ Updating. The papers will be organized by publication years.
     </details>
 [//]: # (+ Keywords: Language-agnostic Data Augmentation; Pre-trained Language Models; Distillation)
 
-+ <a name="flachs-et-al-bea2021"></a>**[`es,de,ru,cs`]Data Strategies for Low-Resource Grammatical Error Correction**
++ <a name="flachs-et-al-bea2021"></a>**[`es,de,ru,cs`] Data Strategies for Low-Resource Grammatical Error Correction**
   + Authors: Simon Flachs, Felix Stahlberg, Shankar Kumar
   + Conference: BEA
   + Link: https://aclanthology.org/2021.bea-1.12/
   + <details>
-      <summary>Abstract</summary>
-   Grammatical Error Correction (GEC) is a task that has been extensively investigated for the English language. However, for low-resource languages the best practices for training GEC systems have not yet been systematically determined. We investigate how best to take advantage of existing data sources for improving GEC systems for languages with limited quantities of high quality training data. We show that methods for generating artificial training data for GEC can benefit from including morphological errors. We also demonstrate that noisy error correction data gathered from Wikipedia revision histories and the language learning website Lang8, are valuable data sources. Finally, we show that GEC systems pre-trained on noisy data sources can be fine-tuned effectively using small amounts of high quality, human-annotated data.
+    <summary>Abstract</summary>
+    Grammatical Error Correction (GEC) is a task that has been extensively investigated for the English language. However, for low-resource languages the best practices for training GEC systems have not yet been systematically determined. We investigate how best to take advantage of existing data sources for improving GEC systems for languages with limited quantities of high quality training data. We show that methods for generating artificial training data for GEC can benefit from including morphological errors. We also demonstrate that noisy error correction data gathered from Wikipedia revision histories and the language learning website Lang8, are valuable data sources. Finally, we show that GEC systems pre-trained on noisy data sources can be fine-tuned effectively using small amounts of high quality, human-annotated data.
    </details>
 
 + <a name="straka-et-al-wnut2021"></a>**[`cs,de,ru`] Character Transformations for Non-Autoregressive GEC Tagging**
@@ -379,8 +379,8 @@ Updating. The papers will be organized by publication years.
   + Link: https://aclanthology.org/2021.wnut-1.46/
   + Code: https://github.com/ufal/wnut2021_character_transformations_gec
   + <details>
-      <summary>Abstract</summary>
-   We propose a character-based non-autoregressive GEC approach, with automatically generated character transformations. Recently, per-word classification of correction edits has proven an efficient, parallelizable alternative to current encoder-decoder GEC systems. We show that word replacement edits may be suboptimal and lead to explosion of rules for spelling, diacritization and errors in morphologically rich languages, and propose a method for generating character transformations from GEC corpus. Finally, we train character transformation models for Czech, German and Russian, reaching solid results and dramatic speedup compared to autoregressive systems. The source code is released at https://github.com/ufal/wnut2021_character_transformations_gec.
+    <summary>Abstract</summary>
+    We propose a character-based non-autoregressive GEC approach, with automatically generated character transformations. Recently, per-word classification of correction edits has proven an efficient, parallelizable alternative to current encoder-decoder GEC systems. We show that word replacement edits may be suboptimal and lead to explosion of rules for spelling, diacritization and errors in morphologically rich languages, and propose a method for generating character transformations from GEC corpus. Finally, we train character transformation models for Czech, German and Russian, reaching solid results and dramatic speedup compared to autoregressive systems. The source code is released at https://github.com/ufal/wnut2021_character_transformations_gec.
    </details>
 
 + <a name="wan-and-wan-2021"></a>**A Syntax-Guided Grammatical Error Correction Model with Dependency Tree Correction**
@@ -531,11 +531,11 @@ Updating. The papers will be organized by publication years.
 #### Monolingual
 + [Enriching Grammatical Error Correction Resources for Modern Greek](#korre-and-pavlopoulos-lrec2022)
   + Year: 2022
-  + Languages: `el`
+  + Language: `el`
 
 + [Using Wikipedia Edits in Low Resource Grammatical Error Correction](#boyd-wnut2018)
   + Year: 2018
-  + Languages: `de`
+  + Language: `de`
   
 ### Syntax-Enhanced
 
