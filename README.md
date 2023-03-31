@@ -1,8 +1,8 @@
-# Papers of Grammatical Error Correction
-
-## Introduction
-This repository lists papers of **Grammatical Error Correction (GEC)** and those of related topics,
-such as **Grammatical Error Detection (GED)** and **Spoken Grammatical Error Correction (SGEC)**.
+# GEC Papers
+Papers for grammatical error correction / detection, including the following topics:
++ **Grammatical Error Correction (GEC)**
++ **Grammatical Error Detection (GED)**
++ **Spoken Grammatical Error Correction (SGEC)**
 
 ## Update Notes
 
@@ -41,7 +41,7 @@ Updating. The papers will be organized by publication years.
   + Code: https://github.com/MaksTarnavskyi/gector-large
   + <details>
     <summary>Abstract</summary>
-    In this paper, we investigate improvements to the GEC sequence tagging architecture with a focus on ensembling of recent cutting-edge Transformer-based encoders in Large configurations. We encourage ensembling models by majority votes on span-level edits because this approach is tolerant to the model architecture and vocabulary size. Our best ensemble achieves a new SOTA result with an F0.5 score of 76.05 on BEA-2019 (test), even without pre-training on synthetic datasets. In addition, we perform knowledge distillation with a trained ensemble to generate new synthetic training datasets, “Troy-Blogs” and “Troy-1BW”. Our best single sequence tagging model that is pretrained on the generated Troy- datasets in combination with the publicly available synthetic PIE dataset achieves a near-SOTA result with an F0.5 score of 73.21 on BEA-2019 (test). The code, datasets, and trained models are publicly available.
+    In this paper, we investigate improvements to the GEC sequence tagging architecture with a focus on ensembling of recent cutting-edge Transformer-based encoders in Large configurations. We encourage ensembling models by majority votes on span-level edits because this approach is tolerant to the model architecture and vocabulary size. Our best ensemble achieves a new SOTA result with an F0.5 score of 76.05 on BEA-2019 (test), even without pre-training on synthetic datasets. In addition, we perform knowledge distillation with a trained ensemble to generate new synthetic training datasets, “Troy-Blogs” and “Troy-1BW”. Our best single sequence tagging model that is pretrained on the generated Troy-datasets in combination with the publicly available synthetic PIE dataset achieves a near-SOTA result with an F0.5 score of 73.21 on BEA-2019 (test). The code, datasets, and trained models are publicly available.
   </details>
 [//]: # (+ Key Words: Empirical Study; Bigger PLMs; Ensembling Comparison; Knowledge Distilling)
 
@@ -424,6 +424,16 @@ Updating. The papers will be organized by publication years.
       Grammatical error correction in English is a long studied problem with many existing systems and datasets. However, there has been only a limited research on error correction of other languages. In this paper, we present a new dataset AKCES-GEC on grammatical error correction for Czech. We then make experiments on Czech, German and Russian and show that when utilizing synthetic parallel corpus, Transformer neural machine translation model can reach new state-of-the-art results on these datasets. AKCES-GEC is published under CC BY-NC-SA 4.0 license at http://hdl.handle.net/11234/1-3057, and the source code of the GEC model is available at https://github.com/ufal/low-resource-gec-wnut2019.
     </details>
 
++ <a name="grundkiewicz-and-junczys-dowmunt-wnut2019"></a>**[`en,de,ru`] Minimally-Augmented Grammatical Error Correction**
+  + Authors: Roman Grundkiewicz, Marcin Junczys-Dowmunt
+  + Conference: EMNLP-WNUT
+  + Link: https://aclanthology.org/D19-5546/
+  + Code: https://github.com/grammatical/magec-wnut2019
+  + <details>
+      <summary>Abstract</summary>
+      There has been an increased interest in low-resource approaches to automatic grammatical error correction. We introduce Minimally-Augmented Grammatical Error Correction (MAGEC) that does not require any error-labelled data. Our unsupervised approach is based on a simple but effective synthetic error generation method based on confusion sets from inverted spell-checkers. In low-resource settings, we outperform the current state-of-the-art results for German and Russian GEC tasks by a large margin without using any real error-annotated training data. When combined with labelled data, our method can serve as an efficient pre-training technique
+    </details>
+  
 ## Papers in 2018
 ### GEC Methods
 + <a name="boyd-wnut2018"></a>**[`de`] Using Wikipedia Edits in Low Resource Grammatical Error Correction**
@@ -443,7 +453,7 @@ Updating. The papers will be organized by publication years.
   + Year: 2022
   + Languages: `en,zh,de,ru`
   + <details>
-    <summary>Method: language-agnostic data augmentation, multi-lingual pre-trained language models.</summary>
+    <summary>Method: Language-agnostic data augmentation, multi-lingual pre-trained language models.</summary>
     
     + A two-stage training strategy is employed: (1) pre-training with augmented pseudo data and (2) fine-tuning with language-specific annotated data.
   
@@ -457,15 +467,11 @@ Updating. The papers will be organized by publication years.
     + In the fine-tuning stage, the pre-trained model is fine-tuned with language-specific annotated data. 
   </details>
 
-+ [Multilingual fine-tuning for Grammatical Error Correction](#pajak-and-pajak-esa2022)
-  + Year: 2022
-  + Languages: `ar,zh,cs,de,en,ro,ru `
-
 + [A Simple Recipe for Multilingual Grammatical Error Correction](#rothe-et-al-acl2021)
   + Year: 2021
   + Languages: `en,de,ru,cs`
   + <details>
-    <summary>Method: language-agnostic data augmentation, multi-lingual pre-trained language models.</summary>
+    <summary>Method: Language-agnostic data augmentation, multi-lingual pre-trained language models.</summary>
     
     + A two-stage training strategy is employed: (1) pre-training with augmented pseudo data and (2) fine-tuning with language-specific annotated data.
   
@@ -477,22 +483,46 @@ Updating. The papers will be organized by publication years.
     + In the fine-tuning stage, the pre-trained model is further fine-tuned with language-specific data.
   
   </details>
- 
-+ [Data Strategies for Low-Resource Grammatical Error Correction](#flachs-et-al-bea2021)
-  + Year: 2021
-  + Languages: `es,de,ru,cs`
 
-+ [ Character Transformations for Non-Autoregressive GEC Tagging](#straka-et-al-wnut2021)
-  + Year: 2021
-  + Languages: `cs,de,ru`
-
-+ [Cross-lingual Transfer Learning for Grammatical Error Correction](#yamashita-et-al-coling2020)
-  + Year: 2020
-  + Languages: `en,ru,cs`
++ [Multilingual fine-tuning for Grammatical Error Correction](#pajak-and-pajak-esa2022)
+  + Year: 2022
+  + Languages: `ar,zh,cs,de,en,ro,ru `
+  + Method: Fine-tuning multilingual seq2seq pretrained models (e.g., mBART) with mixed GEC data to construct a GEC model capable of correcting seven languages. No pretraining is required.
 
 + [Stronger Baselines for Grammatical Error Correction Using a Pretrained Encoder-Decoder Model](#katsusama-and-komachi-aacl2020)
   + Year: 2020
   + Languages: `en,de,cs,ru`
+  + Method: Fine-tuning BART for English GEC and mBART for other languages (separate fine-tuning for each language). No pre-training is required.
+
++ [Cross-lingual Transfer Learning for Grammatical Error Correction](#yamashita-et-al-coling2020)
+  + Year: 2020
+  + Languages: `en,ru,cs`
+  + <details>
+    <summary>Method: Cross-lingual transfer of grammatical knowledge; language similarity.</summary>
+    Using transfer-learning to transfer grammatical knowledge from the source language (`ru`) to the target language (`cs`). Language similarity enhances the effectiveness (`ru`->`cs` better than `ja`->`cs`). The method can be divided into three steps.
+  
+    1. Pretraining. Two pretraining methods are tried (seems that the pretraining methods are similar to those of XLM): 1) pretraining an MLM with source and target language monolingual corpora. For MLM pretraining, a batch includes sentences coming from the same language at each iteration. 2) pretraining a TLM with source and target language parallel corpora.
+    
+    2. Fine-tuning with combined source and target GEC data.
+    
+    3. Fine-tuning with target GEC data only. 
+
+   </details>
+
++ [Character Transformations for Non-Autoregressive GEC Tagging](#straka-et-al-wnut2021)
+  + Year: 2021
+  + Languages: `cs,de,ru`
+  + Method: Tagging GEC; automatically generated tag vocabulary with character transformations applied on each subword (e.g., append_ing); pre-training + language-specific fine-tuning.
+
++ [Data Strategies for Low-Resource Grammatical Error Correction](#flachs-et-al-bea2021)
+  + Year: 2021
+  + Languages: `es,de,ru,cs`
+  + Method: Artificial errors (Aspell for phonological errors and lexical errors + Unimorph for morphological errors) + WikiEdits + Lang8 data.
+
++ [Minimally-Augmented Grammatical Error Correction](#grundkiewicz-and-junczys-dowmunt-wnut2019)
+  + Year: 2019
+  + Languages: `en,de,ru`
+  + Method: Data augmentation with Aspell.
 
 + [Grammatical Error Correction in Low-Resource Scenarios](#naplava-and-straka-wnut2019)
   + Year: 2019
@@ -511,18 +541,19 @@ Updating. The papers will be organized by publication years.
 
 + [SynGEC: Syntax-Enhanced Grammatical Error Correction with a Tailored GEC-Oriented Parser](#zhang-et-al-emnlp2022)
   + Year: 2022
-  + Method: GEC-oriented dependency syntax parser + GCN fusing. 
+  + Method: GEC-oriented dependency syntax (fine-tuned ELECTRA as syntax parser); encoding fusion with GCN. 
 
 + [CSynGEC: Incorporating Constituent-based Syntax for Grammatical Error Correction with a Tailored GEC-Oriented Parser](#zhang-et-al-2022)
   + Year: 2022
-  + Method: GEC-oriented constituency syntax parser + GCN fusing; incorporation of dependency & constituency syntax.
-
-+ [Incorporating rich syntax information in Grammatical Error Correction](#li-et-al-ipm2022)
-  + Year: 2022
+  + Method: GEC-oriented constituency syntax (fine-tuned ELECTRA as syntax parser); encoding fusion with GCN; intra-incorporation of dependency & constituency syntax with two cross-attentions; inter-incorporation of dependency & constituency syntax with ensembling.
 
 + [A Syntax-Guided Grammatical Error Correction Model with Dependency Tree Correction](#wan-and-wan-2021)
   + Year: 2021
-  + Method: Dependency syntax + GAT fusing; dependency tree correction (prediction of dependency relation, distance and ancestor-descendant relation).
+  + Method: Dependency syntax (existing parser); encoding fusion with GAT; dependency tree correction as auxiliary decoding task.
+
++ [Incorporating rich syntax information in Grammatical Error Correction](#li-et-al-ipm2022)
+  + Year: 2022
+  + Method: Mixed dependency & constituency syntax as a syntactic graph; encoding fusion with two GNNs for terminal/non-terminal nodes; cross-attentions for terminal/non-terminal representations in decoding.
 
 [//]: # (---)
 
