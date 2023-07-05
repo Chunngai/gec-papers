@@ -1,93 +1,78 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[25]:
-
-
 import json
+from typing import List
 
 import requests
 from bs4 import BeautifulSoup
 
 
-# In[30]:
-
-
-root_url = "https://aclanthology.org"
-year = "22"
-queries=("scoring",)
-
-
-# In[31]:
-
-
 def request(url: str):
+    """Request html."""
     r = requests.get(url)
     html = r.text
     return html
 
 
-# In[32]:
+def main(year: str, keywords: List[str]):
+    """Search papers of a certain year with keywords.
+
+    :param year: (str) Publication year of the papers. E.g., 22.
+    :param keywords: (List[str]): List of keywords that the searched papers should contain (case-insensitive).
+    """
+
+    items = {}  # {title: item}
+
+    html = request(url=root_url)
+    soup = BeautifulSoup(html, "html.parser")
+    for tag in soup.find("main").find_all("table"):
+        for tr in tag.tbody.find_all("tr"):
+            conference = tr.th.text
+            for td in tr.find_all("td"):
+                if td.text == year:
+                    conference_url = f"{root_url}{td.a['href']}"
+                    print(f"Searching papers of {conference} in {year}. URL: {conference_url}")
+
+                    conf_html = request(url=conference_url)
+                    conf_soup = BeautifulSoup(conf_html, "html.parser")
+                    for tag in conf_soup.find("section", {"id": "main"}).find_all("div", recursive=False):
+                        if not tag.has_attr("id"):
+                            continue
+                        for p in tag.find_all("p"):
+                            try:
+                                paper_span = p.find_all("span", recursive=False)[1]
+                                paper_title = paper_span.strong.a.text
+                                paper_authors = list(map(
+                                    lambda item: item.text,
+                                    paper_span.find_all("a", recursive=False)
+                                ))
+                                paper_url = f"{root_url}{paper_span.strong.a['href']}"
+                            except:
+                                print(p.prettify())
+                                raise
+
+                            for keyword in keywords:
+                                if keyword.lower() in paper_title.lower():
+                                    item = {
+                                        "conference": conference,
+                                        "title": paper_title,
+                                        "authors": paper_authors,
+                                        "url": paper_url,
+                                    }
+                                    if paper_title not in items.keys():
+                                        items[paper_title] = item
+
+    # Display the searching results.
+    print("\nSearched results:\n")
+    for item in items.values():
+        print(json.dumps(
+            item,
+            indent=4,
+            ensure_ascii=False
+        ))
 
 
-papers = []
-
-html = request(url=root_url)
-soup = BeautifulSoup(html, "html.parser")
-for tag in soup.find("main").find_all("table"):
-    tbody = tag.tbody
-    for tr in tbody.find_all("tr"):
-        conf_name = tr.th.text
-        print(conf_name)
-        
-        for td in tr.find_all("td"):
-            if td.text == year:
-                conf_url = f"{root_url}{td.a['href']}"
-                print(conf_url)
-                
-                conf_html = request(url=conf_url)
-                conf_soup = BeautifulSoup(conf_html, "html.parser")
-                for tag in conf_soup.find("section", {"id": "main"}).find_all("div", recursive=False):
-                    if not tag.has_attr("id"):
-                        continue
-                    for p in tag.find_all("p"):
-                        try:
-                            paper_span = p.find_all("span", recursive=False)[1]
-                            paper_title = paper_span.strong.a.text
-                            paper_authors = list(map(
-                                lambda item: item.text,
-                                paper_span.find_all("a", recursive=False)
-                            ))
-                            paper_url = f"{root_url}{paper_span.strong.a['href']}"
-                        except:
-                            print(p.prettify())
-                            raise
-                        
-                        for query in queries:
-                            if query.lower() in paper_title.lower():
-                                papers.append({
-                                    "conf": conf_name,
-                                    "title": paper_title,
-                                    "authors": paper_authors,
-                                    "url": paper_url,
-                                })
-
-
-# In[33]:
-
-
-for item in papers:
-    print(json.dumps(item, indent=4, ensure_ascii=False))
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
+if __name__ == '__main__':
+    root_url = "https://aclanthology.org"
+    main(
+        year="22",  # Year of the papers.
+        keywords=["grammatical error correction", "error correction"],  # Keywords.
+    )
