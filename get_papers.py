@@ -74,5 +74,5 @@ if __name__ == '__main__':
     root_url = "https://aclanthology.org"
     main(
         year="22",  # Year of the papers.
-        keywords=["grammatical error correction", "error correction"],  # Keywords.
+        keywords=["grammatical error correction", "error correction"],  # Keywords (case-insensitive).
     )
