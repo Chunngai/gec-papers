@@ -2,41 +2,6 @@
 Paper list for grammatical error correction (GEC) from 2018 to now.
 
 # 2024
-+ **Chinese Spelling Correction as Rephrasing Language Model**
-  + Authors: Linfeng Liu, Hongqiu Wu, Hai Zhao
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/29829
-
-+ **Deep Quantum Error Correction**
-  + Authors: Yoni Choukroun, Lior Wolf
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/27756
-
-+ **Improving Diffusion-Based Image Restoration with Error Contraction and Error Correction**
-  + Authors: Qiqi Bao, Zheng Hui, Rui Zhu, Peiran Ren, Xuansong Xie, Wenming Yang
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/27833
-
-+ **Improving Factual Error Correction by Learning to Inject Factual Errors**
-  + Authors: Xingwei He, Qianru Zhang, A-Long Jin, Jun Ma, Yuan Yuan, Siu Ming Yiu
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/29778
-
-+ **Negative Pre-aware for Noisy Cross-Modal Matching**
-  + Authors: Xu Zhang, Hao Li, Mang Ye
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/28564
-
-+ **Robust Nonparametric Regression under Poisoning Attack**
-  + Authors: Puning Zhao, Zhiguo Wan
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/29644
-
-+ **Which Is More Effective in Label Noise Cleaning, Correction or Filtering?**
-  + Authors: Gaoxia Jiang, Jia Zhang, Xuefei Bai, Wenjian Wang, Deyu Meng
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/29183
-
 + **Multi-Reference Benchmarks for Russian Grammatical Error Correction**
   + Authors: Frank Palma Gomez, Alla Rozovskaya
   + Conference: EACL
@@ -247,26 +212,6 @@ Paper list for grammatical error correction (GEC) from 2018 to now.
   + Authors: Dhananjay Ashok, Atharva Kulkarni, Hai Pham, Barnabas Poczos
   + Conference: EMNLP Findings
   + Link: https://aclanthology.org/2023.findings-emnlp.451/
-
-+ **AEC-GAN: Adversarial Error Correction GANs for Auto-Regressive Long Time-Series Generation**
-  + Authors: Lei Wang, Liang Zeng, Jian Li
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/26208
-
-+ **Converge to the Truth: Factual Error Correction via Iterative Constrained Editing**
-  + Authors: Jiangjie Chen, Rui Xu, Wenxuan Zeng, Changzhi Sun, Lei Li, Yanghua Xiao
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/26485
-
-+ **Logic Error Localization and Correction with Machine Learning (Student Abstract)**
-  + Authors: Zhenyu Xu, Victor S. Sheng, Keyi Lu
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/27046
-
-+ **SoftCorrect: Error Correction with Soft Detection for Automatic Speech Recognition**
-  + Authors: Yichong Leng, Xu Tan, Wenjie Liu, Kaitao Song, Rui Wang, Xiang-Yang Li, Tao Qin, Ed Lin, Tie-Yan Liu
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/26531
 
 + **A Low-Resource Approach to the Grammatical Error Correction of Ukrainian**
   + Authors: Frank Palma Gomez, Alla Rozovskaya, Dan Roth
@@ -533,16 +478,6 @@ Paper list for grammatical error correction (GEC) from 2018 to now.
   + Authors: Haihua Xie, Xiaoqing Lyu, Xuefei Chen
   + Conference: COLING
   + Link: https://aclanthology.org/2022.coling-1.474/
-
-+ **Reliable Propagation-Correction Modulation for Video Object Segmentation**
-  + Authors: Xiaohao Xu, Jinglu Wang, Xiao Li, Yan Lu
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/20200
-
-+ **Sequence-to-Action: Grammatical Error Correction with Action Guided Sequence Generation**
-  + Authors: Jiquan Li, Junliang Guo, Yongxin Zhu, Xin Sheng, Deqiang Jiang, Bo Ren, Linli Xu
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/21345
 
 + **Czech Grammar Error Correction with a Large and Diverse Corpus**
   + Authors: Jakub Náplava, Milan Straka, Jana Straková, Alexandr Rosen
@@ -871,26 +806,6 @@ Paper list for grammatical error correction (GEC) from 2018 to now.
   + Conference: COLING
   + Link: https://aclanthology.org/2020.coling-main.188/
 
-+ **Infomax Neural Joint Source-Channel Coding via Adversarial Bit Flip**
-  + Authors: Yuxuan Song, Minkai Xu, Lantao Yu, Hao Zhou, Shuo Shao, Yong Yu
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/6041
-
-+ **Label Error Correction and Generation through Label Relationships**
-  + Authors: Zijun Cui, Yong Zhang, Qiang Ji
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/5778
-
-+ **MaskGEC: Improving Neural Grammatical Error Correction via Dynamic Masking**
-  + Authors: Zewei Zhao, Houfeng Wang
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/5476
-
-+ **Towards Minimal Supervision BERT-Based Grammar Error Correction (Student Abstract)**
-  + Authors: Yiyuan Li, Antonios Anastasopoulos, Alan W. Black
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/7202
-
 + **Data Weighted Training Strategies for Grammatical Error Correction**
   + Authors: Jared Lichtarge, Chris Alberti, Shankar Kumar
   + Conference: TACL
@@ -1137,51 +1052,6 @@ Paper list for grammatical error correction (GEC) from 2018 to now.
   + Conference: NAACL
   + Link: https://aclanthology.org/N19-1406/
 
-+ **CGMH: Constrained Sentence Generation by Metropolis-Hastings Sampling**
-  + Authors: Ning Miao, Hao Zhou, Lili Mou, Rui Yan, Lei Li
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/4659
-
-+ **Deep Reinforcement Learning for Syntactic Error Repair in Student Programs**
-  + Authors: Rahul Gupta, Aditya Kanade, Shirish Shevade
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/3882
-
-+ **Efficiently Combining Human Demonstrations and Interventions for Safe Training of Autonomous Systems in Real-Time**
-  + Authors: Vinicius G. Goecks, Gregory M. Gremillion, Vernon J. Lawhern, John Valasek, Nicholas R. Waytowich
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/4091
-
-+ **Jointly Learning to Label Sentences and Tokens**
-  + Authors: Marek Rei, Anders Søgaard
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/4669
-
-+ **Location-Based End-to-End Speech Recognition with Multiple Language Models**
-  + Authors: Zhijie Lin, Kaiyang Lin, Shiling Chen, Linlin Li, Zhou Zhao
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/5124
-
-+ **Multi-Fidelity Automatic Hyper-Parameter Tuning via Transfer Series Expansion**
-  + Authors: Yi-Qi Hu, Yang Yu, Wei-Wei Tu, Qiang Yang, Yuqiang Chen, Wenyuan Dai
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/4272
-
-+ **Plan-and-Write: Towards Better Automatic Storytelling**
-  + Authors: Lili Yao, Nanyun Peng, Ralph Weischedel, Kevin Knight, Dongyan Zhao, Rui Yan
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/4726
-
-+ **Precision-Recall versus Accuracy and the Role of Large Data Sets**
-  + Authors: Brendan Juba, Hai S. Le
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/5193
-
-+ **SpHMC: Spectral Hamiltonian Monte Carlo**
-  + Authors: Haoyi Xiong, Kafeng Wang, Jiang Bian, Zhanxing Zhu, Cheng-Zhong Xu, Zhishan Guo, Jun Huan
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/4492
-
 + **Enabling Robust Grammatical Error Correction in New Domains: Data Sets, Metrics, and Analyses**
   + Authors: Courtney Napoles, Maria Nădejde, Joel Tetreault
   + Conference: TACL
@@ -1307,11 +1177,6 @@ Paper list for grammatical error correction (GEC) from 2018 to now.
   + Authors: Yu-Chun Lo, Jhih-Jie Chen, Chingyu Yang, Jason Chang
   + Conference: COLING
   + Link: https://aclanthology.org/C18-2018/
-
-+ **A Multilayer Convolutional Encoder-Decoder Neural Network for Grammatical Error Correction**
-  + Authors: Shamil Chollampatt, Hwee Tou Ng
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/12069
 
 + **Automated Error Correction and Validation for POS Tagging of Hindi**
   + Authors: Sachi Angle, Pruthwik Mishra, Dipti Mishra Sharma
