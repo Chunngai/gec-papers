@@ -1,7 +1,100 @@
-# GEC Papers
-Paper list for grammatical error correction (GEC) from 2018 to now.
-
 ## 2024
++ **Assessing the Efficacy of Grammar Error Correction: A Human Evaluation Approach in the Japanese Context**
+  + Authors: Qiao Wang, Zheng Yuan
+  + Conference: COLING
+  + Link: https://aclanthology.org/2024.lrec-main.146/
+  + <details>
+      <summary>Abstract</summary>
+      In this study, we evaluated the performance of the state-of-the-art sequence tagging grammar error detection and correction model (SeqTagger) using Japanese university students’ writing samples. With an automatic annotation toolkit, ERRANT, we first evaluated SeqTagger’s performance on error correction with human expert correction as the benchmark. Then a human-annotated approach was adopted to evaluate Seqtagger’s performance in error detection using a subset of the writing dataset. Results indicated a precision of 63.66% and a recall of 20.19% for error correction in the full dataset. For the subset, after manual exclusion of irrelevant errors such as semantic and mechanical ones, the model shows an adjusted precision of 97.98% and an adjusted recall of 42.98% for error detection, indicating the model’s high accuracy but also its conservativeness. Thematic analysis on errors undetected by the model revealed that determiners and articles, especially the latter, were predominant. Specifically, in terms of context-independent errors, the model occasionally overlooked basic ones and faced challenges with overly erroneous or complex structures. Meanwhile, context-dependent errors, notably those related to tense and noun number, as well as those possibly influenced by the students’ first language (L1), remained particularly challenging.
+    </details>
++ **Controlled Generation with Prompt Insertion for Natural Language Explanations in Grammatical Error Correction**
+  + Authors: Masahiro Kaneko, Naoaki Okazaki
+  + Conference: COLING
+  + Link: https://aclanthology.org/2024.lrec-main.350/
+  + <details>
+      <summary>Abstract</summary>
+      In Grammatical Error Correction (GEC), it is crucial to ensure the user’s comprehension of a reason for correction. Existing studies present tokens, examples, and hints for corrections, but do not directly explain the reasons in natural language. Although methods that use Large Language Models (LLMs) to provide direct explanations in natural language have been proposed for various tasks, no such method exists for GEC. Generating explanations for GEC corrections involves aligning input and output tokens, identifying correction points, and presenting corresponding explanations consistently. However, it is not straightforward to specify a complex format to generate explanations, because explicit control of generation is difficult with prompts. This study introduces a method called controlled generation with Prompt Insertion (PI) so that LLMs can explain the reasons for corrections in natural language. In PI, LLMs first correct the input text, and then we automatically extract the correction points based on the rules. The extracted correction points are sequentially inserted into the LLM’s explanation output as prompts, guiding the LLMs to generate explanations for the correction points. We also create an Explainable GEC (XGEC) dataset of correction reasons by annotating NUCLE, CoNLL2013, and CoNLL2014. Although generations from GPT-3.5 and ChatGPT using original prompts miss some correction points, the generation control using PI can explicitly guide to describe explanations for all correction points, contributing to improved performance in generating correction reasons.
+    </details>
++ **Evaluating Prompting Strategies for Grammatical Error Correction Based on Language Proficiency**
+  + Authors: Min Zeng, Jiexin Kuang, Mengyang Qiu, Jayoung Song, Jungyeul Park
+  + Conference: COLING
+  + Link: https://aclanthology.org/2024.lrec-main.569/
+  + <details>
+      <summary>Abstract</summary>
+      This paper proposes an analysis of prompting strategies for grammatical error correction (GEC) with selected large language models (LLM) based on language proficiency. GEC using generative LLMs has been known for overcorrection where results obtain higher recall measures than precision measures. The writing examples of English language learners may be different from those of native speakers. Given that there is a significant differences in second language (L2) learners’ error types by their proficiency levels, this paper attempts to reduce overcorrection by examining the interaction between LLM’s performance and L2 language proficiency. Our method focuses on zero-shot and few-shot prompting and fine-tuning models for GEC for learners of English as a foreign language based on the different proficiency. We investigate GEC results and find that overcorrection happens primarily in advanced language learners’ writing (proficiency C) rather than proficiency A (a beginner level) and proficiency B (an intermediate level). Fine-tuned LLMs, and even few-shot prompting with writing examples of English learners, actually tend to exhibit decreased recall measures. To make our claim concrete, we conduct a comprehensive examination of GEC outcomes and their evaluation results based on language proficiency.
+    </details>
++ **Evaluation of Really Good Grammatical Error Correction**
+  + Authors: Robert Östling, Katarina Gillholm, Murathan Kurfalı, Marie Mattson, Mats Wirén
+  + Conference: COLING
+  + Link: https://aclanthology.org/2024.lrec-main.584/
+  + <details>
+      <summary>Abstract</summary>
+      Traditional evaluation methods for Grammatical Error Correction (GEC) fail to fully capture the full range of system capabilities and objectives. The emergence of large language models (LLMs) has further highlighted the shortcomings of these evaluation strategies, emphasizing the need for a paradigm shift in evaluation methodology. In the current study, we perform a comprehensive evaluation of various GEC systems using a recently published dataset of Swedish learner texts. The evaluation is performed using established evaluation metrics as well as human judges. We find that GPT-3 in a few-shot setting by far outperforms previous grammatical error correction systems for Swedish, a language comprising only about 0.1% of its training data. We also found that current evaluation methods contain undesirable biases that a human evaluation is able to reveal. We suggest using human post-editing of GEC system outputs to analyze the amount of change required to reach native-level human performance on the task, and provide a dataset annotated with human post-edits and assessments of grammaticality, fluency and meaning preservation of GEC system outputs.
+    </details>
++ **GPT-3.5 for Grammatical Error Correction**
+  + Authors: Anisia Katinskaia, Roman Yangarber
+  + Conference: COLING
+  + Link: https://aclanthology.org/2024.lrec-main.692/
+  + <details>
+      <summary>Abstract</summary>
+      This paper investigates the application of GPT-3.5 for Grammatical Error Correction (GEC) in multiple languages in several settings: zero-shot GEC, fine-tuning for GEC, and using GPT-3.5 to re-rank correction hypotheses generated by other GEC models. In the zero-shot setting, we conduct automatic evaluations of the corrections proposed by GPT-3.5 using several methods: estimating grammaticality with language models (LMs), the Scribendy test, and comparing the semantic embeddings of sentences. GPT-3.5 has a known tendency to over-correct erroneous sentences and propose alternative corrections. For several languages, such as Czech, German, Russian, Spanish, and Ukrainian, GPT-3.5 substantially alters the source sentences, including their semantics, which presents significant challenges for evaluation with reference-based metrics. For English, GPT-3.5 demonstrates high recall, generates fluent corrections, and generally preserves sentence semantics. However, human evaluation for both English and Russian reveals that, despite its strong error-detection capabilities, GPT-3.5 struggles with several error types, including punctuation mistakes, tense errors, syntactic dependencies between words, and lexical compatibility at the sentence level.
+    </details>
++ **Grammatical Error Correction for Code-Switched Sentences by Learners of English**
+  + Authors: Kelvin Wey Han Chan, Christopher Bryant, Li Nguyen, Andrew Caines, Zheng Yuan
+  + Conference: COLING
+  + Link: https://aclanthology.org/2024.lrec-main.698/
+  + <details>
+      <summary>Abstract</summary>
+      Code-switching (CSW) is a common phenomenon among multilingual speakers where multiple languages are used in a single discourse or utterance. Mixed language utterances may still contain grammatical errors however, yet most existing Grammar Error Correction (GEC) systems have been trained on monolingual data and not developed with CSW in mind. In this work, we conduct the first exploration into the use of GEC systems on CSW text. Through this exploration, we propose a novel method of generating synthetic CSW GEC datasets by translating different spans of text within existing GEC corpora. We then investigate different methods of selecting these spans based on CSW ratio, switch-point factor and linguistic constraints, and identify how they affect the performance of GEC systems on CSW text. Our best model achieves an average increase of 1.57 F0.5 across 3 CSW test sets (English-Chinese, English-Korean and English-Japanese) without affecting the model’s performance on a monolingual dataset. We furthermore discovered that models trained on one CSW language generalise relatively well to other typologically similar CSW languages.
+    </details>
++ **Improving Copy-oriented Text Generation via EDU Copy Mechanism**
+  + Authors: Tianxiang Wu, Han Chen, Luozheng Qin, Ziqiang Cao, Chunhui Ai
+  + Conference: COLING
+  + Link: https://aclanthology.org/2024.lrec-main.768/
+  + <details>
+      <summary>Abstract</summary>
+      Many text generation tasks are copy-oriented. For instance, nearly 30% content of news summaries is copied. The copy rate is even higher in Grammatical Error Correction (GEC). However, existing generative models generate texts through word-by-word decoding, which may lead to factual inconsistencies and slow inference. While Elementary Discourse Units (EDUs) are outstanding extraction units, EDU-based extractive methods can alleviate the aforementioned problems. As a consequence, we propose EDUCopy, a framework that integrates the behavior of copying EDUs into generative models. The main idea of EDUCopy is to use special index tags to represent the copied EDUs during generation. Specifically, we extract important EDUs from input sequences, finetune generative models to generate sequences with special index tags, and restore the generated special index tags into corresponding text spans. By doing so, EDUCopy reduces the number of generated tokens significantly. To verify the effectiveness of EDUCopy, we conduct experiments on the news summarization datasets CNNDM, NYT and the GEC datasets FCE, WI-LOCNESS. While achieving notable ROUGE and M2 scores, GPT-4 evaluation validates the strength of our models in terms of factual consistency, fluency, and overall performance. Moreover, compared to baseline models, EDUCopy achieves a significant acceleration of 1.65x.
+    </details>
++ **Improving Grammatical Error Correction by Correction Acceptability Discrimination**
+  + Authors: Bin Cao, Kai Jiang, Fayu Pan, Chenlei Bao, Jing Fan
+  + Conference: COLING
+  + Link: https://aclanthology.org/2024.lrec-main.772/
+  + <details>
+      <summary>Abstract</summary>
+      Existing Grammatical Error Correction (GEC) methods often overlook the assessment of sentence-level syntax and semantics in the corrected sentence. This oversight results in final corrections that may not be acceptable in the context of the original sentence. In this paper, to improve the performance of Grammatical Error Correction methods, we propose the post-processing task of Correction Acceptability Discrimination (CAD) which aims to remove invalid corrections by comparing the source sentence and its corrected version from the perspective of “sentence-level correctness”. To solve the CAD task, we propose a pipeline method where the acceptability of each possible correction combination based on the predicted corrections for a source sentence will be judged by a discriminator. Within the discriminator, we design a symmetrical comparison operator to overcome the conflicting results that might be caused by the sentence concatenation order. Experiments show that our method can averagely improve F0.5 score by 1.01% over 13 GEC systems in the BEA-2019 test set.
+    </details>
++ **LM-Combiner: A Contextual Rewriting Model for Chinese Grammatical Error Correction**
+  + Authors: Yixuan Wang, Baoxin Wang, Yijun Liu, Dayong Wu, Wanxiang Che
+  + Conference: COLING
+  + Link: https://aclanthology.org/2024.lrec-main.934/
+  + <details>
+      <summary>Abstract</summary>
+      Over-correction is a critical problem in Chinese grammatical error correction (CGEC) task. Recent work using model ensemble methods based on voting can effectively mitigate over-correction and improve the precision of the GEC system. However, these methods still require the output of several GEC systems and inevitably lead to reduced error recall. In this light, we propose the LM-Combiner, a rewriting model that can directly modify the over-correction of GEC system outputs without a model ensemble. Specifically, we train the model on an over-correction dataset constructed through the proposed K-fold cross inference method, which allows it to directly generate filtered sentences by combining the original and the over-corrected text. In the inference stage, we directly take the original sentences and the output results of other systems as input and then obtain the filtered sentences through LM-Combiner. Experiments on the FCGEC dataset show that our proposed method effectively alleviates the over-correction of the original system (+18.2 Precision) while ensuring the error recall remains unchanged. Besides, we find that LM-Combiner still has a good rewriting performance even with small parameters and few training data, and thus can cost-effectively mitigate the over-correction of black-box GEC systems (e.g., ChatGPT).
+    </details>
++ **Logging Keystrokes in Writing by English Learners**
+  + Authors: Georgios Velentzas, Andrew Caines, Rita Borgo, Erin Pacquetet, Clive Hamilton, Taylor Arnold, Diane Nicholls, Paula Buttery, Thomas Gaillat, Nicolas Ballier, Helen Yannakoudakis
+  + Conference: COLING
+  + Link: https://aclanthology.org/2024.lrec-main.938/
+  + <details>
+      <summary>Abstract</summary>
+      Essay writing is a skill commonly taught and practised in schools. The ability to write a fluent and persuasive essay is often a major component of formal assessment. In natural language processing and education technology we may work with essays in their final form, for example to carry out automated assessment or grammatical error correction. In this work we collect and analyse data representing the essay writing process from start to finish, by recording every key stroke from multiple writers participating in our study. We describe our data collection methodology, the characteristics of the resulting dataset, and the assignment of proficiency levels to the texts. We discuss the ways the keystroke data can be used – for instance seeking to identify patterns in the keystrokes which might act as features in automated assessment or may enable further advancements in writing assistance – and the writing support technology which could be built with such information, if we can detect when writers are struggling to compose a section of their essay and offer appropriate intervention. We frame this work in the context of English language learning, but we note that keystroke logging is relevant more broadly to text authoring scenarios as well as cognitive or linguistic analyses of the writing process.
+    </details>
++ **Spivavtor: An Instruction Tuned Ukrainian Text Editing Model**
+  + Authors: Aman Saini, Artem Chernodub, Vipul Raheja, Vivek Kulkarni
+  + Conference: COLING
+  + Link: https://aclanthology.org/2024.unlp-1.12/
+  + <details>
+      <summary>Abstract</summary>
+      We introduce Spivavtor, a dataset, and instruction-tuned models for text editing focused on the Ukrainian language. Spivavtor is the Ukrainian-focused adaptation of the English-only CoEdIT (Raheja et al., 2023) model. Similar to CoEdIT, Spivavtor performs text editing tasks by following instructions in Ukrainian like “Виправте граматику в цьому реченнi” and “Спростiть це речення” which translate to “Correct the grammar in this sentence” and “Simplify this sentence” in English, respectively. This paper describes the details of the Spivavtor-Instruct dataset and Spivavtor models. We evaluate Spivavtor on a variety of text editing tasks in Ukrainian, such as Grammatical Error Correction (GEC), Text Simplification, Coherence, and Paraphrasing, and demonstrate its superior performance on all of them. We publicly release our best performing models and data as resources to the community to advance further research in this space.
+    </details>
++ **Universal Dependencies for Learner Russian**
+  + Authors: Alla Rozovskaya
+  + Conference: COLING
+  + Link: https://aclanthology.org/2024.lrec-main.1486/
+  + <details>
+      <summary>Abstract</summary>
+      We introduce a pilot annotation of Russian learner data with syntactic dependency relations. The annotation is performed on a subset of sentences from RULEC-GEC and RU-Lang8, two error-corrected Russian learner datasets. We provide manually labeled Universal Dependency (UD) trees for 500 sentence pairs, annotating both the original (source) and the corrected (target) version of each sentence. Further, we outline guidelines for annotating learner Russian data containing non-standard erroneous text and analyze the effect that the individual errors have on the resulting dependency trees. This study should contribute to a wide range of computational and theoretical research directions in second language learning and grammatical error correction.
+    </details>
 + **Multi-Reference Benchmarks for Russian Grammatical Error Correction**
   + Authors: Frank Palma Gomez, Alla Rozovskaya
   + Conference: EACL
