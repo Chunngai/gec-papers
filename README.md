@@ -2,6 +2,126 @@
 Paper list for grammatical error correction (GEC) from 2018 to now.
 
 ## 2024
++ **Classist Tools: Social Class Correlates with Performance in NLP**
+  + Authors: Amanda Curry, Giuseppe Attanasio, Zeerak Talat, Dirk Hovy
+  + Conference: ACL
+  + Link: https://aclanthology.org/2024.acl-long.682/
+  + <details>
+      <summary>Abstract</summary>
+      The field of sociolinguistics has studied factors affecting language use for the last century. Labov (1964) and Bernstein (1960) showed that socioeconomic class strongly influences our accents, syntax and lexicon. However, despite growing concerns surrounding fairness and bias in Natural Language Processing (NLP), there is a dearth of studies delving into the effects it may have on NLP systems. We show empirically that NLP systems’ performance is affected by speakers’ SES, potentially disadvantaging less-privileged socioeconomic groups. We annotate a corpus of 95K utterances from movies with social class, ethnicity and geographical language variety and measure the performance of NLP systems on three tasks: language modelling, automatic speech recognition, and grammar error correction. We find significant performance disparities that can be attributed to socioeconomic status as well as ethnicity and geographical differences. With NLP technologies becoming ever more ubiquitous and quotidian, they must accommodate all language varieties to avoid disadvantaging already marginalised groups. We argue for the inclusion of socioeconomic class in future language technologies.
+    </details>
++ **Detection-Correction Structure via General Language Model for Grammatical Error Correction**
+  + Authors: Wei Li, Houfeng Wang
+  + Conference: ACL
+  + Link: https://aclanthology.org/2024.acl-long.96/
+  + <details>
+      <summary>Abstract</summary>
+      Grammatical error correction (GEC) is a task dedicated to rectifying texts with minimal edits, which can be decoupled into two components: detection and correction. However, previous works have predominantly focused on direct correction, with no prior efforts to integrate both into a single model. Moreover, the exploration of the detection-correction paradigm by large language models (LLMs) remains underdeveloped. This paper introduces an integrated detection-correction structure, named DeCoGLM, based on the General Language Model (GLM). The detection phase employs a fault-tolerant detection template, while the correction phase leverages autoregressive mask infilling for localized error correction. Through the strategic organization of input tokens and modification of attention masks, we facilitate multi-task learning within a single model. Our model demonstrates competitive performance against the state-of-the-art models on English and Chinese GEC datasets. Further experiments present the effectiveness of the detection-correction structure in LLMs, suggesting a promising direction for GEC.
+    </details>
++ **In-context Mixing (ICM): Code-mixed Prompts for Multilingual LLMs**
+  + Authors: Bhavani Shankar, Preethi Jyothi, Pushpak Bhattacharyya
+  + Conference: ACL
+  + Link: https://aclanthology.org/2024.acl-long.228/
+  + <details>
+      <summary>Abstract</summary>
+      We introduce a simple and effective prompting technique called in-context mixing (ICM) for effective in-context learning (ICL) with multilingual large language models (MLLMs). With ICM, we modify the few-shot examples within ICL prompts to be intra-sententially code-mixed by randomly swapping content words in the target languages with their English translations. We observe that ICM prompts yield superior performance in NLP tasks such as disfluency correction, grammar error correction and text simplification that demand a close correspondence between the input and output sequences. Significant improvements are observed mainly for low-resource languages that are under-represented during the pretraining and finetuning of MLLMs. We present an extensive set of experiments to analyze when ICM is effective and what design choices contribute towards its effectiveness. ICM works consistently and significantly better than other prompting techniques across models of varying capacity such as mT0-XXL, BloomZ and GPT-4.
+    </details>
++ **Alirector: Alignment-Enhanced Chinese Grammatical Error Corrector**
+  + Authors: Haihui Yang, Xiaojun Quan
+  + Conference: ACL Findings
+  + Link: https://aclanthology.org/2024.findings-acl.148/
+  + <details>
+      <summary>Abstract</summary>
+      Chinese grammatical error correction (CGEC) faces serious overcorrection challenges when employing autoregressive generative models such as sequence-to-sequence (Seq2Seq) models and decoder-only large language models (LLMs). While previous methods aim to address overcorrection in Seq2Seq models, they are difficult to adapt to decoder-only LLMs. In this paper, we propose an alignment-enhanced corrector for the overcorrection problem that applies to both Seq2Seq models and decoder-only LLMs. Our method first trains a correction model to generate an initial correction of the source sentence. Then, we combine the source sentence with the initial correction and feed it through an alignment model for another round of correction, aiming to enforce the alignment model to focus on potential overcorrection. Moreover, to enhance the model’s ability to identify nuances, we further explore the reverse alignment of the source sentence and the initial correction. Finally, we transfer the alignment knowledge from two alignment models to the correction model, instructing it on how to avoid overcorrection. Experimental results on three CGEC datasets demonstrate the effectiveness of our approach in alleviating overcorrection and improving overall performance. Our code has been made publicly available.
+    </details>
++ **Improving Grammatical Error Correction via Contextual Data Augmentation**
+  + Authors: Yixuan Wang, Baoxin Wang, Yijun Liu, Qingfu Zhu, Dayong Wu, Wanxiang Che
+  + Conference: ACL Findings
+  + Link: https://aclanthology.org/2024.findings-acl.647/
+  + <details>
+      <summary>Abstract</summary>
+      Nowadays, data augmentation through synthetic data has been widely used in the field of Grammatical Error Correction (GEC) to alleviate the problem of data scarcity. However, these synthetic data are mainly used in the pre-training phase rather than the data-limited fine tuning phase due to inconsistent error distribution and noisy labels. In this paper, we propose a synthetic data construction method based on contextual augmentation, which can ensure an efficient augmentation of the original data with a more consistent error distribution. Specifically, we combine rule-based substitution with model-based generation, using the generation model to generate a richer context for the extracted error patterns. Besides, we also propose a relabeling-based data cleaning method to mitigate the effects of noisy labels in synthetic data. Experiments on CoNLL14 and BEA19-Test show that our proposed augmentation method consistently and substantially outperforms strong baselines and achieves the state-of-the-art level with only a few synthetic data.
+    </details>
++ **Likelihood-based Mitigation of Evaluation Bias in Large Language Models**
+  + Authors: Masanari Ohi, Masahiro Kaneko, Ryuto Koike, Mengsay Loem, Naoaki Okazaki
+  + Conference: ACL Findings
+  + Link: https://aclanthology.org/2024.findings-acl.193/
+  + <details>
+      <summary>Abstract</summary>
+      Large Language Models (LLMs) are widely used to evaluate natural language generation tasks as automated metrics.However, the likelihood, a measure of LLM’s plausibility for a sentence, can vary due to superficial differences in sentences, such as word order and sentence structure.It is therefore possible that there might be a likelihood bias if LLMs are used for evaluation: they might overrate sentences with higher likelihoods while underrating those with lower likelihoods.In this paper, we investigate the presence and impact of likelihood bias in LLM-based evaluators.We also propose a method to mitigate the likelihood bias.Our method utilizes highly biased instances as few-shot examples for in-context learning.Our experiments in evaluating the data-to-text and grammatical error correction tasks reveal that several LLMs we test display a likelihood bias.Furthermore, our proposed method successfully mitigates this bias, also improving evaluation performance (in terms of correlation of models with human scores) significantly.
+    </details>
++ **Prompting open-source and commercial language models for grammatical error correction of English learner text**
+  + Authors: Christopher Davis, Andrew Caines, O Andersen, Shiva Taslimipoor, Helen Yannakoudakis, Zheng Yuan, Christopher Bryant, Marek Rei, Paula Buttery
+  + Conference: ACL Findings
+  + Link: https://aclanthology.org/2024.findings-acl.711/
+  + <details>
+      <summary>Abstract</summary>
+      Thanks to recent advances in generative AI, we are able to prompt large language models (LLMs) to produce texts which are fluent and grammatical. In addition, it has been shown that we can elicit attempts at grammatical error correction (GEC) from LLMs when prompted with ungrammatical input sentences. We evaluate how well LLMs can perform at GEC by measuring their performance on established benchmark datasets. We go beyond previous studies, which only examined GPT* models on a selection of English GEC datasets, by evaluating seven open-source and three commercial LLMs on four established GEC benchmarks. We investigate model performance and report results against individual error types. Our results indicate that LLMs do not always outperform supervised English GEC models except in specific contexts – namely commercial LLMs on benchmarks annotated with fluency corrections as opposed to minimal edits. We find that several open-source models outperform commercial ones on minimal edit benchmarks, and that in some settings zero-shot prompting is just as competitive as few-shot prompting.
+    </details>
++ **Towards Better Utilization of Multi-Reference Training Data for Chinese Grammatical Error Correction**
+  + Authors: Yumeng Liu, Zhenghua Li, HaoChen Jiang, Bo Zhang, Chen Li, Ji Zhang
+  + Conference: ACL Findings
+  + Link: https://aclanthology.org/2024.findings-acl.180/
+  + <details>
+      <summary>Abstract</summary>
+      For the grammatical error correction (GEC) task, there usually exist multiple correction ways for an erroneous input sentence, leading to multiple references. Observing the high proportion of multi-reference instances in Chinese GEC training data, we target a systematic study on how to better utilize multi-reference training data. We propose two new approaches and a simple two-stage training strategy. We compare them against previously proposed approaches, on two Chinese training datasets, i.e., Lang-8 for second language learner texts and FCGEC-Train for native speaker texts, and three test datasets. The experiments and analyses demonstrate the effectiveness of our proposed approaches and reveal interesting insights. Our code is available at https://github.com/ymliucs/MrGEC.
+    </details>
++ **Large Language Models Are State-of-the-Art Evaluator for Grammatical Error Correction**
+  + Authors: Masamune Kobayashi, Masato Mita, Mamoru Komachi
+  + Conference: NAACL
+  + Link: https://aclanthology.org/2024.bea-1.6/
+  + <details>
+      <summary>Abstract</summary>
+      Large Language Models (LLMs) have been reported to outperform existing automatic evaluation metrics in some tasks, such as text summarization and machine translation. However, there has been a lack of research on LLMs as evaluators in grammatical error correction (GEC). In this study, we investigate the performance of LLMs in GEC evaluation by employing prompts designed to incorporate various evaluation criteria inspired by previous research. Our extensive experimental results demonstrate that GPT-4 achieved Kendall’s rank correlation of 0.662 with human judgments, surpassing all existing methods. Furthermore, in recent GEC evaluations, we have underscored the significance of the LLMs scale and particularly emphasized the importance of fluency among evaluation criteria.
+    </details>
++ **Pillars of Grammatical Error Correction: Comprehensive Inspection Of Contemporary Approaches In The Era of Large Language Models**
+  + Authors: Kostiantyn Omelianchuk, Andrii Liubonko, Oleksandr Skurzhanskyi, Artem Chernodub, Oleksandr Korniienko, Igor Samokhin
+  + Conference: NAACL
+  + Link: https://aclanthology.org/2024.bea-1.3/
+  + <details>
+      <summary>Abstract</summary>
+      In this paper, we carry out experimental research on Grammatical Error Correction, delving into the nuances of single-model systems, comparing the efficiency of ensembling and ranking methods, and exploring the application of large language models to GEC as single-model systems, as parts of ensembles, and as ranking methods. We set new state-of-the-art records with F_0.5 scores of 72.8 on CoNLL-2014-test and 81.4 on BEA-test, respectively. To support further advancements in GEC and ensure the reproducibility of our research, we make our code, trained models, and systems’ outputs publicly available, facilitating future findings.
+    </details>
++ **Synthetic Data Generation for Low-resource Grammatical Error Correction with Tagged Corruption Models**
+  + Authors: Felix Stahlberg, Shankar Kumar
+  + Conference: NAACL
+  + Link: https://aclanthology.org/2024.bea-1.2/
+  + <details>
+      <summary>Abstract</summary>
+      Tagged corruption models provide precise control over the introduction of grammatical errors into clean text. This capability has made them a powerful tool for generating pre-training data for grammatical error correction (GEC) in English. In this work, we demonstrate their application to four languages with substantially fewer GEC resources than English: German, Romanian, Russian, and Spanish. We release a new tagged-corruption dataset consisting of 2.5M examples per language that was generated by a fine-tuned PaLM 2 foundation model. Pre-training on tagged corruptions yields consistent gains across all four languages, especially for small model sizes and languages with limited human-labelled data.
+    </details>
++ **Towards Automated Document Revision: Grammatical Error Correction, Fluency Edits, and Beyond**
+  + Authors: Masato Mita, Keisuke Sakaguchi, Masato Hagiwara, Tomoya Mizumoto, Jun Suzuki, Kentaro Inui
+  + Conference: NAACL
+  + Link: https://aclanthology.org/2024.bea-1.21/
+  + <details>
+      <summary>Abstract</summary>
+      Natural language processing (NLP) technology has rapidly improved automated grammatical error correction (GEC) tasks, and the GEC community has begun to explore document-level revision. However, there are two major obstacles to going beyond automated sentence-level GEC to NLP-based document-level revision support: (1) there are few public corpora with document-level revisions annotated by professional editors, and (2) it is infeasible to obtain all possible references and evaluate revision quality using such references because there are infinite revision possibilities. To address these challenges, this paper proposes a new document revision corpus, Text Revision of ACL papers (TETRA), in which multiple professional editors have revised academic papers sampled from the ACL anthology. This corpus enables us to focus on document-level and paragraph-level edits, such as edits related to coherence and consistency. Additionally, as a case study using the TETRA corpus, we investigate reference-less and interpretable methods for meta-evaluation to detect quality improvements according to document revisions. We show the uniqueness of TETRA compared with existing document revision corpora and demonstrate that a fine-tuned pre-trained language model can discriminate the quality of documents after revision even when the difference is subtle.
+    </details>
++ **Ungrammatical-syntax-based In-context Example Selection for Grammatical Error Correction**
+  + Authors: Chenming Tang, Fanyi Qu, Yunfang Wu
+  + Conference: NAACL
+  + Link: https://aclanthology.org/2024.naacl-long.99/
+  + <details>
+      <summary>Abstract</summary>
+      In the era of large language models (LLMs), in-context learning (ICL) stands out as an effective prompting strategy that explores LLMs’ potency across various tasks. However, applying LLMs to grammatical error correction (GEC) is still a challenging task. In this paper, we propose a novel ungrammatical-syntax-based in-context example selection strategy for GEC. Specifically, we measure similarity of sentences based on their syntactic structures with diverse algorithms, and identify optimal ICL examples sharing the most similar ill-formed syntax to the test input. Additionally, we carry out a two-stage process to further improve the quality of selection results. On benchmark English GEC datasets, empirical results show that our proposed ungrammatical-syntax-based strategies outperform commonly-used word-matching or semantics-based methods with multiple LLMs. This indicates that for a syntax-oriented task like GEC, paying more attention to syntactic information can effectively boost LLMs’ performance. Our code is available at https://github.com/JamyDon/SynICL4GEC.
+    </details>
++ **mEdIT: Multilingual Text Editing via Instruction Tuning**
+  + Authors: Vipul Raheja, Dimitris Alikaniotis, Vivek Kulkarni, Bashar Alhafni, Dhruv Kumar
+  + Conference: NAACL
+  + Link: https://aclanthology.org/2024.naacl-long.56/
+  + <details>
+      <summary>Abstract</summary>
+      We introduce mEdIT, a multi-lingual extension to CoEdIT – the recent state-of-the-art text editing models for writing assistance. mEdIT models are trained by fine-tuning multi-lingual large, pre-trained language models (LLMs) via instruction tuning. They are designed to take instructions from the user specifying the attributes of the desired text in the form of natural language instructions, such as “Grammatik korrigieren” (German) or “이 텍스 트를 단순화” (Korean). We build mEdIT by curating data from multiple publicly available human-annotated text editing datasets for three text editing tasks (Grammatical Error Correction (GEC), Text Simplification, and Paraphrasing) across diverse languages belonging to six different language families. We detail the design and training of mEdIT models and demonstrate their strong performance on many multi-lingual text editing benchmarks against other multilingual LLMs. We also find that mEdIT generalizes effectively to new languages over multilingual baselines. We publicly release our data, code, and trained models.
+    </details>
++ **GEE! Grammar Error Explanation with Large Language Models**
+  + Authors: Yixiao Song, Kalpesh Krishna, Rajesh Bhatt, Kevin Gimpel, Mohit Iyyer
+  + Conference: NAACL Findings
+  + Link: https://aclanthology.org/2024.findings-naacl.49/
+  + <details>
+      <summary>Abstract</summary>
+      Existing grammatical error correction tools do not provide natural language explanations of the errors that they correct in user-written text. However, such explanations are essential for helping users learn the language by gaining a deeper understanding of its grammatical rules (DeKeyser, 2003; Ellis et al., 2006).To address this gap, we propose the task of grammar error explanation, where a system needs to provide one-sentence explanations for each grammatical error in a pair of erroneous and corrected sentences. The task is not easily solved by prompting LLMs: we find that, using one-shot prompting, GPT-4 only explains 40.6% of the errors and does not even attempt to explain 39.8% of the errors.Since LLMs struggle to identify grammar errors, we develop a two-step pipeline that leverages fine-tuned and prompted large language models to perform structured atomic token edit extraction, followed by prompting GPT-4 to explain each edit. We evaluate our pipeline on German, Chinese, and English grammar error correction data. Our atomic edit extraction achieves an F1 of 0.93 on German, 0.91 on Chinese, and 0.891 on English. Human evaluation of generated explanations reveals that 93.9% of German errors, 96.4% of Chinese errors, and 92.20% of English errors are correctly detected and explained. To encourage further research, we open-source our data and code.
+    </details>
 + **Assessing the Efficacy of Grammar Error Correction: A Human Evaluation Approach in the Japanese Context**
   + Authors: Qiao Wang, Zheng Yuan
   + Conference: COLING
