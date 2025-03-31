@@ -1,6 +1,87 @@
 # GEC Papers
 Paper list for grammatical error correction (GEC) from 2018 to now.
 
+## 2025
++ **A Chain-of-Task Framework for Instruction Tuning of LLMs Based on Chinese Grammatical Error Correction**
+  + Authors: Xinpeng Liu, Bing Xu, Muyun Yang, Hailong Cao, Conghui Zhu, Tiejun Zhao, Wenpeng Lu
+  + Conference: COLING
+  + Link: https://aclanthology.org/2025.coling-main.577/
+  + <details>
+      <summary>Abstract</summary>
+      Over-correction is a critical issue for large language models (LLMs) to address Grammatical Error Correction (GEC) task, esp. for Chinese. This paper proposes a Chain-of-Task (CoTask) framework to reduce over-correction. The CoTask framework is applied as multi-task instruction tuning of LLMs by decomposing the process of grammatical error analysis to design auxiliary tasks and adjusting the types and combinations of training tasks. A supervised fine-tuning (SFT) strategy is also presented to enhance the performance of LLMs, together with an algorithm for automatic dataset annotation to avoid additional manual costs. Experimental results demonstrate that our method achieves new state-of-the-art results on both FCGEC (in-domain) and NaCGEC (out-of-domain) test sets.
+    </details>
++ **Edit-Wise Preference Optimization for Grammatical Error Correction**
+  + Authors: Jiehao Liang, Haihui Yang, Shiping Gao, Xiaojun Quan
+  + Conference: COLING
+  + Link: https://aclanthology.org/2025.coling-main.229/
+  + <details>
+      <summary>Abstract</summary>
+      While large language models (LLMs) have achieved remarkable success in various natural language processing tasks, their strengths have yet to be fully demonstrated in grammatical error correction (GEC). This is partly due to the misalignment between their pre-training objectives and the GEC principle of making minimal edits. In this work, we aim to bridge this gap by introducing a novel method called Edit-wise Preference Optimization (EPO). By distinguishing the importance of different tokens and assigning higher reward weights to edit tokens during preference optimization, our method captures fine-grained distinctions in GEC that traditional preference learning often overlooks. Extensive experiments on both English and Chinese datasets show that our framework consistently outperforms strong baselines, achieving state-of-the-art performance and demonstrating the advantages of LLMs in GEC.
+    </details>
++ **Hi-GEC: Hindi Grammar Error Correction in Low Resource Scenario**
+  + Authors: Ujjwal Sharma, Pushpak Bhattacharyya
+  + Conference: COLING
+  + Link: https://aclanthology.org/2025.coling-main.406/
+  + <details>
+      <summary>Abstract</summary>
+      Automated Grammatical Error Correction (GEC) has been extensively researched in Natural Language Processing (NLP), primarily focusing on English and other resource-rich languages. This paper shifts the focus to GEC for a scarcely explored low-resource language, specifically Hindi, which presents unique challenges due to its intricate morphology and complex syntax. To address data resource limitations, this work explores various GEC data generation techniques. Our research introduces a carefully extracted and filtered, high-quality dataset, HiWikiEdits, which includes human-edited 8,137 instances sourced from Wikipedia, encompassing 17 diverse grammatical error types, with annotations performed using the ERRANT toolkit. Furthermore, we investigate Round Trip Translation (RTT) using diverse languages for synthetic Hindi GEC data generation, revealing that leveraging high-resource linguistically distant language for error generation outperforms mid-resource linguistically closer languages. Specifically, using English as a pivot language resulted in a 6.25% improvement in GLEU score compared to using Assamese or Marathi. Finally, we also investigate the neural model-based synthetic error-generation technique and show that it achieves comparable performance to other synthetic data generation methods, even in low-resource settings.
+    </details>
++ **Improving Automatic Grammatical Error Annotation for Chinese Through Linguistically-Informed Error Typology**
+  + Authors: Yang Gu, Zihao Huang, Min Zeng, Mengyang Qiu, Jungyeul Park
+  + Conference: COLING
+  + Link: https://aclanthology.org/2025.coling-main.189/
+  + <details>
+      <summary>Abstract</summary>
+      Comprehensive error annotation is essential for developing effective Grammatical Error Correction (GEC) systems and delivering meaningful feedback to learners. This paper introduces improvements to automatic grammatical error annotation for Chinese. Our refined framework addresses language-specific challenges that cause common spelling errors in Chinese, including pronunciation similarity, visual shape similarity, specialized participles, and word ordering. In a case study, we demonstrated our system’s ability to provide detailed feedback on 12-16% of all errors by identifying them under our new error typology, specific enough to uncover subtle differences in error patterns between L1 and L2 writings. In addition to improving automated feedback for writers, this work also highlights the value of incorporating language-specific features in NLP systems.
+    </details>
++ **InstructGEC: Enhancing Unsupervised Grammatical Error Correction with Instruction Tuning**
+  + Authors: Jiayi Deng, Chen Chen, Chunyan Hou, Xiaojie Yuan
+  + Conference: COLING
+  + Link: https://aclanthology.org/2025.coling-main.9/
+  + <details>
+      <summary>Abstract</summary>
+      Recent works have proposed methods of generating synthetic data automatically for unsupervised Grammatical Error Correction (GEC). Although a large amount of synthetic data is generated at a low cost, it is unrealistic and of poor quality. The copying phenomenon of synthetic data prevents GEC models from learning the semantic knowledge of contextual language. In this paper, we design an instruction format and use the masking strategy in both an erroneous sentence and the corresponding instruction consistently to alleviate the impact of the copy phenomenon. We also propose a novel approach, InstructGEC, which integrates the knowledge of grammatical detection into GEC models with instruction tuning to address the low-quality issue. Experiments are conducted on English and Chinese GEC datasets and results demonstrate that our method outperforms state-of-the-art unsupervised GEC methods.
+    </details>
++ **Large Language Models are Good Annotators for Type-aware Data Augmentation in Grammatical Error Correction**
+  + Authors: Xinyuan Li, Yunshi Lan
+  + Conference: COLING
+  + Link: https://aclanthology.org/2025.coling-main.14/
+  + <details>
+      <summary>Abstract</summary>
+      Large Language Models (LLMs) have achieved outstanding performance across various NLP tasks. Grammatical Error Correction (GEC) is a task aiming at automatically correcting grammatical errors in text, but it encounters a severe shortage of annotated data. Researchers have tried to make full use of the generalization capabilities of LLMs and prompt them to correct erroneous sentences, which however results in unexpected over-correction issues. In this paper, we rethink the role of LLMs in GEC tasks and propose a method, namely TypeDA, considering LLMs as the annotators for type-aware data augmentation in GEC tasks. Different from the existing data augmentation methods, our method prevents in-distribution corruption and is able to generate sentences with multi-granularity error types. Our experiments verify that our method can generally improve the GEC performance of different backbone models with only a small amount of augmented data. Further analyses verify the high consistency and diversity of the pseudo data generated via our method.
+    </details>
++ **Leveraging Multilingual Models for Robust Grammatical Error Correction Across Low-Resource Languages**
+  + Authors: Divesh Ramesh Kubal, Apurva Shrikant Nagvenkar
+  + Conference: COLING
+  + Link: https://aclanthology.org/2025.coling-industry.43/
+  + <details>
+      <summary>Abstract</summary>
+      Grammatical Error Correction (GEC) is a crucial task in Natural Language Processing (NLP) aimed at improving the quality of user-generated content, particularly for non-native speakers. This paper introduces a novel end-to-end architecture utilizing the M2M100 multilingual transformer model to build a unified GEC system, with a focus on low-resource languages. A synthetic data generation pipeline is proposed, tailored to address language-specific error categories. The system has been implemented for the Spanish language, showing promising results based on evaluations conducted by linguists with expertise in Spanish. Additionally, we present a user analysis that tracks user interactions, revealing an acceptance rate of 88.2%, as reflected by the actions performed by users.
+    </details>
++ **Refined Evaluation for End-to-End Grammatical Error Correction Using an Alignment-Based Approach**
+  + Authors: Junrui Wang, Mengyang Qiu, Yang Gu, Zihao Huang, Jungyeul Park
+  + Conference: COLING
+  + Link: https://aclanthology.org/2025.coling-main.52/
+  + <details>
+      <summary>Abstract</summary>
+      We propose a refined alignment-based method to assess end-to-end grammatical error correction (GEC) systems, aiming to reproduce and improve results from existing evaluation tools, such as errant, even when applied to raw text input—reflecting real-world language learners’ writing scenarios. Our approach addresses challenges arising from sentence boundary detection deviations in text preprocessing, a factor overlooked by current GEC evaluation metrics. We demonstrate its effectiveness by replicating results through a re-implementation of errant, utilizing stanza for error annotation and simulating end-to-end evaluation from raw text. Additionally, we propose a potential multilingual errant, presenting Chinese and Korean GEC results. Previously, Chinese and Korean errant were implemented independently for each language, with different annotation formats. Our approach generates consistent error annotations across languages, establishing a basis for standardized grammatical error annotation and evaluation in multilingual GEC contexts.
+    </details>
++ **UnifiedGEC: Integrating Grammatical Error Correction Approaches for Multi-languages with a Unified Framework**
+  + Authors: Yike Zhao, Xiaoman Wang, Yunshi Lan, Weining Qian
+  + Conference: COLING
+  + Link: https://aclanthology.org/2025.coling-demos.5/
+  + <details>
+      <summary>Abstract</summary>
+      Grammatical Error Correction is an important research direction in NLP field. Although many models of different architectures and datasets across different languages have been developed to support the research, there is a lack of a comprehensive evaluation on these models, and different architectures make it hard for developers to implement these models on their own. To address this limitation, we present UnifiedGEC, the first open-source GEC-oriented toolkit, which consists of several core components and reusable modules. In UnifiedGEC, we integrate 5 widely-used GEC models and compare their performance on 7 datasets in different languages. Additionally, GEC-related modules such as data augmentation, prompt engineering are also deployed in it. Developers are allowed to implement new models, run and evaluate on existing benchmarks through our framework in a simple way. Code, documents and detailed results of UnifiedGEC are available at https://github.com/AnKate/UnifiedGEC.
+    </details>
++ **Who Wrote This? The Key to Zero-Shot LLM-Generated Text Detection Is GECScore**
+  + Authors: Junchao Wu, Runzhe Zhan, Derek F. Wong, Shu Yang, Xuebo Liu, Lidia S. Chao, Min Zhang
+  + Conference: COLING
+  + Link: https://aclanthology.org/2025.coling-main.684/
+  + <details>
+      <summary>Abstract</summary>
+      The efficacy of detectors for texts generated by large language models (LLMs) substantially depends on the availability of large-scale training data. However, white-box zero-shot detectors, which require no such data, are limited by the accessibility of the source model of the LLM-generated text. In this paper, we propose a simple yet effective black-box zero-shot detection approach based on the observation that, from the perspective of LLMs, human-written texts typically contain more grammatical errors than LLM-generated texts. This approach involves calculating the Grammar Error Correction Score (GECScore) for the given text to differentiate between human-written and LLM-generated text. Experimental results show that our method outperforms current state-of-the-art (SOTA) zero-shot and supervised methods, achieving an average AUROC of 98.62% across XSum and Writing Prompts dataset. Additionally, our approach demonstrates strong reliability in the wild, exhibiting robust generalization and resistance to paraphrasing attacks. Data and code are available at: https://github.com/NLP2CT/GECScore.
+    </details>
 ## 2024
 + **Classist Tools: Social Class Correlates with Performance in NLP**
   + Authors: Amanda Curry, Giuseppe Attanasio, Zeerak Talat, Dirk Hovy
@@ -282,6 +363,30 @@ Paper list for grammatical error correction (GEC) from 2018 to now.
       <summary>Abstract</summary>
       Grammatical Error Correction (GEC) enhances language proficiency and promotes effective communication, but research has primarily centered around English. We propose a simple approach to multilingual and low-resource GEC by exploring the potential of multilingual machine translation (MT) models for error correction. We show that MT models are not only capable of error correction out-of-the-box, but that they can also be fine-tuned to even better correction quality. Results show the effectiveness of this approach, with our multilingual model outperforming similar-sized mT5-based models and even competing favourably with larger models.
     </details>
++ **Chinese Grammatical Error Correction via Large Language Model Guided Optimization Training**
+  + Authors: Liu Xiao, Li Ying, Yu Zhengtao
+  + Conference: CCL
+  + Link: https://aclanthology.org/2024.ccl-1.105/
+  + <details>
+      <summary>Abstract</summary>
+      “Pre-trained language model-based methods for Chinese Grammatical Error Correction (CGEC)are categorized into Seq2Seq and Seq2Edit types. However, both Seq2Seq and Seq2Edit mod-els depend on high-quality training data significantly. Considering the strong generation andinference ability of large language models (LLMs), we propose a large language model-guidedoptimization training method to exploit LLMs to extract error knowledge to optimize the tradi-tional CGEC model training process. On the one hand, we use error types and confusion sets asextra knowledge to guide LLMs to generate diverse pseudo data, thus extending the error distri-bution of our training data. On the other hand, LLMs are utilized to infer the predicted resultsfrom our CGEC models and obtain the re-training data, thus iteratively optimizing our pre-trainedCGEC models. Experiments on two benchmark datasets show that our LLMs-guided optimiza-tion method with small-scale training data can achieve comparable results with baseline modelswith large-scale training data. Detailed comparison experiments demonstrate that both the earlydeviser pseudo data and the later re-training data are extremely useful for traditional CGEC modeloptimization training, and can benefit from each other. We will release our code and prompts athttps://github.com/SakuraAcedia/llm-cgec-got to facilitate future work.”
+    </details>
++ **中文语法纠错的多轮解码方法研究(Multi-Turn Decoding for Chinese Grammatical Error Correction)**
+  + Authors: Wang Xiaoying (王晓盈), Mu Lingling (穆玲玲), Xu Hongfei (许鸿飞)
+  + Conference: CCL
+  + Link: https://aclanthology.org/2024.ccl-1.53/
+  + <details>
+      <summary>Abstract</summary>
+      “在语法纠错(Grammatical Error Correction,GEC)任务上,序列到序列(Sequence-to sequence,seq2seq)模型与序列到编辑(Sequence-to-edit,seq2edit)模型相比可以取得相当或更好的性能。序列到编辑模型通常通过多次迭代解码,而序列到序列模型则以从左到右的方式一次性解码,不考虑后续的词语。通过在序列到序列模型中应用多轮解码(Multi-Turn Decoding,MTD)来迭代改进前一轮的修正结果,可能会进一步提升性能。然而,多轮解码会增加推理的计算成本,且前一轮修正中的删除或替换操作可能会导致原始输入中有用的源语句信息丢失。本文提出了一种早停机制来提高效率。同时,为解决源语句信息丢失问题,本文将原始输入与上一轮的修正结果合并为一个序列。在NLPCC2018测试集、FCGEC验证集和NaCGEC测试集的实验结果表明,本文方法可在BART基线上能带来一致且显著的性能提升,F0.5值分别提高了+2.06,+2.31和+3.45,分别取得了47.34,54.58和62.09的F0.5值。”
+    </details>
++ **大语言模型在中文文本纠错任务的评测(Evaluation of large language models for Chinese text error correction tasks)**
+  + Authors: Mu Lingling (穆玲玲), Wang Xiaoying (王晓盈), Cui Jiajia (崔佳佳)
+  + Conference: CCL
+  + Link: https://aclanthology.org/2024.ccl-1.62/
+  + <details>
+      <summary>Abstract</summary>
+      “大语言模型(Large Language Models,LLMs)在信息抽取、机器翻译等自然语言处理任务上的能力已被广泛评估,但是在文本纠错方面还主要局限于评价GPT的英文语法纠错能力 。中文文本纠错任务包括中文语法检测 (Chinese Grammatical Error Detection,CGED)和中文语法纠错(Chinese Error Correction,CGEC)两个子任务。本文使用提示的方法评估了国内外的主流大模型在中文语法检测和中文语法纠错任务上的能力。论文设计了不同的提示策略,对结果进行了整体和细粒度的分析。在NLPCC2018和CGED2018测试集上的实验结果表明,ERNIE-4和ChatGLM-4的中文文本纠错能力优于GPT-3.5-Turbo和LLaMa-2-7B-Chat,少样本思维链提示策略性能最优,对词序错误和拼写错误上纠正的准确率较高,说明大模型在低资源下具有较好的中文文本纠错能力。然而测试结果显示大模型的召回率比基线模型高至少14个百分点,说明大模型在中文文本纠错任务上存在过度校正的问题。”
+    </details>
 ## 2023
 + **A Closer Look at k-Nearest Neighbors Grammatical Error Correction**
   + Authors: Justin Vasselli, Taro Watanabe
@@ -467,14 +572,6 @@ Paper list for grammatical error correction (GEC) from 2018 to now.
       <summary>Abstract</summary>
       Grammatical error correction (GEC) is a well-explored problem in English with many existing models and datasets. However, research on GEC in morphologically rich languages has been limited due to challenges such as data scarcity and language complexity. In this paper, we present the first results on Arabic GEC using two newly developed Transformer-based pretrained sequence-to-sequence models. We also define the task of multi-class Arabic grammatical error detection (GED) and present the first results on multi-class Arabic GED. We show that using GED information as auxiliary input in GEC models improves GEC performance across three datasets spanning different genres. Moreover, we also investigate the use of contextual morphological preprocessing in aiding GEC systems. Our models achieve SOTA results on two Arabic GEC shared task datasets and establish a strong benchmark on a recently created dataset. We make our code, data, and pretrained models publicly available.
     </details>
-+ **Beyond English: Evaluating LLMs for Arabic Grammatical Error Correction**
-  + Authors: Sang Kwon, Gagan Bhatia, El Moatez Billah Nagoudi, Muhammad Abdul-Mageed
-  + Conference: EMNLP
-  + Link: https://aclanthology.org/2023.arabicnlp-1.9/
-  + <details>
-      <summary>Abstract</summary>
-      Large language models (LLMs) finetuned to follow human instruction have recently exhibited significant capabilities in various English NLP tasks. However, their performance in grammatical error correction (GEC), especially on languages other than English, remains significantly unexplored. In this work, we evaluate the abilities of instruction finetuned LLMs in Arabic GEC, a complex task due to Arabic’s rich morphology. Our findings suggest that various prompting methods, coupled with (in-context) few-shot learning, demonstrate considerable effectiveness, with GPT-4 achieving up to 65.49 F1 score under expert prompting (approximately 5 points higher than our established baseline). Despite these positive results, we find that instruction finetuned models, regardless of their size, are still outperformed by fully finetuned ones, even if they are significantly smaller in size. This disparity highlights substantial room for improvements for LLMs. Inspired by methods used in low-resource machine translation, we also develop a method exploiting synthetic data that significantly outperforms previous models on two standard Arabic benchmarks. Our best model achieves a new SOTA on Arabic GEC, with 73.29 and 73.26 F1 on the 2014 and 2015 QALB datasets, respectively, compared to peer-reviewed published baselines.
-    </details>
 + **CLEME: Debiasing Multi-reference Evaluation for Grammatical Error Correction**
   + Authors: Jingheng Ye, Yinghui Li, Qingyu Zhou, Yangning Li, Shirong Ma, Hai-Tao Zheng, Ying Shen
   + Conference: EMNLP
@@ -656,6 +753,14 @@ Paper list for grammatical error correction (GEC) from 2018 to now.
   + Conference: AACL
   + Link: https://aclanthology.org/2023.sealp-1.3/
 
++ **Beyond English: Evaluating LLMs for Arabic Grammatical Error Correction**
+  + Authors: Sang Kwon, Gagan Bhatia, El Moatez Billah Nagoudi, Muhammad Abdul-Mageed
+  + Conference: ArabicNLP
+  + Link: https://aclanthology.org/2023.arabicnlp-1.9/
+  + <details>
+      <summary>Abstract</summary>
+      Large language models (LLMs) finetuned to follow human instruction have recently exhibited significant capabilities in various English NLP tasks. However, their performance in grammatical error correction (GEC), especially on languages other than English, remains significantly unexplored. In this work, we evaluate the abilities of instruction finetuned LLMs in Arabic GEC, a complex task due to Arabic’s rich morphology. Our findings suggest that various prompting methods, coupled with (in-context) few-shot learning, demonstrate considerable effectiveness, with GPT-4 achieving up to 65.49 F1 score under expert prompting (approximately 5 points higher than our established baseline). Despite these positive results, we find that instruction finetuned models, regardless of their size, are still outperformed by fully finetuned ones, even if they are significantly smaller in size. This disparity highlights substantial room for improvements for LLMs. Inspired by methods used in low-resource machine translation, we also develop a method exploiting synthetic data that significantly outperforms previous models on two standard Arabic benchmarks. Our best model achieves a new SOTA on Arabic GEC, with 73.29 and 73.26 F1 on the 2014 and 2015 QALB datasets, respectively, compared to peer-reviewed published baselines.
+    </details>
 + **CCL23-Eval 任务7赛道一系统报告:基于序列到序列模型的自动化文本纠错系统(System Report for CCL23-Eval Task 7 Track 1: Automated text error correction pipeline based on sequence-to-sequence models)**
   + Authors: Shixuan Liu (刘世萱), Xinzhang Liu (刘欣璋), Yuyao Huang (黄钰瑶), Chao Wang (王超), Yongshuang Song (宋双永)
   + Conference: CCL
@@ -1226,6 +1331,14 @@ Paper list for grammatical error correction (GEC) from 2018 to now.
   + Conference: PACLIC
   + Link: https://aclanthology.org/2021.paclic-1.24/
 
++ **Grammatical Error Generation Based on Translated Fragments**
+  + Authors: Eetu Sjöblom, Mathias Creutz, Teemu Vahtola
+  + Conference: NoDaLiDa
+  + Link: https://aclanthology.org/2021.nodalida-main.44/
+  + <details>
+      <summary>Abstract</summary>
+      We perform neural machine translation of sentence fragments in order to create large amounts of training data for English grammatical error correction. Our method aims at simulating mistakes made by second language learners, and produces a wider range of non-native style language in comparison to a state-of-the-art baseline model. We carry out quantitative and qualitative evaluation. Our method is shown to outperform the baseline on data with a high proportion of errors.
+    </details>
 + **Leveraging Task Information in Grammatical Error Correction for Short Answer Assessment through Context-based Reranking**
   + Authors: Ramon Ziai, Anna Karnysheva
   + Conference: WS
@@ -2001,7 +2114,3 @@ Paper list for grammatical error correction (GEC) from 2018 to now.
       <summary>Abstract</summary>
       This paper presents a grammatical error correction (GEC) system that provides corrective feedback for essays. We apply the sequence-to-sequence model, which is frequently used in machine translation and text summarization, to this GEC task. The model is trained by EF-Cambridge Open Language Database (EFCAMDAT), a large learner corpus annotated with grammatical errors and corrections. Evaluation shows that our system achieves competitive performance on a number of publicly available testsets.
     </details>
-+ **A Multilayer Convolutional Encoder-Decoder Neural Network for Grammatical Error Correction**
-  + Authors: Shamil Chollampatt, Hwee Tou Ng
-  + Conference: AAAI
-  + Link: https://ojs.aaai.org/index.php/AAAI/article/view/12069
